@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OVA - Tablas Dinámicas en Excel</title>
+<style>
+  :root {
+    --primary: #1d6f42;
+    --primary-light: #28a745;
+    --primary-dark: #145530;
+    --accent: #ffc107;
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #212529;
+    --text-muted: #6c757d;
+    --border: #dee2e6;
+    --radius: 12px;
+    --shadow: 0 2px 12px rgba(0,0,0,.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+  }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+  /* Hero */
+  .hero {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+    color: white;
+    padding: 80px 0 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: var(--bg);
+    border-radius: 50% 50% 0 0;
+  }
+  .hero h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 12px; letter-spacing: -.5px; }
+  .hero p { font-size: 1.2rem; opacity: .9; max-width: 700px; margin: 0 auto 8px; }
+  .hero .badge {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--primary-dark);
+    padding: 4px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: .9rem;
+    margin-top: 16px;
+  }
+  .hero .badge i { font-style: normal; }
+
+  /* Nav */
+  nav {
+    background: white;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow);
+  }
+  nav ul {
+    display: flex;
+    gap: 4px;
+    list-style: none;
+    padding: 0 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  nav ul::-webkit-scrollbar { display: none; }
+  nav a {
+    display: block;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: .9rem;
+    white-space: nowrap;
+    border-bottom: 3px solid transparent;
+    transition: all .2s;
+  }
+  nav a:hover, nav a.active {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+  }
+
+  /* Sections */
+  section { padding: 60px 0; }
+  section:nth-child(even) { background: white; }
+  .section-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section-title .icon { font-size: 2rem; }
+
+  /* Cards */
+  .card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 28px;
+    margin-bottom: 24px;
+    border: 1px solid var(--border);
+  }
+  .card h3 { color: var(--primary); margin-bottom: 12px; font-size: 1.2rem; }
+  .card p, .card li { color: var(--text); }
+
+  /* Grid */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; }
+  @media (max-width: 768px) {
+    .grid-2, .grid-3 { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 1.8rem; }
+    nav a { padding: 12px; font-size: .8rem; }
+  }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: .95rem;
+    transition: all .2s;
+    cursor: pointer;
+    border: none;
+  }
+  .btn-primary { background: var(--primary); color: white; }
+  .btn-primary:hover { background: var(--primary-dark); transform: translateY(-1px); }
+  .btn-outline { background: transparent; color: var(--primary); border: 2px solid var(--primary); }
+  .btn-outline:hover { background: var(--primary); color: white; }
+  .btn-accent { background: var(--accent); color: var(--primary-dark); }
+  .btn-accent:hover { background: #e0a800; }
+
+  /* Video embed */
+  .video-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media (max-width: 768px) { .video-grid { grid-template-columns: 1fr; } }
+  .video-card {
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    background: #000;
+  }
+  .video-card iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border: none;
+    display: block;
+  }
+  .video-card .v-info {
+    background: white;
+    padding: 12px 16px;
+    font-size: .9rem;
+    font-weight: 500;
+  }
+
+  /* Infographic */
+  .infographic-img {
+    width: 100%;
+    max-width: 900px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Flashcards */
+  .flashcard-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+  }
+  .flashcard {
+    width: 200px;
+    height: 160px;
+    perspective: 600px;
+    cursor: pointer;
+  }
+  .flashcard-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform .5s;
+    transform-style: preserve-3d;
+  }
+  .flashcard.flipped .flashcard-inner { transform: rotateY(180deg); }
+  .flashcard-front, .flashcard-back {
+    position: absolute;
+    inset: 0;
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    text-align: center;
+    font-size: .9rem;
+    font-weight: 600;
+    backface-visibility: hidden;
+    box-shadow: var(--shadow);
+  }
+  .flashcard-front {
+    background: var(--primary);
+    color: white;
+  }
+  .flashcard-back {
+    background: var(--accent);
+    color: var(--primary-dark);
+    transform: rotateY(180deg);
+  }
+
+  /* Quiz */
+  .quiz-question {
+    background: var(--card-bg);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    margin-bottom: 16px;
+  }
+  .quiz-question h4 { margin-bottom: 12px; color: var(--primary-dark); }
+  .quiz-option {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 10px 16px;
+    margin: 6px 0;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+    font-size: .95rem;
+    transition: all .2s;
+  }
+  .quiz-option:hover { border-color: var(--primary-light); background: #f0fff0; }
+  .quiz-option.selected { border-color: var(--primary); background: #e8f5e9; }
+  .quiz-option.correct { border-color: #28a745; background: #d4edda; }
+  .quiz-option.wrong { border-color: #dc3545; background: #f8d7da; }
+  .quiz-result { margin-top: 8px; font-weight: 600; }
+  .btn-quiz { margin-top: 16px; }
+
+  /* Bibliography — APA 7th edition */
+  .bib-entry {
+    padding: 12px 0 12px 32px;
+    text-indent: -32px;
+    border-bottom: 1px solid var(--border);
+    font-size: .95rem;
+  }
+  .bib-entry:last-child { border-bottom: none; }
+  .bib-entry a { color: var(--primary); }
+  .bib-entry .tag {
+    display: inline-block;
+    background: var(--primary-light);
+    color: white;
+    font-size: .75rem;
+    padding: 2px 10px;
+    border-radius: 12px;
+    margin-right: 8px;
+  }
+  .bib-entry .tag.yt { background: #ff0000; }
+  .bib-entry .tag.web { background: #0d6efd; }
+  .bib-entry .tag.pdf { background: #dc3545; }
+  .bib-entry .tag.txt { background: #6f42c1; }
+
+  /* Footer */
+  footer {
+    background: var(--primary-dark);
+    color: rgba(255,255,255,.8);
+    text-align: center;
+    padding: 32px 24px;
+    font-size: .9rem;
+  }
+  footer a { color: var(--accent); }
+
+  /* NotebookLM banner */
+  .notebook-banner {
+    background: linear-gradient(135deg, #4285f4, #34a853);
+    color: white;
+    border-radius: var(--radius);
+    padding: 32px;
+    text-align: center;
+  }
+  .notebook-banner h3 { color: white; margin-bottom: 8px; }
+  .notebook-banner p { opacity: .9; margin-bottom: 16px; }
+  .notebook-banner .btn { background: white; color: #1a73e8; }
+  .notebook-banner .btn:hover { background: #f0f0f0; }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="container">
+    <span class="badge"><i>📘</i> Objeto Virtual de Aprendizaje</span>
+    <h1>Tablas Dinámicas en Excel</h1>
+    <p>Guía completa desde cero para estudiantes de nivel medio superior.<br>Aprende a analizar datos, crear informes y tomar decisiones.</p>
+    <div style="margin-top:24px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+      <a href="#guia" class="btn btn-accent">📄 Guía de Estudio</a>
+      <a href="#videos" class="btn btn-outline" style="color:white;border-color:rgba(255,255,255,.6)">🎬 Videos</a>
+      <a href="#quiz" class="btn btn-outline" style="color:white;border-color:rgba(255,255,255,.6)">🧪 Evaluación</a>
+    </div>
+  </div>
+</header>
+
+<!-- NAV -->
+<nav>
+  <ul>
+    <li><a href="#guia">Guía</a></li>
+    <li><a href="#slides">Presentación</a></li>
+    <li><a href="#infografia">Infografía</a></li>
+    <li><a href="#videos">Videos</a></li>
+    <li><a href="#flashcards">Flashcards</a></li>
+    <li><a href="#quiz">Cuestionario</a></li>
+    <li><a href="#bibliografia">Bibliografía</a></li>
+    <li><a href="#notebooklm">NotebookLM</a></li>
+  </ul>
+</nav>
+
+<!-- GUÍA DE ESTUDIO -->
+<section id="guia">
+  <div class="container">
+    <h2 class="section-title"><span class="icon">📄</span> Guía de Estudio</h2>
+    <div class="card">
+      <p style="margin-bottom:16px;font-size:1.05rem">
+        Esta guía cubre todos los conceptos fundamentales para dominar las tablas dinámicas en Excel,
+        desde la preparación de datos hasta técnicas avanzadas de análisis.
+      </p>
+
+      <h3>1. ¿Qué son las Tablas Dinámicas?</h3>
+      <p>Una tabla dinámica (PivotTable) es una herramienta de Excel que permite resumir, analizar y presentar grandes volúmenes de datos de forma interactiva, sin escribir fórmulas. Con solo arrastrar y soltar campos, puedes reorganizar el análisis en segundos.</p>
+
+      <h3>2. Preparación de Datos</h3>
+      <ul>
+        <li>Los datos deben tener encabezados en la fila 1</li>
+        <li>Sin filas o columnas completamente vacías</li>
+        <li>Sin celdas combinadas</li>
+        <li>Convertir el rango en Tabla de Excel (Ctrl + T) para actualización automática</li>
+      </ul>
+
+      <h3>3. Cómo Crear una Tabla Dinámica</h3>
+      <ol>
+        <li>Selecciona cualquier celda dentro de tus datos</li>
+        <li>Ve a <strong>Insertar → Tabla dinámica</strong> (o Alt + N + V)</li>
+        <li>Elige "Nueva hoja de cálculo" y haz clic en Aceptar</li>
+        <li>Arrastra campos a las áreas: Filas, Columnas, Valores, Filtros</li>
+        <li>Personaliza los cálculos (suma, promedio, conteo, etc.)</li>
+      </ol>
+
+      <h3>4. Las 4 Áreas de una Tabla Dinámica</h3>
+      <ul>
+        <li><strong>Filas:</strong> Organizan datos de forma vertical (ej. nombres de productos)</li>
+        <li><strong>Columnas:</strong> Organizan datos de forma horizontal (ej. meses del año)</li>
+        <li><strong>Valores:</strong> Los datos numéricos que se resumen (ej. ventas, cantidades)</li>
+        <li><strong>Filtros:</strong> Permiten mostrar solo ciertos datos (ej. una región específica)</li>
+      </ul>
+
+      <h3>5. Personalización y Formato</h3>
+      <ul>
+        <li>Cambiar diseño de informe (compacto, tabular, esquemático)</li>
+        <li>Agregar segmentaciones para filtrar visualmente</li>
+        <li>Insertar escalas de tiempo para filtrar por fechas</li>
+        <li>Aplicar estilos y formato de números</li>
+        <li>Mostrar valores como porcentaje del total</li>
+      </ul>
+
+      <h3>6. Gráficos Dinámicos</h3>
+      <p>Los gráficos dinámicos se vinculan directamente a tu tabla dinámica. Al modificar la tabla, el gráfico se actualiza automáticamente. Ideales para crear dashboards visuales.</p>
+
+      <h3>7. Errores Comunes</h3>
+      <ul>
+        <li>❌ No actualizar la tabla después de cambiar los datos de origen</li>
+        <li>❌ Tener datos en blanco o con formatos inconsistentes</li>
+        <li>❌ Usar celdas combinadas en los datos de origen</li>
+        <li>❌ No usar Tablas de Excel como origen de datos</li>
+        <li>✅ Solución: Convertir datos a Tabla (Ctrl+T) y usar "Actualizar" (clic derecho)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SLIDE DECK -->
+<section id="slides" style="background:white">
+  <div class="container">
+    <h2 class="section-title"><span class="icon">📊</span> Presentación</h2>
+    <div class="card" style="text-align:center">
+      <p style="margin-bottom:16px">Descarga la presentación en PDF con todos los temas del curso.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <a href="#" class="btn btn-primary" onclick="alert('El slide deck en español está siendo generado por NotebookLM. Vuelve pronto o revisa el enlace a NotebookLM en la sección inferior.')">⏳ Slide Deck en Español (generándose)</a>
+        <a href="https://notebooklm.google.com/notebook/4998a49c-e05e-4258-8f06-9fef719f55e1" target="_blank" class="btn btn-outline">🔗 Ver en NotebookLM</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INFOGRAFÍA -->
+<section id="infografia">
+  <div class="container">
+    <h2 class="section-title"><span class="icon">🖼️</span> Infografía</h2>
+    <div class="card" style="text-align:center">
+      <p style="margin-bottom:20px">Visualización resumen con los conceptos clave de tablas dinámicas.</p>
+      <img
+        src="https://lh3.googleusercontent.com/notebooklm/AKXwDQESnqh3gql7V4YJNSuQVnkTPLyYyWGnELjkwwZ5SszSq17cFM_N1Q598U_9PcZQ1CYHqX6c4H-47u6iqNXeYo4Hr6YonvgcTpWVBxt-agysE-7sn0L-l2V9qmEAX2YZxv3HdhBP7oMp3FRHJ9un2BEVh0tK9vw=w2752-d-h1536-mp2"
+        alt="Infografía: Dominando las Tablas Dinámicas"
+        class="infographic-img"
+        loading="lazy"
+      >
+    </div>
+  </div>
+</section>
+
+<!-- VIDEOS -->
+<section id="videos" style="background:white">
+  <div class="container">
+    <h2 class="section-title"><span class="icon">🎬</span> Videos Tutoriales</h2>
+    <p style="margin-bottom:24px">Cuatro videos en español cuidadosamente seleccionados para aprender desde cero hasta nivel avanzado.</p>
+    <div class="video-grid">
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/6YOsIVH0STg" allowfullscreen loading="lazy"></iframe>
+        <div class="v-info">⭐ Tablas Dinámicas de CERO a EXPERTO — <em>Saber Programas</em></div>
+      </div>
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/WGH-k_vURuE" allowfullscreen loading="lazy"></iframe>
+        <div class="v-info">🎯 Aprende a crear tablas dinámicas desde cero — <em>Daxus Latam</em></div>
+      </div>
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/Mh93eaKbkkw" allowfullscreen loading="lazy"></iframe>
+        <div class="v-info">🤖 Tablas Dinámicas + IA desde Cero — <em>SMARTpro Academy</em></div>
+      </div>
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/tN6_ZEaqYBo" allowfullscreen loading="lazy"></iframe>
+        <div class="v-info">🔥 Curso COMPLETO de Tablas Dinámicas GRATIS</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FLASHCARDS -->
+<section id="flashcards">
+  <div class="container">
+    <h2 class="section-title"><span class="icon">🃏</span> Flashcards</h2>
+    <p style="margin-bottom:24px">Haz clic en cada tarjeta para ver la respuesta. ¡Pon a prueba tu memoria!</p>
+    <div class="flashcard-container" id="flashcardContainer"></div>
+  </div>
+</section>
+
+<!-- QUIZ -->
+<section id="quiz" style="background:white">
+  <div class="container">
+    <h2 class="section-title"><span class="icon">🧪</span> Cuestionario</h2>
+    <p style="margin-bottom:24px">Selecciona la respuesta correcta para cada pregunta.</p>
+    <div id="quizContainer"></div>
+    <div style="text-align:center;margin-top:16px">
+      <button class="btn btn-primary btn-quiz" onclick="checkQuiz()">✅ Calificar</button>
+      <button class="btn btn-outline btn-quiz" onclick="resetQuiz()" style="margin-left:8px">🔄 Reintentar</button>
+    </div>
+    <div id="quizScore" style="text-align:center;font-size:1.3rem;font-weight:700;margin-top:16px;color:var(--primary)"></div>
+  </div>
+</section>
+
+<!-- BIBLIOGRAFÍA -->
+<section id="bibliografia">
+  <div class="container">
+    <h2 class="section-title"><span class="icon">📚</span> Bibliografía</h2>
+    <div class="card">
+      <div class="bib-entry">
+        <span class="tag yt">YouTube</span>
+        Saber Programas. (2024). <em>⭐ tablas dinámicas en excel ⭐ de cero a experto</em> [Video]. YouTube.
+        <a href="https://www.youtube.com/watch?v=6YOsIVH0STg" target="_blank">https://www.youtube.com/watch?v=6YOsIVH0STg</a>
+      </div>
+      <div class="bib-entry">
+        <span class="tag yt">YouTube</span>
+        Daxus Latam. (2025). <em>🎯 aprende a crear tablas dinámicas desde cero (con ejemplos)</em> [Video]. YouTube.
+        <a href="https://www.youtube.com/watch?v=WGH-k_vURuE" target="_blank">https://www.youtube.com/watch?v=WGH-k_vURuE</a>
+      </div>
+      <div class="bib-entry">
+        <span class="tag yt">YouTube</span>
+        SMARTpro Academy. (s.f.). <em>Cómo hacer tablas dinámicas en excel + ia desde cero</em> [Video]. YouTube.
+        <a href="https://www.youtube.com/watch?v=Mh93eaKbkkw" target="_blank">https://www.youtube.com/watch?v=Mh93eaKbkkw</a>
+      </div>
+      <div class="bib-entry">
+        <span class="tag yt">YouTube</span>
+        El Tío Tech. (2025). <em>Domina las tablas dinámicas en excel desde cero</em> [Video]. YouTube.
+        <a href="https://www.youtube.com/watch?v=tN6_ZEaqYBo" target="_blank">https://www.youtube.com/watch?v=tN6_ZEaqYBo</a>
+      </div>
+      <div class="bib-entry">
+        <span class="tag web">Web</span>
+        Microsoft. (s.f.). <em>Crear una tabla dinámica para analizar datos de una hoja de cálculo</em>. Microsoft Support.
+        <a href="https://support.microsoft.com/es-es/office/crear-una-tabla-din%C3%A1mica-para-analizar-datos-de-una-hoja-de-c%C3%A1lculo-a9a84538-bfe9-40a9-a8e9-f99134456576" target="_blank">https://support.microsoft.com/es-es/office/crear-una-tabla-din%C3%A1mica-para-analizar-datos-de-una-hoja-de-c%C3%A1lculo-a9a84538-bfe9-40a9-a8e9-f99134456576</a>
+      </div>
+      <div class="bib-entry">
+        <span class="tag web">Web</span>
+        Excel Total. (2021). <em>Tablas dinámicas en excel (tutorial completo)</em>. Excel Total.
+        <a href="https://exceltotal.com/tablas-dinamicas-en-excel" target="_blank">https://exceltotal.com/tablas-dinamicas-en-excel</a>
+      </div>
+      <div class="bib-entry">
+        <span class="tag web">Web</span>
+        Ninja Excel. (2024). <em>Cómo hacer tablas dinámicas en excel: paso a paso</em>. Ninja Excel.
+        <a href="https://www.ninjaexcel.com/excel-en-el-trabajo/tablas-dinamicas" target="_blank">https://www.ninjaexcel.com/excel-en-el-trabajo/tablas-dinamicas</a>
+      </div>
+      <div class="bib-entry">
+        <span class="tag web">Web</span>
+        El Tío Tech. (2021). <em>6 ejercicios de tablas dinámicas para practicar</em>. El Tío Tech.
+        <a href="https://eltiotech.com/6-ejercicios-tablas-dinamicas" target="_blank">https://eltiotech.com/6-ejercicios-tablas-dinamicas</a>
+      </div>
+      <div class="bib-entry">
+        <span class="tag txt">Texto</span>
+        Gelabert Fernández, R. (2026). <em>Fuentes originales del cuaderno: conceptos básicos, tutorial práctico, técnicas avanzadas, gráficos dinámicos, errores comunes</em> [Material inédito]. Universidad Autónoma del Carmen.
+      </div>
+      <div class="bib-entry">
+        <span class="tag pdf">PDF</span>
+        La Quinta Dimensión. (s.f.). <em>Tablas dinámicas</em> [Documento PDF]. Incluido en el cuaderno de NotebookLM.
+      </div>
+      <div class="bib-entry">
+        <span class="tag web">Web</span>
+        Aprender21. (2026). <em>Tablas dinámicas en excel: guía paso a paso</em>. Aprender21.
+        <a href="https://www.aprender21.com/blog/excel-tablas-dinamicas-guia" target="_blank">https://www.aprender21.com/blog/excel-tablas-dinamicas-guia</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NOTEBOOKLM -->
+<section id="notebooklm" style="background:white">
+  <div class="container">
+    <h2 class="section-title"><span class="icon">🤖</span> Cuaderno Interactivo</h2>
+    <div class="notebook-banner">
+      <h3>Accede al cuaderno completo en NotebookLM</h3>
+      <p>Explora todas las fuentes, haz preguntas a la IA, genera nuevos materiales y profundiza en cualquier tema.</p>
+      <a href="https://notebooklm.google.com/notebook/4998a49c-e05e-4258-8f06-9fef719f55e1" target="_blank" class="btn">Abrir en NotebookLM →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <p>© 2026 Rolando Gelabert Fernández — Universidad Autónoma del Carmen</p>
+    <p style="margin-top:4px;opacity:.7">Verificado digitalmente — Todos los derechos reservados</p>
+  </div>
+</footer>
+
+<!-- SHA-256: 77D04E7D33A6F11B1A99D46E3952366B97F19B35C254B9C0EF2B2F1555706EFB -->
+
+<script>
+// ===== FLASHCARDS =====
+const Flashcards = [
+  { q: "¿Qué es una tabla dinámica?", a: "Herramienta de Excel que resume, analiza y presenta grandes volúmenes de datos de forma interactiva." },
+  { q: "¿Cuáles son las 4 áreas de una tabla dinámica?", a: "Filas, Columnas, Valores y Filtros." },
+  { q: "¿Qué atajo crea una Tabla de Excel?", a: "Ctrl + T" },
+  { q: "¿Qué atajo inserta una tabla dinámica?", a: "Alt + N + V (en Excel en español)" },
+  { q: "¿Qué tipo de datos va en el área Valores?", a: "Datos numéricos que se resumen (suma, promedio, conteo)." },
+  { q: "¿Qué ventaja tiene usar una Tabla de Excel como origen?", a: "La tabla dinámica se actualiza automáticamente al agregar filas." },
+  { q: "¿Para qué sirve una segmentación?", a: "Filtrar datos de forma visual con botones interactivos." },
+  { q: "¿Qué es un gráfico dinámico?", a: "Un gráfico vinculado a una tabla dinámica que se actualiza con ella." },
+  { q: "¿Cómo se actualiza una tabla dinámica?", a: "Clic derecho → Actualizar o tecla Alt + F5." },
+];
+
+const fcContainer = document.getElementById('flashcardContainer');
+Flashcards.forEach((fc, i) => {
+  const div = document.createElement('div');
+  div.className = 'flashcard';
+  div.innerHTML = `<div class="flashcard-inner"><div class="flashcard-front">${fc.q}</div><div class="flashcard-back">${fc.a}</div></div>`;
+  div.addEventListener('click', () => div.classList.toggle('flipped'));
+  fcContainer.appendChild(div);
+});
+
+// ===== QUIZ =====
+const QuizData = [
+  { q: "¿Cuál de las siguientes NO es un área de una tabla dinámica?",
+    opts: ["Filas", "Valores", "Gráficos", "Filtros"],
+    ans: 2 },
+  { q: "¿Qué tecla se usa para crear rápidamente una Tabla de Excel?",
+    opts: ["Ctrl + T", "Ctrl + P", "Alt + F4", "Ctrl + V"],
+    ans: 0 },
+  { q: "¿Qué tipo de campo se arrastra al área de Valores?",
+    opts: ["Texto", "Fechas", "Números", "Nombres"],
+    ans: 2 },
+  { q: "¿Para qué sirve una segmentación?",
+    opts: ["Sumar datos", "Filtrar visualmente", "Crear gráficos", "Ordenar alfabéticamente"],
+    ans: 1 },
+  { q: "¿Qué ocurre al modificar los datos de origen de una tabla dinámica?",
+    opts: ["Se actualiza sola al instante", "Hay que actualizarla manualmente", "Se borra la tabla", "No se puede modificar"],
+    ans: 1 },
+];
+
+let quizAnswers = [];
+const qContainer = document.getElementById('quizContainer');
+
+QuizData.forEach((item, qi) => {
+  const div = document.createElement('div');
+  div.className = 'quiz-question';
+  div.id = `q${qi}`;
+  let html = `<h4>${qi+1}. ${item.q}</h4>`;
+  item.opts.forEach((opt, oi) => {
+    html += `<button class="quiz-option" data-qi="${qi}" data-oi="${oi}" onclick="selectOption(this, ${qi}, ${oi})">${opt}</button>`;
+  });
+  html += `<div class="quiz-result" id="qr${qi}"></div>`;
+  div.innerHTML = html;
+  qContainer.appendChild(div);
+  quizAnswers[qi] = -1;
+});
+
+function selectOption(el, qi, oi) {
+  const parent = document.getElementById(`q${qi}`);
+  parent.querySelectorAll('.quiz-option').forEach(b => b.classList.remove('selected'));
+  el.classList.add('selected');
+  quizAnswers[qi] = oi;
+}
+
+function checkQuiz() {
+  let correct = 0;
+  QuizData.forEach((item, qi) => {
+    const result = document.getElementById(`qr${qi}`);
+    const options = document.querySelectorAll(`#q${qi} .quiz-option`);
+    options.forEach(b => { b.classList.remove('correct','wrong'); });
+    if (quizAnswers[qi] === -1) {
+      result.innerHTML = '❌ No has seleccionado una respuesta.';
+      result.style.color = '#dc3545';
+    } else if (quizAnswers[qi] === item.ans) {
+      options[quizAnswers[qi]].classList.add('correct');
+      result.innerHTML = '✅ ¡Correcto!';
+      result.style.color = '#28a745';
+      correct++;
+    } else {
+      options[quizAnswers[qi]].classList.add('wrong');
+      options[item.ans].classList.add('correct');
+      result.innerHTML = `❌ Incorrecto. La respuesta correcta es: ${item.opts[item.ans]}`;
+      result.style.color = '#dc3545';
+    }
+  });
+  document.getElementById('quizScore').textContent = `Puntaje: ${correct} de ${QuizData.length} (${Math.round(correct/QuizData.length*100)}%)`;
+}
+
+function resetQuiz() {
+  quizAnswers.fill(-1);
+  QuizData.forEach((_, qi) => {
+    document.querySelectorAll(`#q${qi} .quiz-option`).forEach(b => b.classList.remove('selected','correct','wrong'));
+    document.getElementById(`qr${qi}`).textContent = '';
+  });
+  document.getElementById('quizScore').textContent = '';
+}
+
+// ===== NAV HIGHLIGHT =====
+document.querySelectorAll('nav a').forEach(a => {
+  a.addEventListener('click', function() {
+    document.querySelectorAll('nav a').forEach(x => x.classList.remove('active'));
+    this.classList.add('active');
+  });
+});
+</script>
+</body>
+</html>
