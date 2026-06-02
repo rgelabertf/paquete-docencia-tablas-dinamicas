@@ -4,35 +4,64 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>OVA - Tablas Dinámicas en Excel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
-    --primary: #1d6f42;
-    --primary-light: #28a745;
-    --primary-dark: #145530;
-    --accent: #ffc107;
-    --bg: #f8f9fa;
-    --card-bg: #ffffff;
-    --text: #212529;
-    --text-muted: #6c757d;
-    --border: #dee2e6;
+    --primary-h: 144; --primary-s: 59%; --primary-l: 27%;
+    --primary: hsl(var(--primary-h), var(--primary-s), var(--primary-l));
+    --primary-light: hsl(var(--primary-h), 58%, 46%);
+    --primary-dark: hsl(var(--primary-h), 60%, 21%);
+    --accent-h: 45; --accent-s: 100%; --accent-l: 50%;
+    --accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+    --bg: hsl(210, 17%, 98%);
+    --card-bg: hsl(0, 0%, 100%);
+    --text: hsl(210, 10%, 23%);
+    --text-muted: hsl(208, 7%, 46%);
+    --border: hsl(210, 11%, 87%);
     --radius: 12px;
-    --shadow: 0 2px 12px rgba(0,0,0,.08);
+    --radius-sm: 8px;
+    --shadow: 0 2px 12px hsla(0, 0%, 0%, 0.08);
+    --shadow-lg: 0 8px 32px hsla(0, 0%, 0%, 0.12);
+    --transition: 0.2s ease;
+    --font: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    --space-2: 4px; --space-3: 8px; --space-4: 12px; --space-5: 16px;
+    --space-6: 20px; --space-7: 24px; --space-8: 28px; --space-9: 32px;
+    --space-10: 40px; --space-12: 48px; --space-15: 60px; --space-20: 80px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --primary-h: 144; --primary-s: 50%; --primary-l: 45%;
+      --primary-light: hsl(var(--primary-h), 55%, 55%);
+      --primary-dark: hsl(var(--primary-h), 55%, 30%);
+      --accent-h: 45; --accent-s: 95%; --accent-l: 55%;
+      --accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+      --bg: hsl(210, 10%, 12%);
+      --card-bg: hsl(210, 10%, 17%);
+      --text: hsl(210, 10%, 90%);
+      --text-muted: hsl(208, 7%, 65%);
+      --border: hsl(210, 8%, 28%);
+      --shadow: 0 2px 12px hsla(0, 0%, 0%, 0.3);
+      --shadow-lg: 0 8px 32px hsla(0, 0%, 0%, 0.4);
+    }
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
-    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-family: var(--font);
     background: var(--bg);
     color: var(--text);
     line-height: 1.6;
     scroll-behavior: smooth;
+    scroll-padding-top: 60px;
   }
-  .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 var(--space-7); }
 
   /* Hero */
   .hero {
     background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
     color: white;
-    padding: 80px 0 60px;
+    padding: var(--space-20) 0 var(--space-15);
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -43,27 +72,27 @@
     bottom: -2px;
     left: 0;
     right: 0;
-    height: 40px;
+    height: var(--space-10);
     background: var(--bg);
     border-radius: 50% 50% 0 0;
   }
-  .hero h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 12px; letter-spacing: -.5px; }
-  .hero p { font-size: 1.2rem; opacity: .9; max-width: 700px; margin: 0 auto 8px; }
+  .hero h1 { font-size: clamp(1.8rem, 4.5vw, 2.8rem); font-weight: 800; margin-bottom: var(--space-4); letter-spacing: -.5px; }
+  .hero p { font-size: clamp(1rem, 2vw, 1.2rem); opacity: .9; max-width: 700px; margin: 0 auto var(--space-3); }
   .hero .badge {
     display: inline-block;
     background: var(--accent);
     color: var(--primary-dark);
-    padding: 4px 16px;
+    padding: var(--space-2) var(--space-5);
     border-radius: 20px;
     font-weight: 600;
     font-size: .9rem;
-    margin-top: 16px;
+    margin-top: var(--space-5);
   }
   .hero .badge i { font-style: normal; }
 
   /* Nav */
   nav {
-    background: white;
+    background: var(--card-bg);
     border-bottom: 1px solid var(--border);
     position: sticky;
     top: 0;
@@ -72,9 +101,9 @@
   }
   nav ul {
     display: flex;
-    gap: 4px;
+    gap: var(--space-2);
     list-style: none;
-    padding: 0 24px;
+    padding: 0 var(--space-7);
     max-width: 1100px;
     margin: 0 auto;
     overflow-x: auto;
@@ -83,31 +112,38 @@
   nav ul::-webkit-scrollbar { display: none; }
   nav a {
     display: block;
-    padding: 14px 16px;
+    padding: var(--space-5);
     text-decoration: none;
     color: var(--text-muted);
     font-weight: 500;
     font-size: .9rem;
     white-space: nowrap;
     border-bottom: 3px solid transparent;
-    transition: all .2s;
+    transition: color var(--transition), border-color var(--transition);
+    min-height: 44px;
+    min-width: 44px;
   }
   nav a:hover, nav a.active {
     color: var(--primary);
     border-bottom-color: var(--primary);
   }
+  nav a:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: -4px;
+    border-radius: var(--radius-sm);
+  }
 
   /* Sections */
-  section { padding: 60px 0; }
-  section:nth-child(even) { background: white; }
+  section { padding: var(--space-15) 0; }
+  section:nth-child(even) { background: var(--card-bg); }
   .section-title {
     font-size: 1.8rem;
     font-weight: 700;
     color: var(--primary-dark);
-    margin-bottom: 32px;
+    margin-bottom: var(--space-9);
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: var(--space-4);
   }
   .section-title .icon { font-size: 2rem; }
 
@@ -116,61 +152,101 @@
     background: var(--card-bg);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
-    padding: 28px;
-    margin-bottom: 24px;
+    padding: var(--space-8);
+    margin-bottom: var(--space-7);
     border: 1px solid var(--border);
+    transition: box-shadow var(--transition), transform var(--transition);
   }
-  .card h3 { color: var(--primary); margin-bottom: 12px; font-size: 1.2rem; }
+  .card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+  }
+  .card h3 { color: var(--primary); margin-bottom: var(--space-4); font-size: 1.2rem; }
   .card p, .card li { color: var(--text); }
 
   /* Grid */
-  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-7); }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: var(--space-7); }
   @media (max-width: 768px) {
     .grid-2, .grid-3 { grid-template-columns: 1fr; }
     .hero h1 { font-size: 1.8rem; }
-    nav a { padding: 12px; font-size: .8rem; }
+    nav a { padding: var(--space-4); font-size: .8rem; }
   }
 
   /* Buttons */
   .btn {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    padding: 10px 24px;
-    border-radius: 8px;
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-7);
+    border-radius: var(--radius-sm);
     text-decoration: none;
     font-weight: 600;
     font-size: .95rem;
-    transition: all .2s;
+    transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
     cursor: pointer;
     border: none;
+    min-height: 44px;
   }
   .btn-primary { background: var(--primary); color: white; }
-  .btn-primary:hover { background: var(--primary-dark); transform: translateY(-1px); }
+  .btn-primary:hover { background: var(--primary-dark); transform: translateY(-1px); box-shadow: 0 4px 12px hsla(var(--primary-h), var(--primary-s), var(--primary-l), 0.3); }
+  .btn-primary:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
   .btn-outline { background: transparent; color: var(--primary); border: 2px solid var(--primary); }
   .btn-outline:hover { background: var(--primary); color: white; }
+  .btn-outline:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
   .btn-accent { background: var(--accent); color: var(--primary-dark); }
-  .btn-accent:hover { background: #e0a800; }
+  .btn-accent:hover { background: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 8%)); transform: translateY(-1px); }
+  .btn-accent:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .btn:active { transform: translateY(0); }
+  .btn-sm { font-size: .85rem; padding: var(--space-2) var(--space-5); }
+  .text-center { text-align: center; }
+  .fw-semibold { font-weight: 600; }
+  .skip-link {
+    position: absolute;
+    top: -999px;
+    left: 0;
+    background: var(--primary);
+    color: white;
+    padding: var(--space-3) var(--space-5);
+    z-index: 1000;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .skip-link:focus {
+    top: 0;
+    outline: 2px solid var(--accent);
+  }
 
   /* Video embed */
-  .video-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .video-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6); }
   @media (max-width: 768px) { .video-grid { grid-template-columns: 1fr; } }
   .video-card {
     border-radius: var(--radius);
     overflow: hidden;
     box-shadow: var(--shadow);
     background: #000;
+    transition: box-shadow var(--transition), transform var(--transition);
   }
+  .video-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
   .video-card iframe {
     width: 100%;
     aspect-ratio: 16/9;
     border: none;
     display: block;
   }
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; }
+  thead { background: var(--primary); color: white; }
+  th, td { padding: var(--space-4) var(--space-5); text-align: left; }
+  th:first-child { border-radius: var(--radius-sm) 0 0 0; }
+  th:last-child { border-radius: 0 var(--radius-sm) 0 0; }
+  tbody tr { border-bottom: 1px solid var(--border); }
+  tbody tr:last-child { border-bottom: none; }
+  tbody tr:nth-child(even) { background: hsla(0, 0%, 0%, 0.02); }
+
   .video-card .v-info {
-    background: white;
-    padding: 12px 16px;
+    background: var(--card-bg);
+    padding: var(--space-4) var(--space-5);
     font-size: .9rem;
     font-weight: 500;
   }
@@ -189,7 +265,7 @@
   .flashcard-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: var(--space-4);
     justify-content: center;
   }
   .flashcard {
@@ -198,11 +274,12 @@
     perspective: 600px;
     cursor: pointer;
   }
+  .flashcard:focus-visible { outline: 2px solid var(--primary); border-radius: var(--radius); }
   .flashcard-inner {
     position: relative;
     width: 100%;
     height: 100%;
-    transition: transform .5s;
+    transition: transform .5s ease;
     transform-style: preserve-3d;
   }
   .flashcard.flipped .flashcard-inner { transform: rotateY(180deg); }
@@ -213,7 +290,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 16px;
+    padding: var(--space-5);
     text-align: center;
     font-size: .9rem;
     font-weight: 600;
@@ -235,39 +312,42 @@
     background: var(--card-bg);
     border: 2px solid var(--border);
     border-radius: var(--radius);
-    padding: 20px 24px;
-    margin-bottom: 16px;
+    padding: var(--space-6) var(--space-7);
+    margin-bottom: var(--space-5);
   }
-  .quiz-question h4 { margin-bottom: 12px; color: var(--primary-dark); }
+  .quiz-question h4 { margin-bottom: var(--space-4); color: var(--primary-dark); }
   .quiz-option {
     display: block;
     width: 100%;
     text-align: left;
-    padding: 10px 16px;
+    padding: var(--space-3) var(--space-5);
     margin: 6px 0;
     border: 2px solid var(--border);
-    border-radius: 8px;
-    background: white;
+    border-radius: var(--radius-sm);
+    background: var(--card-bg);
     cursor: pointer;
     font-size: .95rem;
-    transition: all .2s;
+    transition: border-color var(--transition), background var(--transition);
+    min-height: 44px;
   }
-  .quiz-option:hover { border-color: var(--primary-light); background: #f0fff0; }
-  .quiz-option.selected { border-color: var(--primary); background: #e8f5e9; }
-  .quiz-option.correct { border-color: #28a745; background: #d4edda; }
-  .quiz-option.wrong { border-color: #dc3545; background: #f8d7da; }
-  .quiz-result { margin-top: 8px; font-weight: 600; }
-  .btn-quiz { margin-top: 16px; }
+  .quiz-option:hover { border-color: var(--primary-light); background: hsla(var(--primary-h), 50%, 95%, 0.5); }
+  .quiz-option:focus-visible { outline: 2px solid var(--primary); outline-offset: 1px; }
+  .quiz-option.selected { border-color: var(--primary); background: hsla(var(--primary-h), 50%, 93%, 0.5); }
+  .quiz-option.correct { border-color: hsl(134, 61%, 40%); background: hsla(134, 50%, 85%, 0.5); }
+  .quiz-option.wrong { border-color: hsl(354, 70%, 54%); background: hsla(354, 70%, 90%, 0.5); }
+  .quiz-result { margin-top: var(--space-3); font-weight: 600; }
+  .btn-quiz { margin-top: var(--space-5); }
 
   /* Bibliography — APA 7th edition */
   .bib-entry {
-    padding: 12px 0 12px 32px;
+    padding: var(--space-4) 0 var(--space-4) var(--space-9);
     text-indent: -32px;
     border-bottom: 1px solid var(--border);
     font-size: .95rem;
   }
   .bib-entry:last-child { border-bottom: none; }
   .bib-entry a { color: var(--primary); }
+  .bib-entry a:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; border-radius: 2px; }
   .bib-entry .tag {
     display: inline-block;
     background: var(--primary-light);
@@ -275,55 +355,58 @@
     font-size: .75rem;
     padding: 2px 10px;
     border-radius: 12px;
-    margin-right: 8px;
+    margin-right: var(--space-3);
   }
-  .bib-entry .tag.yt { background: #ff0000; }
-  .bib-entry .tag.web { background: #0d6efd; }
-  .bib-entry .tag.pdf { background: #dc3545; }
-  .bib-entry .tag.txt { background: #6f42c1; }
+  .bib-entry .tag.yt { background: hsl(0, 100%, 50%); }
+  .bib-entry .tag.web { background: hsl(214, 100%, 47%); }
+  .bib-entry .tag.pdf { background: hsl(354, 70%, 54%); }
+  .bib-entry .tag.txt { background: hsl(261, 45%, 51%); }
 
   /* Footer */
   footer {
     background: var(--primary-dark);
-    color: rgba(255,255,255,.8);
+    color: hsla(0, 0%, 100%, 0.8);
     text-align: center;
-    padding: 32px 24px;
+    padding: var(--space-9) var(--space-7);
     font-size: .9rem;
   }
   footer a { color: var(--accent); }
+  footer a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
 
   /* NotebookLM banner */
   .notebook-banner {
-    background: linear-gradient(135deg, #4285f4, #34a853);
+    background: linear-gradient(135deg, hsl(214, 100%, 47%), hsl(134, 61%, 40%));
     color: white;
     border-radius: var(--radius);
-    padding: 32px;
+    padding: var(--space-9);
     text-align: center;
   }
-  .notebook-banner h3 { color: white; margin-bottom: 8px; }
-  .notebook-banner p { opacity: .9; margin-bottom: 16px; }
-  .notebook-banner .btn { background: white; color: #1a73e8; }
-  .notebook-banner .btn:hover { background: #f0f0f0; }
+  .notebook-banner h3 { color: white; margin-bottom: var(--space-3); }
+  .notebook-banner p { opacity: .9; margin-bottom: var(--space-5); }
+  .notebook-banner .btn { background: white; color: hsl(214, 100%, 47%); }
+  .notebook-banner .btn:hover { background: hsla(0, 0%, 94%, 1); }
+  .notebook-banner .btn:focus-visible { outline: 2px solid white; outline-offset: 2px; }
 </style>
 </head>
 <body>
+<a href="#guia" class="skip-link">Saltar al contenido principal</a>
 
 <!-- HERO -->
-<header class="hero">
+<header class="hero" role="banner">
   <div class="container">
-    <span class="badge"><i>📘</i> Objeto Virtual de Aprendizaje</span>
+    <span class="badge"><i aria-hidden="true">📘</i> Objeto Virtual de Aprendizaje</span>
     <h1>Tablas Dinámicas en Excel</h1>
     <p>Guía completa desde cero para estudiantes de nivel medio superior.<br>Aprende a analizar datos, crear informes y tomar decisiones.</p>
-    <div style="margin-top:24px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-      <a href="#guia" class="btn btn-accent">📄 Guía de Estudio</a>
-      <a href="#videos" class="btn btn-outline" style="color:white;border-color:rgba(255,255,255,.6)">🎬 Videos</a>
-      <a href="#quiz" class="btn btn-outline" style="color:white;border-color:rgba(255,255,255,.6)">🧪 Evaluación</a>
+    <div style="margin-top:var(--space-7);display:flex;gap:var(--space-4);justify-content:center;flex-wrap:wrap">
+      <a href="#guia" class="btn btn-accent"><span aria-hidden="true">📄</span> Guía de Estudio</a>
+      <a href="#videos" class="btn btn-outline" style="color:white;border-color:hsla(0,0%,100%,.6)"><span aria-hidden="true">🎬</span> Videos</a>
+      <a href="#quiz" class="btn btn-outline" style="color:white;border-color:hsla(0,0%,100%,.6)"><span aria-hidden="true">🧪</span> Evaluación</a>
     </div>
   </div>
 </header>
 
 <!-- NAV -->
-<nav>
+<nav aria-label="Navegación principal">
   <ul>
     <li><a href="#guia">Guía</a></li>
     <li><a href="#slides">Presentación</a></li>
@@ -339,9 +422,9 @@
 </nav>
 
 <!-- GUÍA DE ESTUDIO -->
-<section id="guia">
+<section id="guia" aria-label="Guía de Estudio">
   <div class="container">
-    <h2 class="section-title"><span class="icon">📄</span> Guía de Estudio</h2>
+    <h2 class="section-title"><span class="icon" aria-hidden="true">📄</span> Guía de Estudio</h2>
     <div class="card">
       <p style="margin-bottom:16px;font-size:1.05rem">
         Esta guía cubre todos los conceptos fundamentales para dominar las tablas dinámicas en Excel,
@@ -401,9 +484,9 @@
 </section>
 
 <!-- SLIDE DECK -->
-<section id="slides" style="background:white">
+<section id="slides" aria-label="Presentación" style="background:var(--card-bg)">
   <div class="container">
-    <h2 class="section-title"><span class="icon">📊</span> Presentación</h2>
+    <h2 class="section-title"><span class="icon" aria-hidden="true">📊</span> Presentación</h2>
     <div class="card" style="text-align:center">
       <p style="margin-bottom:16px">Descarga la presentación en PDF con todos los temas del curso.</p>
       <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
@@ -415,9 +498,9 @@
 </section>
 
 <!-- INFOGRAFÍA -->
-<section id="infografia">
+<section id="infografia" aria-label="Infografía">
   <div class="container">
-    <h2 class="section-title"><span class="icon">🖼️</span> Infografía</h2>
+    <h2 class="section-title"><span class="icon" aria-hidden="true">🖼️</span> Infografía</h2>
     <div class="card" style="text-align:center">
       <p style="margin-bottom:20px">Visualización resumen con los conceptos clave de tablas dinámicas.</p>
       <img
@@ -431,9 +514,9 @@
 </section>
 
 <!-- PAQUETE PARA LA DOCENCIA -->
-<section id="paquete" style="background:white">
+<section id="paquete" aria-label="Paquete para la Docencia" style="background:var(--card-bg)">
   <div class="container">
-    <h2 class="section-title"><span class="icon">📦</span> Paquete para la Docencia</h2>
+    <h2 class="section-title"><span class="icon" aria-hidden="true">📦</span> Paquete para la Docencia</h2>
     <p style="margin-bottom:24px">Componentes del Paquete para la Docencia — Indicador ESDEPED 1.2.3 (40 pts). Cada componente está disponible como documento independiente para descarga.</p>
 
     <div class="grid-3">
@@ -442,7 +525,7 @@
         <h3>📋 Programa Sintético</h3>
         <p>5 unidades, 48 hrs total (16 teoría / 32 práctica), 4 créditos. Incluye competencias, contenidos, estrategias y evaluación.</p>
         <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
-          <a href="./programa-sintetico.md" target="_blank" class="btn btn-primary" style="font-size:.85rem;padding:6px 16px">📄 Descargar</a>
+          <a href="./programa-sintetico.md" target="_blank" class="btn btn-primary" style="font-size:.85rem;padding:6px 16px"><span aria-hidden="true">📄</span> Descargar</a>
         </div>
       </div>
 
@@ -450,8 +533,8 @@
         <h3>📅 Secuencias de Aprendizaje</h3>
         <p>4 secuencias por variante (Bioestadística y LyC). Cada una con apertura, desarrollo y cierre detallados.</p>
         <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
-          <a href="./secuencias-bio.md" target="_blank" class="btn btn-primary" style="font-size:.85rem;padding:6px 16px">📄 Bio</a>
-          <a href="./secuencias-lyc.md" target="_blank" class="btn btn-outline" style="font-size:.85rem;padding:6px 16px">📄 LyC</a>
+          <a href="./secuencias-bio.md" target="_blank" class="btn btn-primary" style="font-size:.85rem;padding:6px 16px"><span aria-hidden="true">📄</span> Bio</a>
+          <a href="./secuencias-lyc.md" target="_blank" class="btn btn-outline" style="font-size:.85rem;padding:6px 16px"><span aria-hidden="true">📄</span> LyC</a>
         </div>
       </div>
 
@@ -459,7 +542,7 @@
         <h3>📝 Instrumentos de Evaluación</h3>
         <p>Rúbrica proyecto final, lista de cotejo, examen escrito (10 preguntas), guía de observación y rúbrica de reporte.</p>
         <div style="margin-top:12px">
-          <a href="./instrumentos-evaluacion.md" target="_blank" class="btn btn-primary" style="font-size:.85rem;padding:6px 16px">📄 Descargar</a>
+          <a href="./instrumentos-evaluacion.md" target="_blank" class="btn btn-primary" style="font-size:.85rem;padding:6px 16px"><span aria-hidden="true">📄</span> Descargar</a>
         </div>
       </div>
 
@@ -467,7 +550,7 @@
         <h3>📓 Cuaderno de Trabajo</h3>
         <p>10 ejercicios progresivos (básico a avanzado) con espacios para respuestas, clave incluida. Portada, índice e introducción.</p>
         <div style="margin-top:12px">
-          <a href="./cuaderno-trabajo.md" target="_blank" class="btn btn-primary" style="font-size:.85rem;padding:6px 16px">📄 Descargar</a>
+          <a href="./cuaderno-trabajo.md" target="_blank" class="btn btn-primary" style="font-size:.85rem;padding:6px 16px"><span aria-hidden="true">📄</span> Descargar</a>
         </div>
       </div>
 
@@ -475,7 +558,7 @@
         <h3>📖 Antología Comentada</h3>
         <p>5 lecturas seleccionadas con valoración crítica del compilador. Incluye portada, índice e introducción.</p>
         <div style="margin-top:12px">
-          <a href="./antologia-comentada.md" target="_blank" class="btn btn-primary" style="font-size:.85rem;padding:6px 16px">📄 Descargar</a>
+          <a href="./antologia-comentada.md" target="_blank" class="btn btn-primary" style="font-size:.85rem;padding:6px 16px"><span aria-hidden="true">📄</span> Descargar</a>
         </div>
       </div>
 
@@ -483,7 +566,7 @@
         <h3>🔬 Manual de Prácticas</h3>
         <p>6 prácticas de laboratorio progresivas. Cada una con título, objetivo, fundamento teórico y procedimiento paso a paso.</p>
         <div style="margin-top:12px">
-          <a href="./manual-practicas.md" target="_blank" class="btn btn-primary" style="font-size:.85rem;padding:6px 16px">📄 Descargar</a>
+          <a href="./manual-practicas.md" target="_blank" class="btn btn-primary" style="font-size:.85rem;padding:6px 16px"><span aria-hidden="true">📄</span> Descargar</a>
         </div>
       </div>
 
@@ -532,8 +615,8 @@
         </tbody>
       </table>
       <div style="margin-top:12px;display:flex;gap:8px">
-        <a href="./secuencias-bio.md" target="_blank" class="btn btn-primary" style="font-size:.85rem;padding:6px 16px">📄 Variante Bioestadística</a>
-        <a href="./secuencias-lyc.md" target="_blank" class="btn btn-outline" style="font-size:.85rem;padding:6px 16px">📄 Variante Lenguaje y Comunicación</a>
+        <a href="./secuencias-bio.md" target="_blank" class="btn btn-primary" style="font-size:.85rem;padding:6px 16px"><span aria-hidden="true">📄</span> Variante Bioestadística</a>
+        <a href="./secuencias-lyc.md" target="_blank" class="btn btn-outline" style="font-size:.85rem;padding:6px 16px"><span aria-hidden="true">📄</span> Variante Lenguaje y Comunicación</a>
       </div>
     </div>
 
@@ -557,7 +640,7 @@
         </tbody>
       </table>
       <div style="margin-top:12px">
-        <a href="./instrumentos-evaluacion.md" target="_blank" class="btn btn-primary" style="font-size:.85rem;padding:6px 16px">📄 Descargar instrumentos completos</a>
+        <a href="./instrumentos-evaluacion.md" target="_blank" class="btn btn-primary" style="font-size:.85rem;padding:6px 16px"><span aria-hidden="true">📄</span> Descargar instrumentos completos</a>
       </div>
     </div>
 
@@ -565,34 +648,34 @@
 </section>
 
 <!-- FORMATOS DE APOYO -->
-<section id="formatos">
+<section id="formatos" aria-label="Formatos de Planeación">
   <div class="container">
-    <h2 class="section-title"><span class="icon">📋</span> Formatos de Planeación</h2>
+    <h2 class="section-title"><span class="icon" aria-hidden="true">📋</span> Formatos de Planeación</h2>
     <div class="card">
-      <p style="margin-bottom:16px">Formatos institucionales de planeación didáctica de la Universidad Autónoma del Carmen que describen el contenido, objetivos y estrategias del curso.</p>
-      <table style="width:100%;border-collapse:collapse">
+      <p>Formatos institucionales de planeación didáctica de la Universidad Autónoma del Carmen que describen el contenido, objetivos y estrategias del curso.</p>
+      <table>
         <thead>
-          <tr style="background:var(--primary);color:white">
-            <th style="padding:12px 16px;text-align:left;border-radius:8px 0 0 0">Formato</th>
-            <th style="padding:12px 16px;text-align:left">Descripción</th>
-            <th style="padding:12px 16px;text-align:center;border-radius:0 8px 0 0">Descargar</th>
+          <tr>
+            <th>Formato</th>
+            <th>Descripción</th>
+            <th class="text-center">Descargar</th>
           </tr>
         </thead>
         <tbody>
-          <tr style="border-bottom:1px solid var(--border)">
-            <td style="padding:12px 16px;font-weight:600">Planeación vS1</td>
-            <td style="padding:12px 16px">Formato de planeación didáctica — Sesión 1</td>
-            <td style="padding:12px 16px;text-align:center"><a href="./FormatoPlaneacion_BioestadisticavS1.pdf" target="_blank" class="btn btn-primary" style="font-size:.85rem;padding:6px 16px">📄 PDF</a></td>
-          </tr>
-          <tr style="border-bottom:1px solid var(--border)">
-            <td style="padding:12px 16px;font-weight:600">Planeación vS2</td>
-            <td style="padding:12px 16px">Formato de planeación didáctica — Sesión 2</td>
-            <td style="padding:12px 16px;text-align:center"><a href="./FormatoPlaneacion_BioestadisticavS2.pdf" target="_blank" class="btn btn-primary" style="font-size:.85rem;padding:6px 16px">📄 PDF</a></td>
+          <tr>
+            <td class="fw-semibold">Planeación vS1</td>
+            <td>Formato de planeación didáctica — Sesión 1</td>
+            <td class="text-center"><a href="./FormatoPlaneacion_BioestadisticavS1.pdf" target="_blank" class="btn btn-primary btn-sm">📄 PDF</a></td>
           </tr>
           <tr>
-            <td style="padding:12px 16px;font-weight:600">Planeación vS3</td>
-            <td style="padding:12px 16px">Formato de planeación didáctica — Sesión 3</td>
-            <td style="padding:12px 16px;text-align:center"><a href="./FormatoPlaneacion_BioestadisticavS3.pdf" target="_blank" class="btn btn-primary" style="font-size:.85rem;padding:6px 16px">📄 PDF</a></td>
+            <td class="fw-semibold">Planeación vS2</td>
+            <td>Formato de planeación didáctica — Sesión 2</td>
+            <td class="text-center"><a href="./FormatoPlaneacion_BioestadisticavS2.pdf" target="_blank" class="btn btn-primary btn-sm">📄 PDF</a></td>
+          </tr>
+          <tr>
+            <td class="fw-semibold">Planeación vS3</td>
+            <td>Formato de planeación didáctica — Sesión 3</td>
+            <td class="text-center"><a href="./FormatoPlaneacion_BioestadisticavS3.pdf" target="_blank" class="btn btn-primary btn-sm">📄 PDF</a></td>
           </tr>
         </tbody>
       </table>
@@ -601,9 +684,9 @@
 </section>
 
 <!-- VIDEOS -->
-<section id="videos" style="background:white">
+<section id="videos" aria-label="Videos Tutoriales" style="background:var(--card-bg)">
   <div class="container">
-    <h2 class="section-title"><span class="icon">🎬</span> Videos Tutoriales</h2>
+    <h2 class="section-title"><span class="icon" aria-hidden="true">🎬</span> Videos Tutoriales</h2>
     <p style="margin-bottom:24px">Cuatro videos en español cuidadosamente seleccionados para aprender desde cero hasta nivel avanzado.</p>
     <div class="video-grid">
       <div class="video-card">
@@ -616,7 +699,7 @@
       </div>
       <div class="video-card">
         <iframe src="https://www.youtube.com/embed/Mh93eaKbkkw" allowfullscreen loading="lazy"></iframe>
-        <div class="v-info">🤖 Tablas Dinámicas + IA desde Cero — <em>SMARTpro Academy</em></div>
+        <div class="v-info"><span aria-hidden="true">🤖</span> Tablas Dinámicas + IA desde Cero — <em>SMARTpro Academy</em></div>
       </div>
       <div class="video-card">
         <iframe src="https://www.youtube.com/embed/tN6_ZEaqYBo" allowfullscreen loading="lazy"></iframe>
@@ -627,18 +710,18 @@
 </section>
 
 <!-- FLASHCARDS -->
-<section id="flashcards">
+<section id="flashcards" aria-label="Flashcards">
   <div class="container">
-    <h2 class="section-title"><span class="icon">🃏</span> Flashcards</h2>
+    <h2 class="section-title"><span class="icon" aria-hidden="true">🃏</span> Flashcards</h2>
     <p style="margin-bottom:24px">Haz clic en cada tarjeta para ver la respuesta. ¡Pon a prueba tu memoria!</p>
     <div class="flashcard-container" id="flashcardContainer"></div>
   </div>
 </section>
 
 <!-- QUIZ -->
-<section id="quiz" style="background:white">
+<section id="quiz" aria-label="Cuestionario" style="background:var(--card-bg)">
   <div class="container">
-    <h2 class="section-title"><span class="icon">🧪</span> Cuestionario</h2>
+    <h2 class="section-title"><span class="icon" aria-hidden="true">🧪</span> Cuestionario</h2>
     <p style="margin-bottom:24px">Selecciona la respuesta correcta para cada pregunta.</p>
     <div id="quizContainer"></div>
     <div style="text-align:center;margin-top:16px">
@@ -650,9 +733,9 @@
 </section>
 
 <!-- BIBLIOGRAFÍA -->
-<section id="bibliografia">
+<section id="bibliografia" aria-label="Bibliografía">
   <div class="container">
-    <h2 class="section-title"><span class="icon">📚</span> Bibliografía</h2>
+    <h2 class="section-title"><span class="icon" aria-hidden="true">📚</span> Bibliografía</h2>
     <div class="card">
       <div class="bib-entry">
         <span class="tag yt">YouTube</span>
@@ -713,9 +796,9 @@
 </section>
 
 <!-- NOTEBOOKLM -->
-<section id="notebooklm" style="background:white">
+<section id="notebooklm" aria-label="Cuaderno Interactivo" style="background:var(--card-bg)">
   <div class="container">
-    <h2 class="section-title"><span class="icon">🤖</span> Cuaderno Interactivo</h2>
+    <h2 class="section-title"><span class="icon" aria-hidden="true">🤖</span> Cuaderno Interactivo</h2>
     <div class="notebook-banner">
       <h3>Accede al cuaderno completo en NotebookLM</h3>
       <p>Explora todas las fuentes, haz preguntas a la IA, genera nuevos materiales y profundiza en cualquier tema.</p>
@@ -754,6 +837,11 @@ Flashcards.forEach((fc, i) => {
   div.className = 'flashcard';
   div.innerHTML = `<div class="flashcard-inner"><div class="flashcard-front">${fc.q}</div><div class="flashcard-back">${fc.a}</div></div>`;
   div.addEventListener('click', () => div.classList.toggle('flipped'));
+  div.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); div.classList.toggle('flipped'); }
+  });
+  div.setAttribute('tabindex', '0');
+  div.setAttribute('role', 'button');
   fcContainer.appendChild(div);
 });
 
@@ -785,10 +873,15 @@ QuizData.forEach((item, qi) => {
   div.id = `q${qi}`;
   let html = `<h4>${qi+1}. ${item.q}</h4>`;
   item.opts.forEach((opt, oi) => {
-    html += `<button class="quiz-option" data-qi="${qi}" data-oi="${oi}" onclick="selectOption(this, ${qi}, ${oi})">${opt}</button>`;
+    html += `<button class="quiz-option" data-qi="${qi}" data-oi="${oi}">${opt}</button>`;
   });
   html += `<div class="quiz-result" id="qr${qi}"></div>`;
   div.innerHTML = html;
+  div.querySelectorAll('.quiz-option').forEach(btn => {
+    btn.addEventListener('click', function() {
+      selectOption(this, parseInt(this.dataset.qi), parseInt(this.dataset.oi));
+    });
+  });
   qContainer.appendChild(div);
   quizAnswers[qi] = -1;
 });
