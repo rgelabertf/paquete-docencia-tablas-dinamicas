@@ -9,10 +9,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
-    --primary-h: 144; --primary-s: 59%; --primary-l: 27%;
+    --primary-h: 200; --primary-s: 58%; --primary-l: 30%;
     --primary: hsl(var(--primary-h), var(--primary-s), var(--primary-l));
-    --primary-light: hsl(var(--primary-h), 58%, 46%);
-    --primary-dark: hsl(var(--primary-h), 60%, 21%);
+    --primary-light: hsl(var(--primary-h), 55%, 48%);
+    --primary-dark: hsl(var(--primary-h), 55%, 22%);
     --accent-h: 45; --accent-s: 100%; --accent-l: 50%;
     --accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
     --bg: hsl(210, 17%, 98%);
@@ -32,7 +32,7 @@
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --primary-h: 144; --primary-s: 50%; --primary-l: 45%;
+      --primary-h: 200; --primary-s: 50%; --primary-l: 45%;
       --primary-light: hsl(var(--primary-h), 55%, 55%);
       --primary-dark: hsl(var(--primary-h), 55%, 30%);
       --accent-h: 45; --accent-s: 95%; --accent-l: 55%;
@@ -60,7 +60,7 @@
   /* Hero */
   .hero {
     background:
-      linear-gradient(135deg, hsla(144, 59%, 27%, 0.85) 0%, hsla(144, 60%, 21%, 0.9) 100%),
+      linear-gradient(135deg, hsla(200, 58%, 30%, 0.85) 0%, hsla(200, 55%, 22%, 0.9) 100%),
       url('./hero-bg.jpg') center/cover no-repeat fixed;
     color: white;
     padding: var(--space-20) 0 var(--space-15);
