@@ -5,11 +5,11 @@
 | Campo | Detalle |
 |-------|---------|
 | **Institución** | Universidad Autónoma del Carmen (UNACAR) |
-| **Unidad Académica** | Escuela Preparatoria / Nivel Medio Superior |
-| **Asignatura** | Tablas Dinámicas en Excel |
-| **Semestre / Ciclo** | 2026 |
-| **Elaboró** | [Nombre del docente] |
-| **Fecha de elaboración** | [Fecha] |
+| **Unidad Académica** | Programa Educativo: Biología Marina |
+| **Asignatura** | Bioestadística |
+| **Semestre / Ciclo** | Segundo Semestre — Febrero-Junio 2026 |
+| **Elaboró** | Dr. Rolando Gelabert Fernández |
+| **Fecha de elaboración** | Junio 2026 |
 | **Tipo de paquete** | Paquete para la Docencia — ESDEPED Indicador 1.2.3 |
 
 ---
@@ -20,11 +20,11 @@
 
 | Criterio | Excelente (25 pts) | Satisfactorio (20 pts) | Básico (15 pts) | Insuficiente (10 pts) |
 |----------|-------------------|----------------------|-----------------|----------------------|
-| **Preparación y limpieza de datos** | Los datos de origen están perfectamente estructurados: encabezados en fila 1, sin celdas combinadas, sin filas/columnas vacías, convertidos a Tabla de Excel (Ctrl+T) con formato consistente. | Los datos tienen encabezados y están mayormente limpios; puede haber 1 o 2 detalles menores de formato. | Los datos tienen algunos errores de estructura (celdas combinadas puntuales, filas en blanco) que afectan parcialmente el análisis. | Los datos no están preparados correctamente: sin encabezados, con celdas combinadas o datos inconsistentes que impiden el análisis. |
-| **Estructura de la tabla dinámica** | Las 4 áreas (Filas, Columnas, Valores, Filtros) están correctamente asignadas; la tabla responde al objetivo de análisis planteado y muestra la información relevante de forma clara. | Las áreas están bien asignadas aunque alguna podría optimizarse; la tabla responde al objetivo general. | Una o dos áreas están mal asignadas, lo que dificulta la interpretación de los resultados. | Las áreas están incorrectamente asignadas; la tabla no responde al objetivo de análisis. |
-| **Análisis e interpretación de resultados** | Presenta un análisis completo con hallazgos claros, compara datos relevantes, extrae conclusiones basadas en la tabla y propone recomendaciones accionables. | Presenta análisis adecuado con conclusiones correctas aunque sin profundidad. | El análisis es superficial; las conclusiones son genéricas o no se derivan directamente de los datos. | No presenta análisis ni conclusiones, o estas no tienen relación con los datos mostrados. |
-| **Presentación visual y formato** | Aplica formato de números adecuado, diseño de informe (tabular/compacto), segmentaciones y/o escalas de tiempo, estilos profesionales; incluye gráfico dinámico vinculado correctamente. | Aplica formato básico de números y diseño ordenado; incluye al menos un elemento visual adicional. | El formato es descuidado o inconsistente; no usa segmentaciones, escalas de tiempo ni gráficos dinámicos. | Sin formato aplicado; presentación desordenada que dificulta la lectura. |
-| **Funcionalidad y actualización** | La tabla dinámica está correctamente vinculada a una Tabla de Excel; al modificar los datos de origen, la tabla se actualiza sin errores; los totales y cálculos son correctos. | La tabla se actualiza correctamente aunque con algún paso manual adicional; los cálculos son correctos. | La tabla tiene errores en totales o cálculos; requiere intervención para mostrar datos correctos. | La tabla no se actualiza, los cálculos son incorrectos o no hay vinculación con los datos de origen. |
+| **ETL y preparación de datos** | Aplica Power Query (o limpieza manual) para transformar datos crudos: encabezados, tipos de datos, eliminación de duplicados, valores nulos. Los datos quedan estructurados como Tabla de Excel. | Aplica limpieza básica con algunos pasos de Power Query; datos mayormente listos para análisis. | Limpieza parcial: datos aún contienen errores que afectan el análisis (duplicados, tipos incorrectos). | No aplica limpieza de datos o esta es insuficiente; datos no utilizables para análisis. |
+| **Uso de filtros** | Aplica correctamente autofiltros, filtros avanzados (con criterios AND/OR) y filtros por selección para explorar y segmentar los datos antes del análisis con tablas dinámicas. | Aplica autofiltros y al menos un filtro avanzado de forma correcta. | Aplica solo autofiltros básicos; no utiliza filtros avanzados. | No aplica filtros o los aplica incorrectamente. |
+| **Tabla dinámica y análisis** | Las 4 áreas (Filas, Columnas, Valores, Filtros) están correctamente asignadas; usa funciones de agregación adecuadas (suma, promedio, conteo); la tabla responde al objetivo de análisis. | Las áreas están bien asignadas aunque alguna podría optimizarse; la tabla responde al objetivo general. | Una o dos áreas mal asignadas; dificulta la interpretación de resultados. | Áreas incorrectamente asignadas; la tabla no responde al objetivo. |
+| **Presentación visual y formato** | Aplica formato de números adecuado, diseño de informe, segmentaciones, estilos profesionales; incluye gráfico dinámico vinculado correctamente. | Aplica formato básico y diseño ordenado; incluye al menos un elemento visual adicional. | Formato descuidado o inconsistente; no usa segmentaciones ni gráficos dinámicos. | Sin formato aplicado; presentación desordenada. |
+| **Interpretación y conclusiones** | Analiza los resultados en contexto de Biología Marina; extrae conclusiones basadas en datos y propone recomendaciones pertinentes al manejo de recursos pesqueros. | Presenta análisis adecuado con conclusiones correctas aunque sin profundidad en el contexto marino. | Análisis superficial; conclusiones genéricas sin relación con Biología Marina. | No presenta análisis ni conclusiones. |
 
 ### Escala de calificación
 
@@ -45,25 +45,27 @@
 |-----|-----------|------------|----------------|
 | 1 | Los datos de origen tienen encabezados descriptivos en la fila 1 | | |
 | 2 | No existen celdas combinadas en el rango de datos | | |
-| 3 | El rango de datos se convirtió en Tabla de Excel (Ctrl + T) | | |
-| 4 | La tabla dinámica se insertó en una hoja nueva | | |
-| 5 | Las 4 áreas (Filas, Columnas, Valores, Filtros) están correctamente asignadas | | |
-| 6 | El campo de valores utiliza la función de resumen adecuada (suma, promedio, conteo, etc.) | | |
-| 7 | Se aplicó formato de números correspondiente ($, %, decimales) | | |
-| 8 | Los totales y subtotales se muestran correctamente | | |
-| 9 | Se agregó al menos una segmentación o escala de tiempo para filtrar | | |
-| 10 | Se creó un gráfico dinámico vinculado a la tabla | | |
-| 11 | El archivo se guardó con nombre descriptivo y en formato .xlsx | | |
-| 12 | La tabla dinámica se actualiza correctamente al modificar los datos de origen | | |
+| 3 | Se aplicó Power Query o limpieza manual para transformar los datos (ETL) | | |
+| 4 | El rango de datos se convirtió en Tabla de Excel (Ctrl + T) | | |
+| 5 | Se aplicaron filtros (autofiltros o avanzados) para explorar los datos | | |
+| 6 | La tabla dinámica se insertó en una hoja nueva | | |
+| 7 | Las 4 áreas (Filas, Columnas, Valores, Filtros) están correctamente asignadas | | |
+| 8 | El campo de valores utiliza la función de resumen adecuada (suma, promedio, conteo, etc.) | | |
+| 9 | Se aplicó formato de números correspondiente ($, %, decimales) | | |
+| 10 | Los totales y subtotales se muestran correctamente | | |
+| 11 | Se agregó al menos una segmentación para filtrar interactivamente | | |
+| 12 | Se creó un gráfico dinámico vinculado a la tabla | | |
+| 13 | El archivo se guardó con nombre descriptivo y en formato .xlsx | | |
+| 14 | La tabla dinámica se actualiza correctamente al modificar los datos de origen | | |
 
 ### Escala de desempeño
 
 | Indicadores cumplidos | Desempeño |
 |----------------------|-----------|
-| 12 | Excelente (100 %) |
-| 10 - 11 | Satisfactorio (83 - 92 %) |
-| 7 - 9 | Básico (58 - 75 %) |
-| 0 - 6 | Insuficiente (0 - 50 %) |
+| 14 | Excelente (100 %) |
+| 12 - 13 | Satisfactorio (86 - 93 %) |
+| 8 - 11 | Básico (57 - 79 %) |
+| 0 - 7 | Insuficiente (0 - 50 %) |
 
 ---
 
@@ -87,27 +89,27 @@ b) Valores
 c) Gráficos
 d) Filtros
 
-**2.** ¿Qué combinación de teclas se utiliza para crear una Tabla de Excel a partir de un rango de datos?
+**2.** ¿Qué combinación de teclas se utiliza para activar/desactivar los autofiltros en Excel?
 a) Ctrl + T
-b) Ctrl + P
+b) Ctrl + Mayús + L
 c) Alt + F4
 d) Ctrl + V
 
-**3.** ¿Qué tipo de campo se debe arrastrar al área de Valores?
+**3.** ¿Qué tipo de campo se debe arrastrar al área de Valores de una tabla dinámica?
 a) Campos de texto
 b) Campos numéricos
 c) Campos de fecha
 d) Nombres de productos
 
-**4.** ¿Cuál es la principal ventaja de usar una Tabla de Excel como origen de datos para una tabla dinámica?
-a) Los datos se ven más bonitos
-b) La tabla dinámica se actualiza automáticamente al agregar nuevas filas
-c) No es necesario guardar el archivo
-d) Se puede usar cualquier versión de Excel
+**4.** ¿Cuál de las siguientes opciones describe mejor el proceso ETL?
+a) Editar, Transformar, Linkear
+b) Extraer, Transformar, Cargar
+c) Evaluar, Tabular, Listar
+d) Estimar, Truncar, Limpiar
 
-**5.** ¿Qué herramienta permite filtrar datos de forma visual mediante botones interactivos?
-a) Filtro automático
-b) Segmentación
+**5.** ¿Qué herramienta de Excel permite limpiar y transformar datos provenientes de múltiples orígenes?
+a) Tabla dinámica
+b) Power Query
 c) Formato condicional
 d) Validación de datos
 
@@ -115,45 +117,41 @@ d) Validación de datos
 
 *Instrucciones: Escribe "F" si la afirmación es falsa o "V" si es verdadera. Justifica tu respuesta en caso de ser falsa.*
 
-**6.** (**F**) En una tabla dinámica, el área de Filtros se utiliza exclusivamente para mostrar datos numéricos resumidos.
+**6.** (**F**) Los filtros avanzados en Excel solo permiten usar un criterio a la vez.
 
-> *Justificación:* El área de Filtros se usa para filtrar globalmente los datos mostrados en la tabla dinámica; los datos numéricos resumidos se colocan en el área de Valores.
+> *Justificación:* Los filtros avanzados permiten usar múltiples criterios simultáneamente, combinándolos con condiciones AND y OR.
 
-**7.** (**V**) Al modificar los datos de origen de una tabla dinámica, es necesario actualizarla manualmente para que refleje los cambios.
+**7.** (**V**) Power Query permite combinar datos de múltiples orígenes (CSV, bases de datos, web) en un solo conjunto de datos para su análisis.
 
-**8.** (**F**) Los gráficos dinámicos no se actualizan cuando se modifica la tabla dinámica a la que están vinculados.
+**8.** (**F**) Una tabla dinámica se actualiza automáticamente cuando se modifican los datos de origen, sin necesidad de intervención del usuario.
 
-> *Justificación:* Los gráficos dinámicos están vinculados directamente a su tabla dinámica y se actualizan automáticamente cuando esta se modifica o actualiza.
+> *Justificación:* Las tablas dinámicas NO se actualizan automáticamente; es necesario usar clic derecho → Actualizar o la tecla Alt + F5 para reflejar los cambios en los datos de origen.
 
 ### Sección III. Desarrollo (2 preguntas, 17.5 pts c/u = 35 pts)
 
 *Instrucciones: Responde de forma clara y completa en el espacio asignado.*
 
-**9.** Describe paso a paso el proceso completo para crear una tabla dinámica desde un conjunto de datos en Excel, comenzando desde la verificación de la calidad de los datos hasta la personalización del informe final. Incluye al menos 5 pasos.
+**9.** Describe el proceso completo para aplicar filtros avanzados en Excel, desde la preparación del rango de criterios hasta la obtención de los resultados. Incluye al menos 5 pasos y menciona la diferencia entre condiciones AND y OR.
 
 > **Respuesta esperada (puntos clave):**
-> 1. Verificar que los datos tengan encabezados en fila 1, sin celdas combinadas ni filas/columnas vacías
-> 2. Convertir el rango en Tabla de Excel (Ctrl + T) para actualización automática
-> 3. Seleccionar cualquier celda de los datos e ir a Insertar → Tabla dinámica (Alt + N + V)
-> 4. Elegir "Nueva hoja de cálculo" como destino
-> 5. Arrastrar los campos a las áreas correspondientes: Filas, Columnas, Valores, Filtros
-> 6. Personalizar los cálculos en Valores (suma, promedio, conteo, etc.)
-> 7. Aplicar formato de números y diseño de informe (tabular, compacto, esquemático)
-> 8. Agregar segmentaciones o escalas de tiempo si se requieren filtros visuales
+> 1. Preparar los datos con encabezados en fila 1
+> 2. Definir un rango de criterios separado del rango de datos, con los mismos encabezados
+> 3. Escribir los criterios: en la misma fila = AND (todas las condiciones deben cumplirse), en filas diferentes = OR (cualquier condición puede cumplirse)
+> 4. Seleccionar Datos → Avanzadas (o Advanced)
+> 5. Configurar: Rango de la lista, Rango de criterios, elegir "Filtrar in situ" o "Copiar a otro lugar"
+> 6. Ejecutar y verificar los resultados
+> 7. Los filtros avanzados también permiten extraer datos únicos (sin duplicados)
 
-**10.** Explica la función de cada una de las 4 áreas de una tabla dinámica (Filas, Columnas, Valores, Filtros) y proporciona un ejemplo concreto de qué tipo de datos colocarías en cada área para analizar las ventas mensuales de una tienda por producto y región.
+**10.** Explica cómo las tablas dinámicas pueden utilizarse como herramienta de análisis en Bioestadística para estudiar datos de pesquerías. Describe qué campos colocarías en cada área (Filas, Columnas, Valores, Filtros) para analizar el peso desembarcado por especie, año y litoral, y qué conclusiones podrían obtenerse.
 
 > **Respuesta esperada:**
-> - **Filas:** Organizan datos de forma vertical (ej. nombres de productos)
-> - **Columnas:** Organizan datos de forma horizontal (ej. meses del año)
-> - **Valores:** Contienen los datos numéricos que se resumen (ej. total de ventas en $)
-> - **Filtros:** Permiten mostrar u ocultar datos globalmente (ej. región: Norte, Sur, Centro)
->
-> Ejemplo concreto: para analizar ventas mensuales por producto y región:
-> - **Filas:** Nombre del producto
-> - **Columnas:** Mes
-> - **Valores:** Suma de Ventas ($)
-> - **Filtros:** Región
+> > Las tablas dinámicas permiten resumir grandes volúmenes de datos de capturas sin escribir fórmulas. Para analizar peso desembarcado:
+> > - **Filas:** Especie (agrupa por especie marina)
+> > - **Columnas:** Año (evolución temporal)
+> > - **Valores:** Suma de Peso Desembarcado (kg o toneladas)
+> > - **Filtros:** Litoral (Golfo de México, Pacífico, Caribe)
+> >
+> > Conclusiones posibles: identificar especies con mayor volumen de captura, detectar tendencias de aumento o disminución, comparar productividad entre litorales, apoyar decisiones de manejo pesquero sostenible.
 
 ---
 

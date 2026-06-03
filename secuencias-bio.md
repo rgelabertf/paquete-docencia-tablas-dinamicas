@@ -1,12 +1,15 @@
-# Secuencias de Aprendizaje — Tablas Dinámicas en Excel
+# Secuencias de Aprendizaje — Bioestadística Aplicada con Excel
 
-**UA:** Tablas Dinámicas en Excel
-**Docente:** M.A. Rolando Gelabert Fernández
-**Semestre:** 2026-1
-**Carrera:** Técnico en Bioestadística / Área de Ciencias de la Salud
+**UA:** Bioestadística
+**Docente:** Dr. Rolando Gelabert Fernández
+**Semestre:** Segundo Semestre — Febrero-Junio 2026
+**Carrera:** Biología Marina
 **Modalidad:** Presencial
-**Horas totales:** 48 horas (12 horas por unidad)
+**Horas totales:** 48 horas (16 horas por secuencia)
 **Elaborado para:** Paquete para la Docencia — ESDEPED Indicador 1.2.3
+**Formato base:** FormatoPlaneacion_BioestadisticavS1/S2/S3.pdf — Contenidos institucionales de la UA
+
+> **Nota metodológica:** Las tablas dinámicas se utilizan como herramienta transversal de análisis bioestadístico. Cada secuencia parte de un conjunto de datos pesqueros (`datos capturas 2005 2022.xlsx`) y aplica las técnicas de Excel correspondientes. **Los filtros (autofiltros, avanzados, por selección) se enseñan y practican antes de introducir las tablas dinámicas.**
 
 ---
 
@@ -16,77 +19,75 @@
 
 | Campo | Valor |
 |-------|-------|
-| UA | Tablas Dinámicas en Excel |
+| UA | Bioestadística |
 | Sesión | vS1 |
-| Unidad temática | Fundamentos de Tablas Dinámicas |
-| Duración | 12 horas (4 sesiones de 3 h) |
+| Unidad temática | Estadística Descriptiva: ETL, Power Query, Filtros y Tablas Dinámicas |
+| Duración | 16 horas (5 sesiones de 3 h + 1 h de cierre) |
 | Semestre | 2026-1 |
-| Docente | M.A. Rolando Gelabert Fernández |
-| Fecha de elaboración | Junio 2026 |
+| Docente | Dr. Rolando Gelabert Fernández |
+| Contenido institucional | `FormatoPlaneacion_BioestadisticavS1.pdf` |
 
 ### Competencia específica
 
-Comprende el concepto, utilidad y fundamentos de las tablas dinámicas en Excel, identificando los requisitos de estructura de datos, y aplica técnicas de preparación de datos (encabezados, ausencia de celdas combinadas, conversión a Tabla de Excel con Ctrl+T) para garantizar fuentes de datos confiables y listas para el análisis.
+Aplica procesos ETL (Extraer, Transformar, Cargar) utilizando Power Query para limpiar y normalizar datos de capturas pesqueras; utiliza autofiltros y filtros avanzados para explorar y segmentar la información; construye tablas dinámicas básicas para resumir variables como peso desembarcado, valor en pesos, captura por especie y litoral, sentando las bases del análisis bioestadístico descriptivo.
 
 ### Momento de apertura (3 horas)
 
 | Elemento | Descripción |
 |----------|-------------|
-| **Actividad de encuadre** | Presentación del programa de la UA, criterios de evaluación, competencias a desarrollar y cronograma de actividades. |
-| **Evaluación diagnóstica** | Cuestionario escrito con 10 preguntas: conocimientos previos de Excel (rangos, fórmulas básicas, formato de tablas), experiencia previa con resumen de datos. |
-| **Estrategia** | Lluvia de ideas grupales: "¿Cómo resumirías 1000 filas de ventas sin escribir fórmulas?" |
-| **Materiales** | Cuestionario impreso, proyector, presentación de encuadre. |
+| **Actividad de encuadre** | Presentación del programa de la UA, competencias, criterios de evaluación basados en los 3 formatos institucionales PDF (vS1/vS2/vS3), y cronograma. |
+| **Evaluación diagnóstica** | Cuestionario: conocimientos previos de Excel (rangos, tablas, formato), estadística descriptiva básica (media, frecuencia, porcentaje), familiaridad con datos biológicos. |
+| **Estrategia** | Discusión guiada: "Con 500+ registros de capturas pesqueras, ¿cómo encontrarías la especie más capturada sin escribir fórmulas una por una?" |
+| **Materiales** | Cuestionario impreso, proyector, presentación de encuadre, `FormatoPlaneacion_BioestadisticavS1.pdf`. |
 | **Tiempo** | 3 horas (1 sesión) |
 
-### Momento de desarrollo (7 horas)
+### Momento de desarrollo (11 horas)
 
 | Elemento | Descripción |
 |----------|-------------|
-| **Actividades de enseñanza** | - Exposición dialogada: ¿Qué es una tabla dinámica? (concepto, casos de uso, ventajas frente a fórmulas manuales)<br>- Demostración en vivo: mostrar un conjunto de datos "sucio" vs. "limpio" y los problemas que genera cada uno<br>- Guía paso a paso para convertir rango a Tabla de Excel (Ctrl+T) |
-| **Actividades de aprendizaje** | - Ejercicio 1: Abrir un archivo CSV con datos de pacientes, identificar problemas de estructura (celdas combinadas, encabezados faltantes, filas vacías)<br>- Ejercicio 2: Limpiar el conjunto de datos aplicando: encabezados en fila 1, eliminar celdas combinadas, eliminar filas/columnas vacías<br>- Ejercicio 3: Convertir el rango limpio a Tabla de Excel (Ctrl+T) y renombrar la tabla<br>- Ejercicio 4: Explorar las 4 áreas de la tabla dinámica (Filas, Columnas, Valores, Filtros) con datos guiados |
-| **Contenido temático** | 1. ¿Qué son las Tablas Dinámicas? — Concepto, utilidad, casos de aplicación<br>2. Preparación de datos — Encabezados, sin celdas combinadas, sin filas/columnas vacías, Tabla de Excel |
-| **Recursos** | Archivo `datos-pacientes.csv` (100 registros), archivo `datos-ventas-ejemplo.xlsx`, proyector, computadoras con Excel 2021/365 |
-| **Tiempo** | 7 horas (2 sesiones de 3 h + 1 sesión de 1 h) |
+| **Actividades de enseñanza** | - **ETL conceptual:** Explicación del proceso Extraer-Transformar-Cargar aplicado a datos pesqueros. Fuentes: CSV, bases de datos institucionales, web.<br>- **Power Query:** Demostración de Power Query (Obtener datos → Desde archivo CSV/texto). Eliminar columnas, cambiar tipos, reemplazar valores, dividir columnas, combinar consultas.<br>- **Autofiltros:** Activación (Ctrl+Mayús+L), filtros por valores, por color, búsqueda en filtros.<br>- **Filtros avanzados:** Rango de criterios, condiciones AND/OR, filtrar in situ vs. copiar a otro lugar, extraer registros únicos.<br>- **Tablas dinámicas:** Concepto, preparación de datos (Tabla de Excel con Ctrl+T), inserción (Alt+N+V), asignación a las 4 áreas con datos de capturas, funciones de agregación (suma, conteo, promedio). |
+| **Actividades de aprendizaje** | - **Ejercicio 1 — ETL con Power Query:** Cargar `datos capturas 2005 2022.xlsx` en Power Query. Eliminar columnas irrelevantes, cambiar tipos de datos (año como entero, peso como decimal), reemplazar valores nulos con 0. Cargar a hoja de Excel.<br>- **Ejercicio 2 — Autofiltros:** Aplicar autofiltros para responder: ¿cuántos registros hay del litoral "Golfo de México"?, ¿cuál es la especie con mayor peso desembarcado en 2020?<br>- **Ejercicio 3 — Filtros avanzados:** Crear rango de criterios para filtrar especies con peso > 1000 kg Y origen "captura". Extraer los resultados a otra hoja.<br>- **Ejercicio 4 — Tabla dinámica básica:** Convertir datos limpios en Tabla de Excel. Crear tabla dinámica con Filas = Especie, Valores = Suma de Peso Desembarcado. Ordenar descendente.<br>- **Ejercicio 5 — Tabla dinámica con filtros:** Agregar Filtro = Litoral y Columnas = Año. Analizar cómo cambia la captura por especie a lo largo del tiempo en cada litoral. |
+| **Contenido temático** | 1. ETL y Power Query — Extraer, transformar y cargar datos; limpieza, tipos, combinación de consultas<br>2. Filtros en Excel — Autofiltros, filtros avanzados, criterios AND/OR, registros únicos<br>3. Tablas dinámicas — Concepto, preparación, 4 áreas, funciones de agregación |
+| **Recursos** | `datos capturas 2005 2022.xlsx`, proyector, computadoras con Excel 2021/365, guía de Power Query, `FormatoPlaneacion_BioestadisticavS1.pdf` |
+| **Tiempo** | 11 horas (3 sesiones de 3 h + 1 sesión de 2 h) |
 
 ### Momento de cierre (2 horas)
 
 | Elemento | Descripción |
 |----------|-------------|
-| **Actividad integradora** | Ejercicio práctico individual: Los estudiantes reciben un archivo con datos desordenados (ventas por región y producto). Deben: (1) diagnosticar los problemas de estructura, (2) limpiar los datos, (3) convertir a Tabla de Excel, (4) crear una tabla dinámica básica que muestre total de ventas por producto. |
-| **Estrategia de integración** | Socialización de resultados: 3 estudiantes pasan al frente a mostrar su solución. Discusión grupal sobre dificultades encontradas. |
-| **Evaluación** | Lista de cotejo (ver instrumento). Ponderación: 15 % de la calificación parcial. |
-| **Tiempo** | 2 horas (sesión final de unidad) |
+| **Actividad integradora** | Los estudiantes reciben `datos capturas 2005 2022.xlsx` y deben: (1) aplicar Power Query para limpiar y normalizar los datos, (2) usar filtros avanzados para extraer capturas del Pacífico con peso > 500 kg en 2022, (3) crear una tabla dinámica que muestre el peso total desembarcado por especie y por año, con filtro de litoral. |
+| **Estrategia de integración** | Socialización: 3 estudiantes proyectan su solución. Discusión grupal sobre decisiones de limpieza y hallazgos en los datos. |
+| **Evaluación** | Lista de cotejo (ver instrumentos-evaluacion.md). Ponderación: 30 %. |
+| **Tiempo** | 2 horas (sesión final) |
 
 ### Evidencias de aprendizaje
 
 | Evidencia | Tipo | Instrumento |
 |-----------|------|-------------|
-| Cuestionario diagnóstico | Diagnóstica | Lista de cotejo |
-| Ejercicios de limpieza de datos | Formativa | Rúbrica |
-| Tabla dinámica básica (actividad integradora) | Sumativa | Lista de cotejo |
+| Cuestionario diagnóstico | Diagnóstica | Clave de respuestas |
+| Ejercicios ETL con Power Query | Formativa | Rúbrica |
+| Ejercicios de filtros (autofiltros + avanzados) | Formativa | Lista de cotejo |
+| Tabla dinámica integradora vS1 | Sumativa | Lista de cotejo |
 
 ### Materiales y recursos didácticos
 
 - Computadora con Microsoft Excel 2021 o Microsoft 365
 - Proyector y pantalla
-- Archivos de práctica: `datos-pacientes.csv`, `datos-ventas-ejemplo.xlsx`, `datos-desordenados.xlsx`
-- Presentación digital (diapositivas) "Unidad 1 — Fundamentos"
-- Pizarrón y marcadores
-- Guía de estudio impresa (OVA)
+- `datos capturas 2005 2022.xlsx`
+- `FormatoPlaneacion_BioestadisticavS1.pdf` — guía de contenidos oficial
+- Guía de estudio (OVA) — secciones 1 a 4 (ETL, filtros, tablas dinámicas)
+- Cuaderno de trabajo — Ejercicios 1 a 4
+- Manual de prácticas — Prácticas 1 y 2
 
 ### Bibliografía
 
-Caballero, M. & Torres, F. (s.f.). *Tablas dinámicas: la quinta dimensión* (1.ª ed.). [Documento PDF].
+Gelman, A., et al. (2020). *Regression and Other Stories*. Cambridge University Press.
 
-Gelabert Fernández, R. (2026). *Fuentes originales del cuaderno: conceptos básicos, tutorial práctico, técnicas avanzadas, gráficos dinámicos, errores comunes* [Material inédito]. Universidad Autónoma del Carmen.
+Microsoft. (s.f.). *Obtener datos con Power Query*. Microsoft Support. https://support.microsoft.com/es-es/office/obtener-datos-con-power-query
 
-Microsoft. (s.f.). *Crear una tabla dinámica para analizar datos de una hoja de cálculo*. Microsoft Support. https://support.microsoft.com/es-es/office/crear-una-tabla-din%C3%A1mica-para-analizar-datos-de-una-hoja-de-c%C3%A1lculo-a9a84538-bfe9-40a9-a8e9-f99134456576
+McKillup, S. (2012). *Statistics Explained: An Introductory Guide for Life Scientists* (2nd ed.). Cambridge University Press.
 
-Excel Total. (2021). *Tablas dinámicas en Excel (tutorial completo)*. Excel Total. https://exceltotal.com/tablas-dinamicas-en-excel
-
-Saber Programas. (2024). *Tablas dinámicas en Excel de cero a experto* [Video]. YouTube. https://www.youtube.com/watch?v=6YOsIVH0STg
-
-Daxus Latam. (2025). *Aprende a crear tablas dinámicas desde cero* [Video]. YouTube. https://www.youtube.com/watch?v=WGH-k_vURuE
+Zar, J. H. (2010). *Biostatistical Analysis* (5th ed.). Pearson.
 
 ---
 
@@ -96,73 +97,73 @@ Daxus Latam. (2025). *Aprende a crear tablas dinámicas desde cero* [Video]. You
 
 | Campo | Valor |
 |-------|-------|
-| UA | Tablas Dinámicas en Excel |
+| UA | Bioestadística |
 | Sesión | vS2 |
-| Unidad temática | Creación y Estructura de Tablas Dinámicas |
-| Duración | 12 horas (4 sesiones de 3 h) |
+| Unidad temática | Medidas de Tendencia Central y Dispersión con Tablas Dinámicas |
+| Duración | 16 horas (5 sesiones de 3 h + 1 h de cierre) |
 | Semestre | 2026-1 |
-| Docente | M.A. Rolando Gelabert Fernández |
-| Fecha de elaboración | Junio 2026 |
+| Docente | Dr. Rolando Gelabert Fernández |
+| Contenido institucional | `FormatoPlaneacion_BioestadisticavS2.pdf` |
 
 ### Competencia específica
 
-Crea tablas dinámicas desde cero utilizando el asistente de Excel (Insertar → Tabla dinámica), asigna correctamente los campos a las 4 áreas (Filas, Columnas, Valores, Filtros), y personaliza los cálculos (suma, promedio, conteo) para generar reportes de análisis de datos con resultados verificables.
+Calcula e interpreta medidas de tendencia central (media, mediana, moda) y de dispersión (rango, varianza, desviación estándar, coeficiente de variación) utilizando tablas dinámicas y funciones estadísticas de Excel sobre datos de capturas pesqueras, para describir y comparar distribuciones de variables biológico-pesqueras como peso desembarcado, valor económico y captura por unidad de esfuerzo.
 
 ### Momento de apertura (2 horas)
 
 | Elemento | Descripción |
 |----------|-------------|
-| **Actividad de inicio** | Repaso rápido: los estudiantes abren su archivo de la unidad anterior y explican cómo prepararon los datos. |
-| **Evaluación diagnóstica** | Preguntas guía: "¿Qué diferencia hay entre un filtro manual y una tabla dinámica?", "¿En qué área colocarías 'Meses'?" |
-| **Estrategia** | Demostración motivacional: mostrar un reporte de 5 minutos armado desde cero con una tabla dinámica. |
-| **Materiales** | Archivos de la unidad anterior, proyector. |
+| **Actividad de inicio** | Repaso: los estudiantes abren su tabla dinámica de vS1. Pregunta detonante: "Del peso desembarcado por especie, ¿cuál es el valor típico? ¿Qué tan dispersos están los datos?" |
+| **Evaluación diagnóstica** | Preguntas: ¿Qué es la media aritmética? ¿La mediana? ¿Cómo se calcula la desviación estándar? ¿Qué significa que un conjunto de datos tenga alta varianza? |
+| **Estrategia** | Caso motivacional: mostrar datos de captura de dos especies aparentemente similares pero con distribuciones muy diferentes (una estable, otra volátil). ¿Cómo medirlo? |
+| **Materiales** | Archivos de vS1, proyector, `FormatoPlaneacion_BioestadisticavS2.pdf` |
 | **Tiempo** | 2 horas |
 
-### Momento de desarrollo (7 horas)
+### Momento de desarrollo (11 horas)
 
 | Elemento | Descripción |
 |----------|-------------|
-| **Actividades de enseñanza** | - Explicación del flujo completo: Seleccionar datos → Insertar → Tabla dinámica → Elegir ubicación<br>- Demostración de asignación de campos a las 4 áreas con datos de ventas<br>- Explicación de los tipos de cálculo: suma, promedio, conteo, máximo, mínimo<br>- Demostración de cómo cambiar configuración de campo de valor (Mostrar valores como) |
-| **Actividades de aprendizaje** | - Ejercicio 1: Crear tabla dinámica desde datos de pacientes por diagnóstico (Filas = diagnóstico, Valores = conteo de paciente)<br>- Ejercicio 2: Agregar Columnas = género, Filtro = rango de edad. Interpretar los resultados.<br>- Ejercicio 3: Cambiar el tipo de cálculo a promedio y porcentaje del total. Comparar resultados.<br>- Ejercicio 4: Crear tabla dinámica de dos niveles (Filas = Región → Producto, Valores = Suma de ventas) |
-| **Contenido temático** | 3. Cómo crear una tabla dinámica — Selección de datos, Insertar → Tabla dinámica, ubicación (nueva hoja / misma hoja)<br>4. Las 4 áreas — Filas, Columnas, Valores, Filtros; tipos de cálculo; configuración de campo de valor |
-| **Recursos** | Archivo `datos-ventas-completos.xlsx`, archivo `datos-pacientes-diagnostico.xlsx`, guía rápida de atajos (Alt + N + V) |
-| **Tiempo** | 7 horas |
+| **Actividades de enseñanza** | - **Medidas TC:** Explicación de media, mediana y moda con ejemplos pesqueros. Cuándo usar cada una (media para distribuciones simétricas, mediana para datos con outliers).<br>- **Medidas de dispersión:** Rango, varianza (poblacional y muestral), desviación estándar, coeficiente de variación. Interpretación biológica: una especie con alta desviación estándar en peso desembarcado sugiere capturas irregulares.<br>- **Tabla dinámica para TC:** Usar Configuración de campo de valor → Promedio para media. Mostrar valores como para comparar proporciones.<br>- **Tabla dinámica para dispersión:** No existe función nativa de desviación estándar en tabla dinámica → usar tabla dinámica como resumen + funciones ESTIMAR (DESVEST, VAR) en celdas auxiliares.<br>- **Comparación entre grupos:** Tabla dinámica con promedios y conteos por especie/litoral/año, complementada con columnas de desviación estándar calculadas. |
+| **Actividades de aprendizaje** | - **Ejercicio 1 — Media en tabla dinámica:** Crear tabla dinámica con Filas = Especie, Valores = Promedio de Peso Desembarcado. Interpretar: ¿qué especie tiene el mayor promedio?<br>- **Ejercicio 2 — Mediana:** Usar la función MEDIANA en celdas auxiliares sobre los datos filtrados por la tabla dinámica. Comparar media vs. mediana por especie. Identificar especies con asimetría.<br>- **Ejercicio 3 — Desviación estándar:** Agregar columna DESVEST (desviación estándar muestral) a los resúmenes por especie. Identificar la especie con captura más estable (menor desviación).<br>- **Ejercicio 4 — Coeficiente de variación:** Calcular CV = (DESVEST / MEDIA) * 100. ¿Qué especie tiene mayor variabilidad relativa?<br>- **Ejercicio 5 — Comparación por litoral:** Tabla dinámica con Filas = Litoral, Valores = Promedio de peso y Desviación estándar (calculada). Comparar la variabilidad entre litorales. |
+| **Contenido temático** | 4. Medidas de tendencia central — Media, mediana, moda; cuándo usar cada una<br>5. Medidas de dispersión — Rango, varianza, desviación estándar, coeficiente de variación<br>6. Aplicación en Excel — Tablas dinámicas para promedios, funciones estadísticas auxiliares (MEDIANA, DESVEST, VAR) |
+| **Recursos** | `datos capturas 2005 2022.xlsx`, `FormatoPlaneacion_BioestadisticavS2.pdf`, guía de funciones estadísticas de Excel |
+| **Tiempo** | 11 horas |
 
 ### Momento de cierre (3 horas)
 
 | Elemento | Descripción |
 |----------|-------------|
-| **Actividad integradora** | Ejercicio práctico: Dado un archivo con 500 registros de consultas médicas (fecha, diagnóstico, médico, costo), el estudiante debe: (1) crear tabla dinámica que muestre costo total por diagnóstico, (2) agregar filtro por médico, (3) mostrar costo promedio, (4) cambiar diseño a formato tabular, (5) generar un segundo reporte con conteo de consultas por mes. |
-| **Estrategia de integración** | Retroalimentación entre pares: intercambiar archivos con un compañero para verificar resultados. |
-| **Evaluación** | Rúbrica de tabla dinámica (ver instrumento). Ponderación: 20 % de la calificación parcial. |
+| **Actividad integradora** | Con `datos capturas 2005 2022.xlsx`, el estudiante debe: (1) crear tabla dinámica con promedio de peso desembarcado por especie y por año, (2) calcular en celdas auxiliares la desviación estándar y coeficiente de variación para cada especie, (3) identificar la especie más estable y la más variable, (4) responder: ¿la media es representativa para todas las especies? ¿Dónde convendría usar la mediana? |
+| **Estrategia de integración** | Retroalimentación entre pares: intercambiar archivos, verificar cálculos, discutir interpretaciones. |
+| **Evaluación** | Rúbrica de análisis estadístico (ver instrumentos-evaluacion.md). Ponderación: 35 %. |
 | **Tiempo** | 3 horas |
 
 ### Evidencias de aprendizaje
 
 | Evidencia | Tipo | Instrumento |
 |-----------|------|-------------|
-| Ejercicios de asignación de campos | Formativa | Lista de cotejo |
-| Tabla dinámica con múltiples áreas (actividad integradora) | Sumativa | Rúbrica |
-| Reporte de conteo por mes | Sumativa | Lista de cotejo |
+| Ejercicios de media y mediana en tabla dinámica | Formativa | Lista de cotejo |
+| Ejercicios de desviación estándar y CV | Formativa | Rúbrica |
+| Análisis integrador vS2 | Sumativa | Rúbrica |
 
 ### Materiales y recursos didácticos
 
 - Computadora con Excel 2021/365
-- Archivos: `datos-ventas-completos.xlsx`, `datos-pacientes-diagnostico.xlsx`, `datos-consultas-medicas.xlsx`
-- Guía de referencia rápida de tablas dinámicas
-- Video de apoyo: Aprende a crear tablas dinámicas desde cero (Daxus Latam)
+- `datos capturas 2005 2022.xlsx`
+- `FormatoPlaneacion_BioestadisticavS2.pdf`
+- Cuaderno de trabajo — Ejercicios 5 a 7
+- Manual de prácticas — Práctica 3
+- Guía de estudio — sección 5 (medidas TC y dispersión)
 
 ### Bibliografía
 
-Caballero, M. & Torres, F. (s.f.). *Tablas dinámicas: la quinta dimensión* (1.ª ed.). [Documento PDF].
+Gelman, A., et al. (2020). *Regression and Other Stories*. Cambridge University Press.
 
-Microsoft. (s.f.). *Crear una tabla dinámica para analizar datos de una hoja de cálculo*. Microsoft Support. https://support.microsoft.com/es-es/office/crear-una-tabla-din%C3%A1mica-para-analizar-datos-de-una-hoja-de-c%C3%A1lculo-a9a84538-bfe9-40a9-a8e9-f99134456576
+McKillup, S. (2012). *Statistics Explained: An Introductory Guide for Life Scientists* (2nd ed.). Cambridge University Press.
 
-Excel Total. (2021). *Tablas dinámicas en Excel (tutorial completo)*. Excel Total. https://exceltotal.com/tablas-dinamicas-en-excel
+Zar, J. H. (2010). *Biostatistical Analysis* (5th ed.). Pearson.
 
-Ninja Excel. (2024). *Cómo hacer tablas dinámicas en Excel: paso a paso*. Ninja Excel. https://www.ninjaexcel.com/excel-en-el-trabajo/tablas-dinamicas
-
-Daxus Latam. (2025). *Aprende a crear tablas dinámicas desde cero* [Video]. YouTube. https://www.youtube.com/watch?v=WGH-k_vURuE
+Microsoft. (s.f.). *Funciones estadísticas de Excel*. Microsoft Support.
 
 ---
 
@@ -172,154 +173,76 @@ Daxus Latam. (2025). *Aprende a crear tablas dinámicas desde cero* [Video]. You
 
 | Campo | Valor |
 |-------|-------|
-| UA | Tablas Dinámicas en Excel |
+| UA | Bioestadística |
 | Sesión | vS3 |
-| Unidad temática | Personalización, Visualización y Gráficos Dinámicos |
-| Duración | 12 horas (4 sesiones de 3 h) |
+| Unidad temática | Distribuciones de Frecuencia, Histogramas y Análisis de Pareto con Tablas Dinámicas |
+| Duración | 16 horas (5 sesiones de 3 h + 1 h de cierre) |
 | Semestre | 2026-1 |
-| Docente | M.A. Rolando Gelabert Fernández |
-| Fecha de elaboración | Junio 2026 |
+| Docente | Dr. Rolando Gelabert Fernández |
+| Contenido institucional | `FormatoPlaneacion_BioestadisticavS3.pdf` |
 
 ### Competencia específica
 
-Personaliza tablas dinámicas mediante diseño de informe (compacto, tabular, esquemático), formato de números, segmentaciones y escalas de tiempo; crea gráficos dinámicos vinculados para construir dashboards visuales que faciliten la interpretación de datos y la toma de decisiones.
+Construye e interpreta distribuciones de frecuencia (absoluta, relativa, acumulada) para variables cuantitativas discretas y continuas; elabora histogramas y diagramas de Pareto utilizando tablas dinámicas y gráficos dinámicos; aplica estos análisis a datos pesqueros para identificar patrones de captura, especies prioritarias y tendencias temporales que fundamenten decisiones de manejo.
 
 ### Momento de apertura (2 horas)
 
 | Elemento | Descripción |
 |----------|-------------|
-| **Actividad de inicio** | Los estudiantes abren su tabla dinámica de la unidad anterior y comentan: ¿qué información adicional les gustaría visualizar? |
-| **Evaluación diagnóstica** | Preguntas: "¿Has usado segmentaciones antes?", "¿Qué tipos de gráficos conoces en Excel?", "¿Qué significa 'mostrar como porcentaje del total'?" |
-| **Estrategia** | Presentación de un dashboard terminado con 3 gráficos dinámicos y segmentaciones conectadas, para mostrar el potencial de la herramienta. |
-| **Materiales** | Dashboard de ejemplo, proyector. |
+| **Actividad de inicio** | Repaso de vS2: ¿cómo describir numéricamente los datos de captura? Ahora preguntamos: ¿cómo se distribuyen? ¿Cuántas especies aportan la mayor parte del volumen? |
+| **Evaluación diagnóstica** | Preguntas: ¿Qué es una distribución de frecuencia? ¿Cómo se construye un histograma? ¿Qué es el principio de Pareto (80/20)? |
+| **Estrategia** | Presentar el principio de Pareto aplicado a pesquerías: "el 20 % de las especies genera el 80 % de la captura". ¿Será cierto para nuestros datos? |
+| **Materiales** | Archivos de vS2, proyector, `FormatoPlaneacion_BioestadisticavS3.pdf` |
 | **Tiempo** | 2 horas |
 
-### Momento de desarrollo (7 horas)
+### Momento de desarrollo (11 horas)
 
 | Elemento | Descripción |
 |----------|-------------|
-| **Actividades de enseñanza** | - Explicación de los diseños de informe: compacto (predeterminado), tabular, esquemático<br>- Demostración de formato de números (moneda, porcentaje, decimales) en campos de valor<br>- Demostración de "Mostrar valores como": % del total, % del total de fila, % del total de columna<br>- Inserción y configuración de segmentaciones de datos y escalas de tiempo<br>- Creación de gráfico dinámico: selección, tipos recomendados, vinculación con segmentaciones<br>- Técnicas para dashboards: diseño limpio, conexión de múltiples segmentaciones |
-| **Actividades de aprendizaje** | - Ejercicio 1: Aplicar los 3 diseños de informe a una misma tabla dinámica y comparar la presentación<br>- Ejercicio 2: Configurar formato de números (moneda para ingresos, porcentaje para margen) y mostrar valores como % del total<br>- Ejercicio 3: Insertar 2 segmentaciones (región y año) y una escala de tiempo. Verificar que filtren correctamente<br>- Ejercicio 4: Crear 3 gráficos dinámicos (barras, columnas, pastel) vinculados a segmentaciones compartidas<br>- Ejercicio 5: Organizar los elementos en una hoja como dashboard presentable |
-| **Contenido temático** | 5. Personalización y Formato — Diseños de informe, formato de números, mostrar valores como %, segmentaciones, escalas de tiempo, estilos<br>6. Gráficos Dinámicos — Creación, vinculación, tipos, dashboards |
-| **Recursos** | Archivo `datos-ventas-anuales.xlsx`, archivo `datos-financieros.xlsx`, guía de estilos y formatos |
-| **Tiempo** | 7 horas |
+| **Actividades de enseñanza** | - **Distribuciones de frecuencia:** Tabla dinámica para obtener frecuencia absoluta (conteo) y frecuencia relativa (% del total). Frecuencia acumulada con Mostrar valores como → Total acumulado.<br>- **Histogramas con tablas dinámicas:** Agrupar datos numéricos (peso desembarcado) en rangos usando agrupación automática de tablas dinámicas (clic derecho → Agrupar). Definir intervalos (límite inicial, tamaño, límite final). Crear gráfico de columnas → histograma.<br>- **Diagrama de Pareto:** Ordenar tabla dinámica descendente por frecuencia. Calcular % individual y % acumulado. Gráfico combinado: columnas para frecuencia individual, línea para % acumulado. Identificar el punto donde se alcanza el 80 %.<br>- **Análisis de biodiversidad de captura:** Usar tabla dinámica para calcular índices simples: riqueza de especies (conteo de especies distintas por año/litoral), uniformidad (distribución de captura entre especies). |
+| **Actividades de aprendizaje** | - **Ejercicio 1 — Frecuencia de captura por especie:** Tabla dinámica: Filas = Especie, Valores = Conteo de registros y % del total. ¿Cuáles son las 5 especies más frecuentes?<br>- **Ejercicio 2 — Histograma de peso desembarcado:** Agrupar Peso Desembarcado en intervalos de 500 kg. Crear gráfico de columnas. Interpretar la forma de la distribución (¿simétrica? ¿sesgada?).<br>- **Ejercicio 3 — Histograma por litoral:** Repetir con filtro de litoral. Comparar las distribuciones: ¿el Golfo de México tiene capturas más homogéneas que el Pacífico?<br>- **Ejercicio 4 — Diagrama de Pareto por especie:** Tabla dinámica con especies ordenadas por peso total descendente. Calcular % del total y % acumulado. Crear gráfico combinado. Identificar cuántas especies acumulan el 80 % del peso.<br>- **Ejercicio 5 — Evolución temporal:** Tabla dinámica: Filas = Año, Valores = Conteo de especies distintas (configurar campo para contar valores únicos si es posible, o usar tabla dinámica + función CONTAR.SI). ¿La riqueza de especies capturadas aumenta o disminuye? |
+| **Contenido temático** | 7. Distribuciones de frecuencia — Absoluta, relativa, acumulada; agrupación en intervalos<br>8. Histogramas — Construcción con tablas dinámicas, interpretación de formas (simetría, asimetría, multimodalidad)<br>9. Diagrama de Pareto — Principio 80/20, aplicación a pesquerías, gráfico combinado |
+| **Recursos** | `datos capturas 2005 2022.xlsx`, `FormatoPlaneacion_BioestadisticavS3.pdf`, guía de gráficos dinámicos |
+| **Tiempo** | 11 horas |
 
 ### Momento de cierre (3 horas)
 
 | Elemento | Descripción |
 |----------|-------------|
-| **Actividad integradora** | Proyecto individual: Construir un dashboard ejecutivo de una página que incluya: (1) tabla dinámica con diseño tabular, formato de moneda y % del total, (2) segmentaciones para filtrar por categoría y periodo, (3) al menos 2 gráficos dinámicos (barras y pastel o líneas), (4) diseño profesional con título y colores coherentes. Datos: archivo con 1000 registros de ventas (región, producto, mes, ingresos, margen). |
-| **Estrategia de integración** | Exposición breve (3 min c/u): cada estudiante presenta su dashboard y explica una conclusión que puede extraerse. |
-| **Evaluación** | Rúbrica de dashboard (ver instrumento). Ponderación: 25 % de la calificación parcial. |
+| **Actividad integradora** | Proyecto final de secuencia: Con `datos capturas 2005 2022.xlsx`, el estudiante debe entregar un archivo .xlsx con: (1) tabla dinámica de frecuencia absoluta y relativa de captura por especie, (2) histograma de peso desembarcado con intervalos de 500 kg, (3) diagrama de Pareto de peso total por especie (identificar cuántas especies representan el 80 %), (4) hoja de conclusiones con al menos 3 hallazgos: ¿Hay concentración de captura en pocas especies? ¿La distribución del peso es simétrica? ¿Varía por litoral? |
+| **Estrategia de integración** | Presentación breve (3 min): cada estudiante muestra su Pareto y explica el hallazgo más relevante. |
+| **Evaluación** | Rúbrica de análisis de distribuciones (ver instrumentos-evaluacion.md). Ponderación: 35 %. |
 | **Tiempo** | 3 horas |
 
 ### Evidencias de aprendizaje
 
 | Evidencia | Tipo | Instrumento |
 |-----------|------|-------------|
-| Ejercicios de formato y segmentaciones | Formativa | Lista de cotejo |
-| Gráficos dinámicos | Formativa | Lista de cotejo |
-| Dashboard ejecutivo (actividad integradora) | Sumativa | Rúbrica |
+| Ejercicios de frecuencia y agrupación | Formativa | Lista de cotejo |
+| Histogramas y diagramas de Pareto | Formativa | Rúbrica |
+| Proyecto integrador vS3 | Sumativa | Rúbrica |
 
 ### Materiales y recursos didácticos
 
 - Computadora con Excel 2021/365
-- Archivos: `datos-ventas-anuales.xlsx`, `datos-financieros.xlsx`, `datos-ventas-dashboard.xlsx`
-- Guía de diseño de dashboards en Excel
-- Video de apoyo: Curso COMPLETO de Tablas Dinámicas GRATIS (El Tío Tech)
+- `datos capturas 2005 2022.xlsx`
+- `FormatoPlaneacion_BioestadisticavS3.pdf`
+- Cuaderno de trabajo — Ejercicios 8 a 10
+- Manual de prácticas — Prácticas 4 a 6
+- Guía de estudio — secciones 6 a 8 (histogramas, Pareto, dashboard)
+- Acceso a NotebookLM: https://notebooklm.google.com/notebook/4998a49c-e05e-4258-8f06-9fef719f55e1
 
 ### Bibliografía
 
-Caballero, M. & Torres, F. (s.f.). *Tablas dinámicas: la quinta dimensión* (1.ª ed.). [Documento PDF].
+Gelman, A., et al. (2020). *Regression and Other Stories*. Cambridge University Press.
 
-Gelabert Fernández, R. (2026). *Fuentes originales del cuaderno: conceptos básicos, tutorial práctico, técnicas avanzadas, gráficos dinámicos, errores comunes* [Material inédito]. Universidad Autónoma del Carmen.
+McKillup, S. (2012). *Statistics Explained: An Introductory Guide for Life Scientists* (2nd ed.). Cambridge University Press.
 
-Excel Total. (2021). *Tablas dinámicas en Excel (tutorial completo)*. Excel Total. https://exceltotal.com/tablas-dinamicas-en-excel
+Zar, J. H. (2010). *Biostatistical Analysis* (5th ed.). Pearson.
 
-Aprender21. (2026). *Tablas dinámicas en Excel: guía paso a paso*. Aprender21. https://www.aprender21.com/blog/excel-tablas-dinamicas-guia
+Microsoft. (s.f.). *Crear un histograma en Excel*. Microsoft Support.
 
-El Tío Tech. (2025). *Domina las tablas dinámicas en Excel desde cero* [Video]. YouTube. https://www.youtube.com/watch?v=tN6_ZEaqYBo
-
----
-
-## Secuencia de Aprendizaje 4 — Bioestadística vS4
-
-### Datos de identificación
-
-| Campo | Valor |
-|-------|-------|
-| UA | Tablas Dinámicas en Excel |
-| Sesión | vS4 |
-| Unidad temática | Buenas Prácticas, Actualización de Datos y Proyecto Integrador |
-| Duración | 12 horas (4 sesiones de 3 h) |
-| Semestre | 2026-1 |
-| Docente | M.A. Rolando Gelabert Fernández |
-| Fecha de elaboración | Junio 2026 |
-
-### Competencia específica
-
-Aplica buenas prácticas en el uso de tablas dinámicas (actualización de datos de origen, uso de Tablas de Excel para rangos dinámicos, verificación de consistencia), identifica y resuelve errores comunes, y desarrolla un proyecto integrador que demuestre el dominio completo de la herramienta para el análisis de datos en contextos de bioestadística.
-
-### Momento de apertura (2 horas)
-
-| Elemento | Descripción |
-|----------|-------------|
-| **Actividad de inicio** | Repaso general: mapa mental colaborativo en el pizarrón con todos los temas vistos en las unidades anteriores. |
-| **Evaluación diagnóstica** | Caso problema: Se entrega un archivo con errores típicos (datos no actualizados, celdas combinadas, origen no tabular). Los estudiantes deben identificar los errores. |
-| **Estrategia** | Discusión guiada: "¿Qué errores has cometido tú al usar tablas dinámicas?" |
-| **Materiales** | Archivo `errores-comunes.xlsx`, pizarrón, tarjetas de conceptos. |
-| **Tiempo** | 2 horas |
-
-### Momento de desarrollo (6 horas)
-
-| Elemento | Descripción |
-|----------|-------------|
-| **Actividades de enseñanza** | - Explicación de la actualización de datos de origen: clic derecho → Actualizar, Alt+F5, Actualizar todo<br>- Demostración de rangos dinámicos con Tablas de Excel (Ctrl+T): al agregar filas al origen, la tabla dinámica se actualiza sin redefinir rangos<br>- Explicación de errores comunes y soluciones: datos en blanco, formatos inconsistentes, celdas combinadas, no actualizar después de cambios<br>- Integración con IA: uso de Excel Ideas (Analyze Data) para sugerir tablas dinámicas automáticamente |
-| **Actividades de aprendizaje** | - Ejercicio 1: Actualizar una tabla dinámica después de agregar 20 registros nuevos al origen. Verificar coherencia de totales.<br>- Ejercicio 2: Convertir un rango estático en Tabla de Excel, agregar datos, y comprobar que la tabla dinámica reconoce las nuevas filas automáticamente<br>- Ejercicio 3: Depurar un archivo con 5 errores introducidos (celdas combinadas, datos en blanco, formato incorrecto, origen no actualizado, encabezados duplicados)<br>- Ejercicio 4: Usar Excel Ideas (Analyze Data) para generar recomendaciones automáticas de tablas y gráficos |
-| **Contenido temático** | 7. Errores Comunes y Buenas Prácticas — Actualización de datos, rangos dinámicos, consistencia, formato uniforme, Tablas de Excel como origen<br>Integración: Excel Ideas con IA, conexión a datos externos |
-| **Recursos** | Archivo `errores-comunes.xlsx`, archivo `datos-crecientes.xlsx` (para demostrar rangos dinámicos), guía de buenas prácticas |
-| **Tiempo** | 6 horas |
-
-### Momento de cierre (4 horas)
-
-| Elemento | Descripción |
-|----------|-------------|
-| **Actividad integradora** | **Proyecto Final Integrador**: Los estudiantes reciben una base de datos real simulada de un estudio de salud pública (2000+ registros con variables: paciente, edad, género, diagnóstico, fecha de consulta, médico tratante, costo, región, tipo de seguro, días de hospitalización). Deben entregar un archivo .xlsx que contenga: (1) datos originales limpios y convertidos a Tabla de Excel, (2) tabla dinámica de costos totales y promedio por diagnóstico, (3) tabla dinámica de días de hospitalización por región, (4) dashboard con 2 gráficos dinámicos y segmentaciones conectadas, (5) hoja de conclusiones con 3 hallazgos relevantes basados en los datos. |
-| **Estrategia de integración** | Feria de proyectos: los estudiantes presentan sus archivos en estaciones. Cada estudiante visita 3 estaciones de compañeros y deja retroalimentación escrita. |
-| **Evaluación** | Rúbrica de proyecto integrador (ver instrumento). Ponderación: 40 % de la calificación final. |
-| **Tiempo** | 4 horas |
-
-### Evidencias de aprendizaje
-
-| Evidencia | Tipo | Instrumento |
-|-----------|------|-------------|
-| Ejercicios de actualización y depuración | Formativa | Lista de cotejo |
-| Proyecto final integrador | Sumativa | Rúbrica de proyecto |
-| Retroalimentación entre pares | Formativa | Guía de observación |
-
-### Materiales y recursos didácticos
-
-- Computadora con Excel 2021/365
-- Archivos: `errores-comunes.xlsx`, `datos-crecientes.xlsx`, `estudio-salud-publica.xlsx`
-- Rúbrica de proyecto final (impresa y digital)
-- Video de apoyo: Tablas Dinámicas + IA desde Cero (SMARTpro Academy)
-- Acceso a NotebookLM para consulta de materiales (https://notebooklm.google.com/notebook/4998a49c-e05e-4258-8f06-9fef719f55e1)
-
-### Bibliografía
-
-Caballero, M. & Torres, F. (s.f.). *Tablas dinámicas: la quinta dimensión* (1.ª ed.). [Documento PDF].
-
-Gelabert Fernández, R. (2026). *Fuentes originales del cuaderno: conceptos básicos, tutorial práctico, técnicas avanzadas, gráficos dinámicos, errores comunes* [Material inédito]. Universidad Autónoma del Carmen.
-
-El Tío Tech. (2021). *6 ejercicios de tablas dinámicas para practicar*. El Tío Tech. https://eltiotech.com/6-ejercicios-tablas-dinamicas
-
-Microsoft. (s.f.). *Crear una tabla dinámica para analizar datos de una hoja de cálculo*. Microsoft Support. https://support.microsoft.com/es-es/office/crear-una-tabla-din%C3%A1mica-para-analizar-datos-de-una-hoja-de-c%C3%A1lculo-a9a84538-bfe9-40a9-a8e9-f99134456576
-
-Saber Programas. (2024). *Tablas dinámicas en Excel de cero a experto* [Video]. YouTube. https://www.youtube.com/watch?v=6YOsIVH0STg
-
-SMARTpro Academy. (s.f.). *Cómo hacer tablas dinámicas en Excel + IA desde cero* [Video]. YouTube. https://www.youtube.com/watch?v=Mh93eaKbkkw
-
-Aprender21. (2026). *Tablas dinámicas en Excel: guía paso a paso*. Aprender21. https://www.aprender21.com/blog/excel-tablas-dinamicas-guia
+Excel Total. (2021). *Diagrama de Pareto en Excel*. https://exceltotal.com/diagrama-de-pareto-en-excel
 
 ---
 
@@ -327,10 +250,9 @@ Aprender21. (2026). *Tablas dinámicas en Excel: guía paso a paso*. Aprender21.
 
 | Secuencia | Unidad | Evidencia principal | Ponderación |
 |-----------|--------|---------------------|-------------|
-| vS1 | Fundamentos y preparación de datos | Tabla dinámica básica | 15 % |
-| vS2 | Creación y estructura | Tabla dinámica con múltiples áreas | 20 % |
-| vS3 | Personalización y gráficos | Dashboard ejecutivo | 25 % |
-| vS4 | Buenas prácticas y proyecto | Proyecto final integrador | 40 % |
+| vS1 | ETL, Power Query, filtros, tablas dinámicas básicas | Tabla dinámica con datos de capturas | 30 % |
+| vS2 | Medidas de tendencia central y dispersión | Análisis estadístico con tabla dinámica + funciones auxiliares | 35 % |
+| vS3 | Distribuciones de frecuencia, histogramas, Pareto | Proyecto integrador con Pareto e histogramas | 35 % |
 | | **Total** | | **100 %** |
 
 ---

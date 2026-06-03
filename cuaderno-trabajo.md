@@ -1,6 +1,6 @@
 # Cuaderno de Trabajo
 
-## Tablas Dinámicas en Excel
+## Bioestadística — Herramientas de Análisis de Datos con Excel
 
 ---
 
@@ -14,17 +14,19 @@
 ║                                                                  ║
 ║                    CUADERNO DE TRABAJO                           ║
 ║                                                                  ║
-║              Tablas Dinámicas en Excel                           ║
+║              Bioestadística                                      ║
+║      Herramientas de Análisis de Datos con Excel                ║
 ║                                                                  ║
+║   Programa Educativo: Biología Marina                            ║
 ║                                                                  ║
 ║   Autores:                                                       ║
-║   • M.A. Rolando Gelabert Fernández                              ║
+║   • Dr. Rolando Gelabert Fernández                               ║
 ║   • Dr. Juan Carlos Pérez López                                  ║
 ║   • Mtra. Ana María Sánchez Ruiz                                 ║
 ║   • Ing. Luis Alberto Domínguez Hernández                        ║
 ║                                                                  ║
 ║                                                                  ║
-║   Periodo: Agosto 2025 - Enero 2026                              ║
+║   Periodo: Febrero - Junio 2026                                  ║
 ║                                                                  ║
 ║   Cd. del Carmen, Campeche, México                               ║
 ╚══════════════════════════════════════════════════════════════════╝
@@ -38,28 +40,30 @@
 |---------|-----------|------|
 | **1** | Introducción | 3 |
 | **2** | Ejercicios de Autoaprendizaje | 4 |
-| 2.1 | Ejercicio 1: Creación de tu primera tabla dinámica | 4 |
-| 2.2 | Ejercicio 2: Análisis de ventas por producto y región | 6 |
-| 2.3 | Ejercicio 3: Resumen de inventarios con promedios | 8 |
-| 2.4 | Ejercicio 4: Conteo de encuestas de satisfacción | 10 |
-| 2.5 | Ejercicio 5: Análisis de rendimiento académico | 12 |
-| 2.6 | Ejercicio 6: Segmentación y filtros con escalas de tiempo | 14 |
-| 2.7 | Ejercicio 7: Cálculos personalizados y campos calculados | 16 |
-| 2.8 | Ejercicio 8: Porcentajes y comparación de periodos | 18 |
-| 2.9 | Ejercicio 9: Gráficos dinámicos y dashboards | 20 |
-| 2.10 | Ejercicio 10: Proyecto integrador — Reporte ejecutivo | 22 |
-| **3** | Clave de Respuestas | 24 |
-| **4** | Fuentes de Información y Bibliografía | 28 |
+| 2.1 | Ejercicio 1: Autofiltros básicos | 4 |
+| 2.2 | Ejercicio 2: Filtros avanzados (AND/OR) | 6 |
+| 2.3 | Ejercicio 3: Filtros por selección y formato condicional | 8 |
+| 2.4 | Ejercicio 4: Power Query / ETL — Limpieza de datos pesqueros | 10 |
+| 2.5 | Ejercicio 5: Tabla dinámica — Peso desembarcado por especie y año | 13 |
+| 2.6 | Ejercicio 6: Tabla dinámica — Peso vivo por litoral y entidad | 15 |
+| 2.7 | Ejercicio 7: Tabla dinámica — Valor en pesos por especie, origen y mes | 17 |
+| 2.8 | Ejercicio 8: Agrupación de datos y campos calculados | 19 |
+| 2.9 | Ejercicio 9: Mostrar valores como (% del total, diferencias, rankings) | 21 |
+| 2.10 | Ejercicio 10: Proyecto integrador — Dashboard de capturas pesqueras | 23 |
+| **3** | Clave de Respuestas | 26 |
+| **4** | Fuentes de Información y Bibliografía | 30 |
 
 ---
 
 ## 1. Introducción
 
-El presente Cuaderno de Trabajo ha sido diseñado como un recurso didáctico para la Unidad de Aprendizaje **"Tablas Dinámicas en Excel"**, dirigido a estudiantes de nivel medio superior y superior que requieren desarrollar competencias en el análisis y presentación de datos.
+El presente Cuaderno de Trabajo ha sido diseñado como un recurso didáctico para la Unidad de Aprendizaje **Bioestadística**, dirigido a estudiantes del Programa Educativo de **Biología Marina** de la Universidad Autónoma del Carmen (UNACAR). Su propósito es desarrollar competencias en el análisis de datos biológicos y pesqueros mediante herramientas computacionales de Excel.
 
-Las tablas dinámicas (PivotTables) constituyen una de las herramientas más poderosas de Microsoft Excel, permitiendo resumir, analizar y explorar grandes volúmenes de datos de forma interactiva sin necesidad de escribir fórmulas complejas. Su dominio es esencial en ámbitos académicos, administrativos y profesionales donde la toma de decisiones basada en datos es fundamental.
+La Bioestadística proporciona los fundamentos teóricos y metodológicos para la recolección, organización, análisis e interpretación de datos en ciencias marinas. Dentro de este marco, las **tablas dinámicas (PivotTables)** constituyen una herramienta transversal de gran valor: permiten resumir, explorar y visualizar grandes volúmenes de datos de forma interactiva, sin necesidad de escribir fórmulas complejas. Su dominio es esencial para el análisis de capturas pesqueras, monitoreo de poblaciones, evaluación de temporadas de veda, distribución espacial de especies y cualquier escenario donde se requiera tomar decisiones basadas en evidencia cuantitativa.
 
-Este cuaderno contiene **10 ejercicios prácticos progresivos** que van desde un nivel básico hasta avanzado. Cada ejercicio incluye título, objetivo, saberes a reforzar, estrategia metodológica, lecturas sugeridas y actividades con espacios para registrar resultados. Se espera que el estudiante desarrolle cada ejercicio de forma autónoma, registre sus respuestas y conclusiones, y al finalizar consulte la clave de respuestas para verificar su aprendizaje.
+Este cuaderno contiene **10 ejercicios prácticos progresivos** organizados en cuatro etapas: (1) filtros en Excel como preparación para el análisis, (2) limpieza y transformación de datos con Power Query, (3) tablas dinámicas básicas sobre datos de capturas pesqueras, y (4) tablas dinámicas avanzadas con campos calculados, porcentajes y dashboards. Cada ejercicio incluye título, objetivo, saberes a reforzar, estrategia metodológica, lecturas sugeridas y actividades con espacios para registrar resultados. Todos los datos de ejemplo provienen del contexto marino-pesquero del Golfo de México, el Pacífico y el Caribe mexicano.
+
+Se espera que el estudiante desarrolle cada ejercicio de forma autónoma, registre sus respuestas y conclusiones, y al finalizar consulte la clave de respuestas para verificar su aprendizaje.
 
 ---
 
@@ -67,78 +71,89 @@ Este cuaderno contiene **10 ejercicios prácticos progresivos** que van desde un
 
 ---
 
-### Ejercicio 1: Creación de tu primera tabla dinámica
+### Ejercicio 1: Autofiltros básicos
 
 **Nivel:** Básico
 
-**Objetivo:** El estudiante será capaz de crear una tabla dinámica a partir de un conjunto de datos estructurados, identificando las cuatro áreas fundamentales (filas, columnas, valores y filtros).
+**Objetivo:** El estudiante aplicará autofiltros en Excel para explorar y segmentar datos de capturas pesqueras por año, litoral y entidad federativa, identificando patrones básicos en los registros.
 
 **Saberes a reforzar:**
-- Concepto de tabla dinámica
-- Estructura de datos con encabezados
-- Uso de la ficha Insertar en Excel
-- Áreas de una tabla dinámica
+- Concepto de filtro de datos
+- Autofiltro de Excel (ficha Datos)
+- Filtrado por valores numéricos y texto
+- Limpieza de filtros
 
-**Estrategia metodológica:** Aprendizaje guiado paso a paso. El estudiante seguirá las instrucciones para crear su primera tabla dinámica y registrará las observaciones.
+**Estrategia metodológica:** Aprendizaje guiado paso a paso. El estudiante trabajará con una tabla de capturas pesqueras y aplicará filtros para responder preguntas específicas.
 
 **Lecturas sugeridas:**
-- Microsoft Support. (s.f.). *Crear una tabla dinámica para analizar datos de una hoja de cálculo*. https://support.microsoft.com/es-es/office/crear-una-tabla-dinamica-para-analizar-datos-de-una-hoja-de-calculo-a9a84538-bfe9-40a9-a8e9-f99134456576
-- Saber Programas. (2024). *Tablas dinamicas en Excel: de cero a experto* [Video]. YouTube. https://www.youtube.com/watch?v=6YOsIVH0STg
+- Microsoft Support. (s.f.). *Aplicar filtros en Excel*. https://support.microsoft.com/es-es/office/aplicar-filtros-en-excel
+- CONAPESCA. (2025). *Anuario estadístico de pesca y acuacultura*. https://www.gob.mx/conapesca
 
 ---
 
-**Caso: Ventas de la empresa "Comercial del Carmen"**
+**Caso: Capturas pesqueras del litoral mexicano (año 2022)**
 
-A continuacion se presentan los datos de ventas del primer trimestre:
-
-| Vendedor | Producto | Region | Enero | Febrero | Marzo |
-|----------|----------|--------|-------|---------|-------|
-| Ana Lopez | Laptop | Norte | 15,000 | 18,000 | 22,000 |
-| Carlos Ruiz | Mouse | Sur | 3,200 | 4,500 | 3,800 |
-| Ana Lopez | Monitor | Norte | 8,500 | 9,000 | 11,000 |
-| Pedro Gil | Laptop | Sur | 12,000 | 14,500 | 16,000 |
-| Carlos Ruiz | Teclado | Sur | 2,100 | 2,800 | 3,200 |
-| Ana Lopez | Laptop | Centro | 10,000 | 11,500 | 13,000 |
+| Año | Litoral | Entidad | Puerto | Especie | Origen | Peso_Desembarcado_kg | Peso_Vivo_kg | Valor_Pesos |
+|-----|---------|---------|--------|---------|--------|---------------------|--------------|-------------|
+| 2022 | Golfo de México | Campeche | Ciudad del Carmen | Camarón blanco | Captura | 125,000 | 135,000 | $18,750,000 |
+| 2022 | Golfo de México | Campeche | Champotón | Mero rojo | Captura | 45,000 | 48,000 | $9,000,000 |
+| 2022 | Golfo de México | Tabasco | Frontera | Ostión | Captura | 80,000 | 85,000 | $4,800,000 |
+| 2022 | Golfo de México | Veracruz | Alvarado | Pargo rojo | Captura | 30,000 | 32,000 | $6,000,000 |
+| 2022 | Pacífico | Sinaloa | Mazatlán | Camarón café | Captura | 200,000 | 215,000 | $30,000,000 |
+| 2022 | Pacífico | Sonora | Guaymas | Sardina | Captura | 350,000 | 370,000 | $7,000,000 |
+| 2022 | Pacífico | Nayarit | San Blas | Huachinango | Captura | 28,000 | 30,000 | $5,600,000 |
+| 2022 | Caribe | Quintana Roo | Chetumal | Langosta espinosa | Captura | 15,000 | 16,500 | $6,750,000 |
+| 2022 | Caribe | Quintana Roo | Isla Mujeres | Pulpo maya | Captura | 22,000 | 24,000 | $7,920,000 |
+| 2022 | Golfo de México | Campeche | Sabancuy | Jaiba | Captura | 18,000 | 19,500 | $1,800,000 |
 
 **Instrucciones:**
 
-1. Abre una hoja de calculo en Excel y copia los datos anteriores en el rango A1:F7.
+1. Abre una hoja de cálculo en Excel y copia los datos anteriores en el rango A1:J11. Asegúrate de que la primera fila contenga los encabezados.
 2. Selecciona cualquier celda dentro de los datos.
-3. Ve a **Insertar > Tabla dinamica** (o presiona Alt + N + V).
-4. Selecciona "Nueva hoja de calculo" y haz clic en Aceptar.
-5. En el panel de Campos de tabla dinamica, arrastra los campos a las siguientes areas:
-   - **Filas:** Producto
-   - **Columnas:** Region
-   - **Valores:** Enero (Suma)
-6. Observa el resultado.
+3. Ve a **Datos > Filtro** (o presiona Ctrl + Mayús + L).
+4. Observa cómo aparecen flechas de despliegue en cada encabezado de columna.
+5. Haz clic en la flecha de la columna **Litoral** y selecciona solo "Golfo de México".
+6. Haz clic en la flecha de la columna **Año** y selecciona solo "2022".
+7. Sin quitar el filtro anterior, haz clic en la flecha de **Especie** y selecciona "Camarón blanco".
 
 ---
 
 **Resultado del ejercicio:**
 
-Describe brevemente el aspecto de tu tabla dinamica resultante:
+Describe qué registros se muestran después de aplicar los tres filtros simultáneamente:
 
 ```
 _________________________________________________________________
 _________________________________________________________________
-_________________________________________________________________
 ```
 
-**Preguntas de reflexion:**
+**Preguntas de reflexión:**
 
-a) ?Que producto aparece en la primera fila? _________________________________
-
-b) ?Que region tiene la mayor suma de ventas en enero? ________________________
-
-c) ?Cual es el total general de ventas de enero? ______________________________
-
-d) ?Que sucede si arrastras el campo "Vendedor" al area de Filas?
+a) ¿Cuántos registros cumplen con la condición Litoral = "Golfo de México" y Especie = "Camarón blanco"?
 
 ```
 _________________________________________________________________
 ```
 
-e) ?Que diferencia observas al cambiar el campo de valores de "Suma" a "Promedio"?
+b) ¿Cuál es el peso desembarcado total de las capturas del Pacífico?
+
+```
+_________________________________________________________________
+```
+
+c) ¿Qué entidad federativa tiene el mayor valor en pesos en la tabla completa?
+
+```
+_________________________________________________________________
+```
+
+d) ¿Cómo harías para ver solo los registros del Caribe mexicano?
+
+```
+_________________________________________________________________
+```
+
+e) ¿Qué especie del Golfo de México tiene el mayor peso desembarcado?
 
 ```
 _________________________________________________________________
@@ -146,101 +161,119 @@ _________________________________________________________________
 
 ---
 
-**Autoevaluacion:**
+**Autoevaluación:**
 
-| Indicador | Si | No |
+| Indicador | Sí | No |
 |-----------|----|----|
-| Cree la tabla dinamica siguiendo los pasos indicados | - | - |
-| Identifique las cuatro areas de la tabla dinamica | - | - |
-| Pude cambiar el calculo de suma a promedio | - | - |
-| Comprendo la utilidad de las tablas dinamicas | - | - |
+| Apliqué el autofiltro correctamente | - | - |
+| Pude filtrar por una columna específica | - | - |
+| Apliqué filtros combinados en varias columnas | - | - |
+| Limpié los filtros después del ejercicio | - | - |
+| Comprendo la utilidad de los filtros para explorar datos | - | - |
 
 ---
 
-### Ejercicio 2: Analisis de ventas por producto y region
+### Ejercicio 2: Filtros avanzados (criterios AND/OR)
 
-**Nivel:** Basico
+**Nivel:** Básico
 
-**Objetivo:** El estudiante analizara datos de ventas utilizando una tabla dinamica con multiples campos en las areas de filas y valores, identificando tendencias por producto y region.
+**Objetivo:** El estudiante aplicará filtros avanzados con criterios lógicos AND/OR para extraer subconjuntos específicos de datos de capturas pesqueras.
 
 **Saberes a reforzar:**
-- Areas de tabla dinamica
-- Agregacion de datos (suma, conteo)
-- Ordenamiento de datos en tabla dinamica
+- Filtro avanzado (Datos > Avanzadas)
+- Área de criterios
+- Criterios AND (misma fila)
+- Criterios OR (distintas filas)
+- Extraer a otra ubicación
 
-**Estrategia metodologica:** Aprendizaje basado en problemas. El estudiante recibe datos reales de ventas y debe responder preguntas de negocio utilizando la tabla dinamica.
+**Estrategia metodológica:** Aprendizaje basado en problemas. El estudiante debe extraer subconjuntos de datos que cumplen condiciones múltiples.
 
 **Lecturas sugeridas:**
-- Excel Total. (2021). *Tablas dinamicas en Excel (tutorial completo)*. https://exceltotal.com/tablas-dinamicas-en-excel
-- Daxus Latam. (2025). *Aprende a crear tablas dinamicas desde cero* [Video]. YouTube. https://www.youtube.com/watch?v=WGH-k_vURuE
+- Microsoft Support. (s.f.). *Filtrar datos aplicando criterios avanzados*. https://support.microsoft.com/es-es/office/filtrar-datos-aplicando-criterios-avanzados
+- Gelabert Fernández, R. (2026). *Conceptos básicos de filtros en Excel* [Material inédito]. UNACAR.
 
 ---
 
-**Caso: Tienda de electronica "TecnoShop"**
+**Caso: Captura por especie, litoral y temporada**
 
-Registro de ventas del mes de abril:
-
-| Fecha | Producto | Categoria | Vendedor | Region | Total |
-|------|----------|-----------|----------|--------|-------|
-| 01/04 | Laptop Gamer | Computo | Lucia | Norte | $25,000 |
-| 01/04 | Smartwatch | Accesorios | Mario | Sur | $4,500 |
-| 02/04 | Laptop Gamer | Computo | Mario | Sur | $25,000 |
-| 02/04 | Audifonos | Accesorios | Lucia | Norte | $2,000 |
-| 03/04 | Tablet | Computo | Ana | Centro | $8,000 |
-| 03/04 | Smartwatch | Accesorios | Ana | Centro | $4,500 |
-| 04/04 | Laptop Gamer | Computo | Lucia | Norte | $25,000 |
-| 04/04 | Audifonos | Accesorios | Mario | Sur | $2,000 |
-| 05/04 | Tablet | Computo | Ana | Centro | $8,000 |
-| 05/04 | Smartwatch | Accesorios | Lucia | Norte | $4,500 |
-| 06/04 | Monitor | Computo | Mario | Sur | $6,000 |
-| 06/04 | Teclado Mec. | Accesorios | Ana | Centro | $1,800 |
+| Año | Litoral | Entidad | Especie | Temporada | Meses | Peso_Desembarcado_kg | Valor_Pesos |
+|-----|---------|---------|---------|-----------|-------|---------------------|-------------|
+| 2020 | Golfo de México | Campeche | Mero rojo | Veda | Ene-Feb | 12,000 | $2,400,000 |
+| 2020 | Golfo de México | Campeche | Mero rojo | Libre | Mar-Dic | 55,000 | $11,000,000 |
+| 2020 | Pacífico | Sinaloa | Camarón café | Veda | Mar-Jun | 8,000 | $1,200,000 |
+| 2020 | Pacífico | Sinaloa | Camarón café | Libre | Jul-Feb | 210,000 | $31,500,000 |
+| 2021 | Golfo de México | Campeche | Mero rojo | Veda | Ene-Feb | 10,500 | $2,100,000 |
+| 2021 | Golfo de México | Campeche | Mero rojo | Libre | Mar-Dic | 48,000 | $9,600,000 |
+| 2021 | Pacífico | Sinaloa | Camarón café | Veda | Mar-Jun | 7,500 | $1,125,000 |
+| 2021 | Pacífico | Sinaloa | Camarón café | Libre | Jul-Feb | 195,000 | $29,250,000 |
+| 2022 | Golfo de México | Campeche | Mero rojo | Veda | Ene-Feb | 11,000 | $2,200,000 |
+| 2022 | Golfo de México | Campeche | Mero rojo | Libre | Mar-Dic | 52,000 | $10,400,000 |
+| 2022 | Pacífico | Sinaloa | Camarón café | Veda | Mar-Jun | 8,500 | $1,275,000 |
+| 2022 | Pacífico | Sinaloa | Camarón café | Libre | Jul-Feb | 220,000 | $33,000,000 |
+| 2022 | Caribe | Quintana Roo | Langosta | Veda | Mar-Jun | 3,000 | $1,350,000 |
+| 2022 | Caribe | Quintana Roo | Langosta | Libre | Jul-Feb | 14,000 | $6,300,000 |
 
 **Instrucciones:**
 
-1. Captura los datos en Excel (rango A1:G13).
-2. Crea una tabla dinamica.
-3. Arrastra los campos de la siguiente manera:
-   - **Filas:** Producto
-   - **Columnas:** Region
-   - **Valores:** Suma de Total
-4. Ordena los productos de mayor a menor por el total general.
-5. Agrega **Filtro** con el campo "Vendedor".
+1. Captura los datos en Excel en el rango A1:H15.
+2. **Filtro avanzado AND:** En un área de criterios separada (ej. celdas J1:K2), escribe:
+   - J1: `Litoral`, J2: `Pacífico`
+   - K1: `Temporada`, K2: `Libre`
+3. Ve a **Datos > Avanzadas**, selecciona "Filtrar la lista in situ" y define el Rango de criterios como $J$1:$K$2.
+4. **Filtro avanzado OR:** En J4:K6, escribe:
+   - J4: `Especie`, J5: `Mero rojo`
+   - K4: `Especie`, K6: `Langosta`
+5. Aplica el filtro avanzado con criterios OR para ver ambas especies.
 
 ---
 
 **Resultados:**
 
-**a)** Completa la siguiente tabla con los totales por producto y region:
+**a)** Completa la siguiente tabla con los registros filtrados con criterio AND (Litoral = Pacífico Y Temporada = Libre):
 
-| Producto | Norte | Sur | Centro | Total General |
-|----------|-------|-----|--------|--------------|
-| Laptop Gamer | | | | |
-| Tablet | | | | |
-| Monitor | | | | |
-| Smartwatch | | | | |
-| Audifonos | | | | |
-| Teclado Mec. | | | | |
-| **Total General** | | | | |
+| Año | Entidad | Especie | Peso Desembarcado | Valor |
+|-----|---------|---------|-------------------|-------|
+| | | | | |
+| | | | | |
+| | | | | |
 
-**b)** ?Cual es el producto mas vendido en total? _________________________________
-
-**c)** ?Que region genero mayores ingresos? _____________________________________
-
-**d)** Si filtramos por el vendedor "Lucia", ?cuanto suma en total?
+**b)** ¿Cuántos registros se obtienen con el filtro OR (Mero rojo O Langosta)?
 
 ```
 _________________________________________________________________
 ```
 
-**e)** ?Cuantas transacciones registro el vendedor "Ana"?
+**Preguntas:**
+
+a) ¿Cuál es la diferencia práctica entre poner criterios AND en la misma fila vs. OR en distintas filas?
+
+```
+_________________________________________________________________
+_________________________________________________________________
+```
+
+b) ¿Qué litoral tiene mayor producción en temporada libre?
 
 ```
 _________________________________________________________________
 ```
 
-**f)** ?Cual es el producto que menos se vendio y en que region?
+c) ¿Cuánto vale la producción total de langosta en el Caribe en temporada libre?
 
 ```
+_________________________________________________________________
+```
+
+d) Diseña un filtro avanzado que muestre solo las capturas del año 2022 con peso desembarcado mayor a 50,000 kg. ¿Cómo escribirías los criterios?
+
+```
+_________________________________________________________________
+```
+
+e) ¿Qué especie muestra mayor diferencia entre captura en veda vs. libre?
+
+```
+_________________________________________________________________
 _________________________________________________________________
 ```
 
@@ -256,398 +289,569 @@ _________________________________________________________________
 
 ---
 
-### Ejercicio 3: Resumen de inventarios con promedios y conteos
+### Ejercicio 3: Filtros por selección y formato condicional
 
-**Nivel:** Basico-Intermedio
+**Nivel:** Básico
 
-**Objetivo:** El estudiante utilizara funciones de agregacion (promedio, conteo, maximo, minimo) en una tabla dinamica para analizar un inventario de productos.
-
-**Saberes a reforzar:**
-- Cambiar tipo de calculo en valores
-- Interpretacion de promedios
-- Conteo de registros
-
-**Estrategia metodologica:** Aprendizaje por descubrimiento. El estudiante experimenta con diferentes funciones de agregacion y analiza los resultados.
-
-**Lecturas sugeridas:**
-- Ninja Excel. (2024). *Como hacer tablas dinamicas en Excel: paso a paso*. https://www.ninjaexcel.com/excel-en-el-trabajo/tablas-dinamicas
-- El Tio Tech. (2021). *6 ejercicios de tablas dinamicas para practicar*. https://eltiotech.com/6-ejercicios-tablas-dinamicas
-
----
-
-**Caso: Inventario de almacen "Distribuidora del Golfo"**
-
-| Producto | Categoria | Proveedor | Costo Unit. | Precio Venta | Stock | Sucursal |
-|----------|-----------|-----------|-------------|--------------|-------|----------|
-| Arroz 1kg | Alimentos | Proveedor A | $15.00 | $22.00 | 200 | Centro |
-| Frijol 1kg | Alimentos | Proveedor A | $18.00 | $26.00 | 150 | Centro |
-| Aceite 1L | Alimentos | Proveedor B | $25.00 | $35.00 | 80 | Norte |
-| Leche 1L | Alimentos | Proveedor B | $12.00 | $18.50 | 300 | Norte |
-| Jabon barra | Limpieza | Proveedor C | $8.00 | $14.00 | 120 | Sur |
-| Detergente 1kg | Limpieza | Proveedor C | $22.00 | $32.00 | 90 | Sur |
-| Shampoo 500ml | Cuidado Pers. | Proveedor A | $35.00 | $52.00 | 60 | Centro |
-| Arroz 1kg | Alimentos | Proveedor A | $15.00 | $22.00 | 180 | Norte |
-| Frijol 1kg | Alimentos | Proveedor A | $18.00 | $26.00 | 120 | Sur |
-| Detergente 1kg | Limpieza | Proveedor C | $22.00 | $32.00 | 110 | Centro |
-
-**Instrucciones:**
-
-1. Captura los datos.
-2. Crea una tabla dinamica con:
-   - **Filas:** Categoria
-   - **Valores:** Promedio de Precio Venta
-3. Agrega un segundo campo a **Valores**: Conteo de Producto.
-4. Duplica la tabla dinamica y cambia los valores a **Maximo** y **Minimo** de Costo Unitario.
-
----
-
-**Resultados:**
-
-**Tabla 1 - Promedio de Precio Venta y Conteo por Categoria:**
-
-| Categoria | Promedio Precio Venta | Cantidad de Productos |
-|-----------|----------------------|-----------------------|
-| Alimentos | | |
-| Limpieza | | |
-| Cuidado Pers. | | |
-| **Total General** | | |
-
-**Tabla 2 - Costo Unitario Maximo y Minimo por Categoria:**
-
-| Categoria | Costo Maximo | Costo Minimo |
-|-----------|-------------|-------------|
-| Alimentos | | |
-| Limpieza | | |
-| Cuidado Pers. | | |
-
-**Preguntas:**
-
-a) ?Cual es la categoria con mayor precio de venta promedio? _____________________
-
-b) ?Cuantos productos diferentes hay en la categoria "Alimentos"? _________________
-
-c) ?Cual es el costo unitario minimo en toda la tabla? ___________________________
-
-d) ?Que categoria tiene el stock total mas alto? (Pista: agrega Suma de Stock a Valores)
-
-```
-_________________________________________________________________
-```
-
-e) ?Cual es la sucursal que tiene mas productos registrados?
-
-```
-_________________________________________________________________
-```
-
-f) Calcula el margen de ganancia promedio por categoria (Precio Venta - Costo):
-
-| Categoria | Margen Promedio |
-|-----------|----------------|
-| Alimentos | |
-| Limpieza | |
-| Cuidado Pers. | |
-
----
-
-### Ejercicio 4: Conteo de encuestas de satisfaccion
-
-**Nivel:** Intermedio
-
-**Objetivo:** El estudiante utilizara tablas dinamicas para procesar y analizar datos cualitativos provenientes de encuestas, aplicando conteos y porcentajes.
+**Objetivo:** El estudiante utilizará filtros por selección (clic derecho) y filtros por color/formato condicional para identificar visualmente tendencias y valores atípicos en datos de capturas pesqueras.
 
 **Saberes a reforzar:**
-- Conteo de registros
-- Mostrar valores como porcentaje
-- Segmentacion de datos categoricos
+- Filtro por selección (clic derecho)
+- Filtro por color de celda
+- Filtro por color de fuente
+- Formato condicional combinado con filtros
 
-**Estrategia metodologica:** Aprendizaje basado en problemas reales. El estudiante actua como analista de datos procesando resultados de una encuesta.
-
-**Lecturas sugeridas:**
-- Aprender21. (2026). *Tablas dinamicas en Excel: guia paso a paso*. https://www.aprender21.com/blog/excel-tablas-dinamicas-guia
-- Microsoft Support. (s.f.). *Crear una tabla dinamica para analizar datos de una hoja de calculo*.
-
----
-
-**Caso: Encuesta de satisfaccion de clientes**
-
-Resultados parciales de la encuesta aplicada a 50 clientes. Genera los 50 registros completos variando edad (18-65), genero (M/F), producto, satisfaccion (1-5), recomienda (Si/No) y frecuencia (Semanal/Mensual/Quincenal). A continuacion se muestran los primeros registros como ejemplo:
-
-| ID Cliente | Edad | Genero | Producto | Satisfaccion | Recomienda | Frecuencia |
-|-----------|------|--------|----------|-------------|-----------|-----------|
-| C001 | 25 | F | Laptop | 4 | Si | Semanal |
-| C002 | 34 | M | Tablet | 5 | Si | Mensual |
-| C003 | 42 | F | Smartphone | 3 | No | Quincenal |
-
-**Instrucciones:**
-
-1. Genera una tabla en Excel con los datos de 50 clientes.
-2. Crea una tabla dinamica con:
-   - **Filas:** Satisfaccion
-   - **Valores:** Conteo de ID Cliente
-3. Agrega un filtro de **Producto**.
-4. Duplica la tabla dinamica y cambia "Mostrar valores como" a **% del total**.
-
----
-
-**Resultados:**
-
-**Tabla 1 - Distribucion de satisfaccion (conteo):**
-
-| Nivel de Satisfaccion | Cantidad de Clientes |
-|-----------------------|---------------------|
-| 1 (Muy insatisfecho) | |
-| 2 (Insatisfecho) | |
-| 3 (Neutral) | |
-| 4 (Satisfecho) | |
-| 5 (Muy satisfecho) | |
-| **Total** | |
-
-**Tabla 2 - Porcentaje de satisfaccion:**
-
-| Nivel de Satisfaccion | Porcentaje |
-|-----------------------|-----------|
-| 1 (Muy insatisfecho) | |
-| 2 (Insatisfecho) | |
-| 3 (Neutral) | |
-| 4 (Satisfecho) | |
-| 5 (Muy satisfecho) | |
-| **Total** | 100% |
-
-**Preguntas:**
-
-a) ?Que porcentaje de clientes esta satisfecho o muy satisfecho (4 y 5)?
-
-```
-_________________________________________________________________
-```
-
-b) ?Cuantos clientes NO recomendarian el producto?
-
-```
-_________________________________________________________________
-```
-
-c) ?Que producto tiene mayor satisfaccion promedio?
-
-```
-_________________________________________________________________
-```
-
-d) ?Existe alguna relacion entre la frecuencia de compra y la satisfaccion?
-
-```
-_________________________________________________________________
-_________________________________________________________________
-```
-
----
-
-**Reflexion del estudiante sobre la utilidad de este analisis:**
-
-```
-_________________________________________________________________
-_________________________________________________________________
-_________________________________________________________________
-```
-
----
-
-### Ejercicio 5: Analisis de rendimiento academico
-
-**Nivel:** Intermedio
-
-**Objetivo:** El estudiante aplicara tablas dinamicas para analizar datos academicos, calcular promedios ponderados y detectar patrones de rendimiento.
-
-**Saberes a reforzar:**
-- Promedios ponderados
-- Agrupacion de datos
-- Filtros multiples
-
-**Estrategia metodologica:** Aprendizaje contextualizado. El estudiante analiza datos de su propio entorno academico.
+**Estrategia metodológica:** Aprendizaje por descubrimiento. El estudiante explorará formas alternativas de filtrar datos basadas en atributos visuales.
 
 **Lecturas sugeridas:**
-- Gelabert Fernandez, R. (2026). *Conceptos basicos de tablas dinamicas* [Material inedito]. UNACAR.
-- SMARTpro Academy. (s.f.). *Como hacer tablas dinamicas en Excel + IA desde cero* [Video]. YouTube. https://www.youtube.com/watch?v=Mh93eaKbkkw
+- Microsoft Support. (s.f.). *Agregar, cambiar o eliminar formato condicional*. https://support.microsoft.com/es-es/office/agregar-cambiar-o-eliminar-formato-condicional
+- Ninja Excel. (2024). *Filtros y formato condicional en Excel*. https://www.ninjaexcel.com
 
 ---
 
-**Caso: Calificaciones de estudiantes en 4 materias**
+**Caso: Rendimiento pesquero por puerto (2022)**
 
-| Matricula | Nombre | Materia | Semestre | Calificacion |
-|-----------|--------|---------|----------|-------------|
-| A001 | Laura Garcia | Matematicas | 1 | 85 |
-| A001 | Laura Garcia | Fisica | 1 | 78 |
-| A001 | Laura Garcia | Quimica | 1 | 92 |
-| A002 | Pedro Lopez | Matematicas | 1 | 70 |
-| A002 | Pedro Lopez | Fisica | 1 | 65 |
-| A002 | Pedro Lopez | Quimica | 1 | 73 |
-| A003 | Ana Martinez | Matematicas | 2 | 95 |
-| A003 | Ana Martinez | Fisica | 2 | 88 |
-| A003 | Ana Martinez | Quimica | 2 | 91 |
-| A004 | Luis Torres | Matematicas | 2 | 60 |
-| A004 | Luis Torres | Fisica | 2 | 55 |
-| A004 | Luis Torres | Quimica | 2 | 58 |
-| A005 | Sofia Ramirez | Matematicas | 1 | 90 |
-| A005 | Sofia Ramirez | Fisica | 1 | 85 |
-| A005 | Sofia Ramirez | Quimica | 1 | 88 |
-| A006 | Miguel Angel | Matematicas | 2 | 75 |
-| A006 | Miguel Angel | Fisica | 2 | 80 |
-| A006 | Miguel Angel | Quimica | 2 | 72 |
+| Puerto | Litoral | Entidad | Especie_Principal | Captura_Total_kg | Valor_Total | Embarcaciones | Días_de_Pesca |
+|--------|---------|---------|-------------------|-----------------|-------------|--------------|---------------|
+| Ciudad del Carmen | Golfo de México | Campeche | Camarón blanco | 125,000 | $18,750,000 | 120 | 180 |
+| Champotón | Golfo de México | Campeche | Mero rojo | 48,000 | $9,600,000 | 45 | 150 |
+| Sabancuy | Golfo de México | Campeche | Jaiba | 19,500 | $1,800,000 | 30 | 120 |
+| Frontera | Golfo de México | Tabasco | Ostión | 85,000 | $4,800,000 | 60 | 200 |
+| Alvarado | Golfo de México | Veracruz | Pargo rojo | 32,000 | $6,000,000 | 40 | 160 |
+| Mazatlán | Pacífico | Sinaloa | Camarón café | 215,000 | $30,000,000 | 200 | 220 |
+| Guaymas | Pacífico | Sonora | Sardina | 370,000 | $7,000,000 | 80 | 180 |
+| San Blas | Pacífico | Nayarit | Huachinango | 30,000 | $5,600,000 | 35 | 140 |
+| Chetumal | Caribe | Quintana Roo | Langosta espinosa | 16,500 | $6,750,000 | 25 | 100 |
+| Isla Mujeres | Caribe | Quintana Roo | Pulpo maya | 24,000 | $7,920,000 | 40 | 130 |
+| Progreso | Golfo de México | Yucatán | Pulpo maya | 55,000 | $18,150,000 | 90 | 170 |
+| Lázaro Cárdenas | Pacífico | Michoacán | Sardina | 120,000 | $2,400,000 | 35 | 110 |
+| Salina Cruz | Pacífico | Oaxaca | Pargo rojo | 18,000 | $3,600,000 | 25 | 90 |
+| Tampico | Golfo de México | Tamaulipas | Camarón blanco | 65,000 | $9,750,000 | 55 | 160 |
 
 **Instrucciones:**
 
 1. Captura los datos en Excel.
-2. Crea una tabla dinamica con:
-   - **Filas:** Materia
-   - **Valores:** Promedio de Calificacion
-3. Agrega un filtro de **Semestre**.
-4. Crea una segunda tabla dinamica con:
-   - **Filas:** Nombre
-   - **Valores:** Promedio de Calificacion
-   - **Orden:** de mayor a menor promedio
+2. Aplica **Formato Condicional** > **Barras de datos** a la columna "Captura_Total_kg" para visualizar la magnitud relativa de cada puerto.
+3. Aplica **Formato Condicional** > **Escalas de color** (verde-amarillo-rojo) a la columna "Valor_Total".
+4. Ahora haz clic derecho sobre una celda con un valor alto en Captura_Total_kg y selecciona **Filtrar > Filtrar por valor de celda seleccionada**.
+5. Aplica un **Filtro por color** usando la flecha de autofiltro en la columna "Valor_Total": selecciona "Filtrar por color de celda" y elige el color verde (valores altos).
 
 ---
 
 **Resultados:**
 
-**Tabla 1 - Promedio por Materia:**
+**Tabla 1 - Puertos con mayor captura (aplica filtro por selección sobre un valor alto):**
 
-| Materia | Promedio General | Promedio Semestre 1 | Promedio Semestre 2 |
-|---------|-----------------|--------------------|--------------------|
-| Matematicas | | | |
-| Fisica | | | |
-| Quimica | | | |
-| **Promedio General** | | | |
+| Puerto | Captura Total | Valor Total |
+|--------|---------------|-------------|
+| | | |
+| | | |
+| | | |
 
-**Tabla 2 - Ranking de estudiantes por promedio:**
+**Tabla 2 - Puertos con valor más alto (filtro por color verde en Valor_Total):**
 
-| Posicion | Nombre | Promedio |
-|----------|--------|---------|
-| 1 | | |
-| 2 | | |
-| 3 | | |
-| 4 | | |
-| 5 | | |
-| 6 | | |
+| Puerto | Valor Total |
+|--------|-------------|
+| | |
+| | |
+| | |
 
 **Preguntas:**
 
-a) ?Cual es la materia con mejor promedio general? _______________________________
-
-b) ?Cuantos estudiantes tienen promedio superior a 80? ___________________________
-
-c) ?Que semestre tiene mejor rendimiento general? ________________________________
-
-d) ?Cual es la desviacion entre la materia mas alta y mas baja?
+a) ¿Cuántos puertos del Golfo de México tienen capturas superiores a 50,000 kg?
 
 ```
 _________________________________________________________________
 ```
 
-e) Si el minimo aprobatorio es 70, ?Cuantos estudiantes estan en riesgo?
+b) ¿Qué puerto del Pacífico tiene el mayor valor en pesos?
 
 ```
+_________________________________________________________________
+```
+
+c) ¿Cuál es la relación visual entre captura total y valor total? ¿Todos los puertos con alta captura tienen alto valor?
+
+```
+_________________________________________________________________
+_________________________________________________________________
+```
+
+d) ¿Qué puerto tiene el mayor valor por kg capturado? (Pista: divide Valor_Total / Captura_Total_kg en una columna adicional)
+
+```
+_________________________________________________________________
+```
+
+e) ¿Cómo ayudan las barras de datos a identificar rápidamente los puertos más productivos?
+
+```
+_________________________________________________________________
 _________________________________________________________________
 ```
 
 ---
 
-### Ejercicio 6: Segmentacion y filtros con escalas de tiempo
+**Reflexión del estudiante:**
+
+```
+_________________________________________________________________
+_________________________________________________________________
+_________________________________________________________________
+```
+
+---
+
+### Ejercicio 4: Power Query / ETL — Limpieza de datos pesqueros
 
 **Nivel:** Intermedio
 
-**Objetivo:** El estudiante incorporara segmentaciones (slicers) y escalas de tiempo (timeline) para filtrar datos de forma interactiva en una tabla dinamica.
+**Objetivo:** El estudiante aplicará técnicas de Extracción, Transformación y Carga (ETL) mediante Power Query de Excel para limpiar, normalizar y preparar un dataset de capturas pesqueras para su análisis posterior con tablas dinámicas.
 
 **Saberes a reforzar:**
-- Insertar y configurar segmentaciones
-- Insertar escalas de tiempo
-- Conexion de segmentaciones a multiples tablas dinamicas
-- Formato de segmentaciones
+- Concepto de proceso ETL
+- Power Query (Obtener y transformar datos)
+- Eliminación de duplicados y filas vacías
+- División y combinación de columnas
+- Cambio de tipos de datos
+- Reemplazo de valores y eliminación de errores
 
-**Estrategia metodologica:** Aprendizaje demostrativo-practico. El estudiante explorara la interactividad de las tablas dinamicas mediante controles visuales.
+**Estrategia metodológica:** Aprendizaje basado en problemas reales. El estudiante recibe un archivo con datos simulados que contiene inconsistencias, valores nulos, formatos mixtos y errores típicos de bases de datos pesqueras. Deberá aplicar Power Query para normalizarlo.
 
 **Lecturas sugeridas:**
-- Caballero, M. & Torres, F. (s.f.). *Tablas dinamicas: la quinta dimension* (1. ed.). [PDF].
-- El Tio Tech. (2025). *Domina las tablas dinamicas en Excel desde cero* [Video]. YouTube. https://www.youtube.com/watch?v=tN6_ZEaqYBo
+- Microsoft Support. (s.f.). *Introducción a Power Query*. https://support.microsoft.com/es-es/office/introducción-a-power-query
+- Gelabert Fernández, R. (2026). *Limpieza de datos con Power Query* [Material inédito]. UNACAR.
 
 ---
 
-**Caso: Ventas diarias de "Comercial del Sureste"**
+**Caso: Normalización del dataset "datos capturas 2005 2022"**
 
-| Fecha | Vendedor | Producto | Cantidad | Precio Unit. | Total |
-|------|----------|----------|----------|-------------|-------|
-| 02/01/2025 | Hugo | Pantalla LED | 3 | $8,000 | $24,000 |
-| 02/01/2025 | Maya | Bocina BT | 10 | $1,200 | $12,000 |
-| 05/01/2025 | Hugo | Laptop | 2 | $18,000 | $36,000 |
-| 07/01/2025 | Leo | Pantalla LED | 1 | $8,000 | $8,000 |
-| 10/01/2025 | Maya | Laptop | 3 | $18,000 | $54,000 |
-| 15/01/2025 | Hugo | Bocina BT | 5 | $1,200 | $6,000 |
-| 20/01/2025 | Leo | Pantalla LED | 2 | $8,000 | $16,000 |
-| 22/01/2025 | Maya | Bocina BT | 8 | $1,200 | $9,600 |
-| 25/01/2025 | Leo | Laptop | 1 | $18,000 | $18,000 |
-| 28/01/2025 | Hugo | Pantalla LED | 4 | $8,000 | $32,000 |
-| 01/02/2025 | Maya | Laptop | 2 | $18,000 | $36,000 |
-| 03/02/2025 | Leo | Bocina BT | 6 | $1,200 | $7,200 |
-| 05/02/2025 | Hugo | Pantalla LED | 2 | $8,000 | $16,000 |
-| 10/02/2025 | Maya | Bocina BT | 12 | $1,200 | $14,400 |
-| 12/02/2025 | Leo | Laptop | 1 | $18,000 | $18,000 |
-| 15/02/2025 | Hugo | Pantalla LED | 3 | $8,000 | $24,000 |
-| 20/02/2025 | Maya | Laptop | 4 | $18,000 | $72,000 |
-| 25/02/2025 | Leo | Bocina BT | 7 | $1,200 | $8,400 |
+El docente proporcionará un archivo de datos simulado (ej. **"datos capturas 2005 2022.xlsx"** con más de 500 registros, años, litoral, entidad, mes, especie, origen, peso desembarcado, peso vivo, valor en pesos, entre otras). Puede ser otro archivo que necesite normalizar mediante técnicas de limpieza de datos (ETL) y con el uso de Power Query.
+
+**Estructura esperada del dataset después de la limpieza:**
+
+| Columna | Tipo | Descripción |
+|---------|------|-------------|
+| Año | Número (entero) | 2005 a 2022 |
+| Litoral | Texto | Golfo de México, Pacífico, Caribe |
+| Entidad | Texto | Campeche, Yucatán, Sinaloa, etc. |
+| Puerto | Texto | Ciudad del Carmen, Mazatlán, etc. |
+| Mes | Texto | Enero, Febrero, ..., Diciembre |
+| Especie | Texto | Camarón blanco, Mero rojo, etc. |
+| Origen | Texto | Captura o Acuacultura |
+| Peso_Desembarcado_kg | Número | Peso en kilogramos |
+| Peso_Vivo_kg | Número | Peso vivo en kilogramos |
+| Valor_Pesos | Número | Valor en pesos mexicanos |
 
 **Instrucciones:**
 
-1. Captura los datos (convierte la columna Fecha a tipo Fecha en Excel).
-2. Crea una tabla dinamica con:
-   - **Filas:** Vendedor
-   - **Columnas:** Producto
-   - **Valores:** Suma de Total
-3. Inserta una **Segmentacion** para el campo "Producto".
-4. Inserta una **Escala de Tiempo** para el campo "Fecha".
-5. Prueba los filtros: selecciona solo "Enero" y el producto "Pantalla LED".
+1. Abre el archivo **"datos capturas 2005 2022.xlsx"** proporcionado por el docente.
+2. Selecciona cualquier celda dentro de los datos y ve a **Datos > Desde tabla/rango** (o **Datos > Obtener y transformar datos > Desde tabla/rango**). Si Excel lo solicita, confirma que los datos tienen encabezados.
+3. Se abrirá el Editor de Power Query. Aplica las siguientes transformaciones en orden:
+
+   a) **Eliminar filas innecesarias:** En la pestaña Inicio, usa **Quitar filas > Quitar filas superiores** si hay filas de encabezado repetido o títulos. Usa **Quitar filas en blanco** para eliminar filas vacías.
+
+   b) **Promover encabezados:** Si la primera fila contiene los nombres de columna, usa **Inicio > Usar la primera fila como encabezados**.
+
+   c) **Cambiar tipo de datos:** Asegúrate de que cada columna tenga el tipo correcto:
+      - Año → Número entero
+      - Mes → Texto
+      - Peso_Desembarcado_kg → Número decimal
+      - Valor_Pesos → Número decimal
+      Para cambiarlo, haz clic en el ícono de tipo junto al nombre de la columna.
+
+   d) **Reemplazar valores:** Si hay celdas con texto inconsistente (ej. "N/A", "-", "Sin dato"), selecciona la columna y usa **Inicio > Reemplazar valores** para sustituirlos por valores nulos o por ceros según corresponda.
+
+   e) **Dividir columnas:** Si alguna columna combina información (ej. "Especie - Origen"), selecciona la columna y ve a **Transformar > Dividir columna > Por delimitador** y elige el guion (-).
+
+   f) **Eliminar duplicados:** Si hay registros repetidos, selecciona todas las columnas y usa **Inicio > Quitar filas > Quitar duplicados**.
+
+   g) **Filtrar errores:** Haz clic en el ícono de filtro de cada columna y desmarca cualquier valor que sea claramente un error (ej. valores negativos en peso, texto donde debería haber número).
+
+4. Una vez que los datos estén limpios, ve a **Inicio > Cerrar y cargar > Cerrar y cargar en...** y selecciona "Nueva hoja de cálculo".
+
+---
+
+**Resultado del ejercicio:**
+
+Describe las transformaciones que aplicaste y cuántos registros tenía el dataset original vs. después de la limpieza:
+
+```
+_________________________________________________________________
+_________________________________________________________________
+_________________________________________________________________
+_________________________________________________________________
+```
+
+**Preguntas de reflexión:**
+
+a) ¿Qué tipo de inconsistencias encontraste en el dataset original?
+
+```
+_________________________________________________________________
+_________________________________________________________________
+```
+
+b) ¿Cuántos registros duplicados eliminaste?
+
+```
+_________________________________________________________________
+```
+
+c) ¿Qué columnas requirieron cambio de tipo de dato?
+
+```
+_________________________________________________________________
+```
+
+d) ¿Por qué es importante normalizar los datos antes de crear tablas dinámicas?
+
+```
+_________________________________________________________________
+_________________________________________________________________
+```
+
+e) ¿Qué ventajas tiene Power Query frente a hacer la limpieza manualmente?
+
+```
+_________________________________________________________________
+_________________________________________________________________
+```
+
+---
+
+**Autoevaluación:**
+
+| Indicador | Sí | No |
+|-----------|----|----|
+| Abrí correctamente el archivo en Power Query | - | - |
+| Eliminé filas vacías y duplicados | - | - |
+| Cambié los tipos de datos según correspondía | - | - |
+| Reemplacé valores inconsistentes | - | - |
+| Cargué los datos limpios a una nueva hoja | - | - |
+| Comprendo la utilidad del proceso ETL | - | - |
+
+---
+
+### Ejercicio 5: Tabla dinámica — Peso desembarcado por especie y año
+
+**Nivel:** Básico
+
+**Objetivo:** El estudiante creará su primera tabla dinámica a partir del dataset limpio de capturas pesqueras, analizando el peso desembarcado por especie a través de los años.
+
+**Saberes a reforzar:**
+- Creación de tabla dinámica
+- Áreas de tabla dinámica (filas, columnas, valores, filtros)
+- Agregación de datos con suma
+- Ordenamiento en tabla dinámica
+
+**Estrategia metodológica:** Aprendizaje guiado paso a paso. El estudiante aplicará por primera vez una tabla dinámica sobre datos marinos reales.
+
+**Lecturas sugeridas:**
+- Microsoft Support. (s.f.). *Crear una tabla dinámica para analizar datos de una hoja de cálculo*. https://support.microsoft.com/es-es/office/crear-una-tabla-dinamica-para-analizar-datos-de-una-hoja-de-calculo-a9a84538-bfe9-40a9-a8e9-f99134456576
+- Daxus Latam. (2025). *Aprende a crear tablas dinámicas desde cero* [Video]. YouTube. https://www.youtube.com/watch?v=WGH-k_vURuE
+
+---
+
+**Caso: Dataset de capturas pesqueras (2005-2022) — ya limpio del Ejercicio 4**
+
+Utiliza el dataset ya limpio del ejercicio anterior. Si no completaste el Ejercicio 4, el docente proporcionará una versión limpia del archivo.
+
+**Instrucciones:**
+
+1. Asegúrate de tener los datos limpios en una hoja de Excel.
+2. Selecciona cualquier celda dentro de los datos.
+3. Ve a **Insertar > Tabla dinámica** (o presiona Alt + N + V).
+4. Selecciona "Nueva hoja de cálculo" y haz clic en Aceptar.
+5. En el panel de Campos de tabla dinámica, arrastra los campos a las siguientes áreas:
+   - **Filas:** Especie
+   - **Columnas:** Año
+   - **Valores:** Suma de Peso_Desembarcado_kg
+6. Ordena las especies de mayor a menor por el total general.
+7. Agrega un **Filtro** con el campo "Litoral" y selecciona solo "Golfo de México".
+
+---
+
+**Resultado del ejercicio:**
+
+**Tabla 1 - Peso desembarcado (kg) por especie y año (filtrado: Golfo de México):**
+
+| Especie | Año 2005 | Año 2006 | ... | 2022 | Total General |
+|---------|----------|----------|-----|------|--------------|
+| | | | | | |
+| | | | | | |
+| | | | | | |
+| **Total General** | | | | | |
+
+*Nota: completa con los datos que arroje tu tabla dinámica.*
+
+**Preguntas de reflexión:**
+
+a) ¿Qué especie tiene el mayor peso desembarcado total en el Golfo de México?
+
+```
+_________________________________________________________________
+```
+
+b) ¿En qué año se registró el mayor peso desembarcado de la especie líder?
+
+```
+_________________________________________________________________
+```
+
+c) ¿Cómo cambia el ranking de especies si cambias "Suma" por "Promedio" en los valores?
+
+```
+_________________________________________________________________
+_________________________________________________________________
+```
+
+d) ¿Qué año presenta la mayor captura total en el Golfo de México?
+
+```
+_________________________________________________________________
+```
+
+e) Si eliminas el filtro de Litoral, ¿cómo se modifica el ranking de especies?
+
+```
+_________________________________________________________________
+_________________________________________________________________
+```
+
+---
+
+**Autoevaluación:**
+
+| Indicador | Sí | No |
+|-----------|----|----|
+| Creé la tabla dinámica siguiendo los pasos | - | - |
+| Identifiqué las cuatro áreas de la tabla dinámica | - | - |
+| Pude ordenar las especies de mayor a menor | - | - |
+| Apliqué correctamente el filtro de Litoral | - | - |
+| Comprendo cómo la tabla dinámica resume los datos | - | - |
+
+---
+
+### Ejercicio 6: Tabla dinámica — Peso vivo por litoral y entidad federativa
+
+**Nivel:** Básico
+
+**Objetivo:** El estudiante analizará el peso vivo de las capturas distribuidas por litoral y entidad federativa, utilizando múltiples campos en una tabla dinámica para identificar las regiones más productivas.
+
+**Saberes a reforzar:**
+- Múltiples campos en filas y columnas
+- Agrupación jerárquica (Litoral > Entidad)
+- Cambio de cálculo entre suma, promedio y conteo
+- Interpretación de subtotales y totales
+
+**Estrategia metodológica:** Aprendizaje basado en problemas. El estudiante responde preguntas sobre la distribución geográfica de las capturas.
+
+**Lecturas sugeridas:**
+- Excel Total. (2021). *Tablas dinámicas en Excel (tutorial completo)*. https://exceltotal.com/tablas-dinamicas-en-excel
+- CONAPESCA. (2025). *Anuario estadístico de pesca y acuacultura*. https://www.gob.mx/conapesca
+
+---
+
+**Caso: Captura por litoral y entidad (2005-2022)**
+
+Utiliza el dataset limpio del Ejercicio 4. Vamos a analizar cómo se distribuye el peso vivo de las capturas geográficamente.
+
+**Instrucciones:**
+
+1. Con los datos limpios visibles, crea una nueva tabla dinámica (**Insertar > Tabla dinámica**).
+2. Configura los campos de la siguiente manera:
+   - **Filas:** Litoral y luego Entidad (arrastra Litoral primero, luego Entidad debajo)
+   - **Valores:** Suma de Peso_Vivo_kg
+3. Agrega un segundo campo a **Valores**: Promedio de Peso_Vivo_kg.
+4. Agrega un tercer campo a **Valores**: Conteo de Registros (arrastra cualquier campo texto, como Especie, y cambia su cálculo a "Conteo").
+5. Expande y contrae los niveles haciendo clic en los signos + y - junto a cada litoral.
 
 ---
 
 **Resultados:**
 
-**Tabla dinamica completa (sin filtros):**
+**Tabla 1 - Peso vivo por litoral y entidad:**
 
-| Vendedor | Bocina BT | Laptop | Pantalla LED | Total General |
-|----------|-----------|--------|-------------|--------------|
-| Hugo | | | | |
-| Leo | | | | |
-| Maya | | | | |
+| Litoral | Entidad | Suma Peso Vivo (kg) | Promedio Peso Vivo (kg) | Conteo de Registros |
+|---------|---------|-------------------|------------------------|---------------------|
+| **Golfo de México** | | | | |
+| | Campeche | | | |
+| | Veracruz | | | |
+| | Tabasco | | | |
+| | Tamaulipas | | | |
+| | Yucatán | | | |
+| **Pacífico** | | | | |
+| | Sinaloa | | | |
+| | Sonora | | | |
+| | Nayarit | | | |
+| | Michoacán | | | |
+| | Oaxaca | | | |
+| **Caribe** | | | | |
+| | Quintana Roo | | | |
 | **Total General** | | | | |
-
-**Despues de aplicar filtros (Enero + Pantalla LED):**
-
-| Vendedor | Pantalla LED |
-|----------|-------------|
-| Hugo | |
-| Leo | |
-| **Total** | |
 
 **Preguntas:**
 
-a) ?Cuanto vendio Maya en total durante todo el periodo? _________________________
-
-b) ?Que producto genero mas ingresos en febrero? ________________________________
-
-c) ?Cuantas unidades de Pantalla LED se vendieron en enero?
+a) ¿Qué litoral tiene el mayor peso vivo total?
 
 ```
 _________________________________________________________________
 ```
 
-d) Describe como las segmentaciones mejoran la interactividad del analisis:
+b) ¿Qué entidad federativa es la más productiva dentro del Golfo de México?
+
+```
+_________________________________________________________________
+```
+
+c) ¿Qué litoral tiene el mayor promedio de peso vivo por registro?
+
+```
+_________________________________________________________________
+```
+
+d) ¿Cuántos registros de captura tiene Quintana Roo (Caribe)?
+
+```
+_________________________________________________________________
+```
+
+e) ¿Qué entidad del Pacífico tiene la menor cantidad de registros?
+
+```
+_________________________________________________________________
+```
+
+f) ¿Cómo interpretas la diferencia entre "Suma de Peso Vivo" y "Promedio de Peso Vivo" al comparar litorales?
 
 ```
 _________________________________________________________________
 _________________________________________________________________
 ```
 
-e) ?Que vendedor tuvo el mejor desempeno en febrero?
+---
+
+**Conclusiones del estudiante:**
+
+```
+_________________________________________________________________
+_________________________________________________________________
+_________________________________________________________________
+```
+
+---
+
+### Ejercicio 7: Tabla dinámica — Valor en pesos por especie, origen y mes
+
+**Nivel:** Intermedio
+
+**Objetivo:** El estudiante analizará el valor económico de las capturas (en pesos) desglosado por especie, origen (captura vs. acuacultura) y mes, identificando tendencias estacionales y de mercado.
+
+**Saberes a reforzar:**
+- Múltiples campos en columnas
+- Filtros de informe
+- Análisis estacional
+- Comparación de origen (captura vs. acuacultura)
+
+**Estrategia metodológica:** Aprendizaje contextualizado. El estudiante analiza datos económicos pesqueros para detectar estacionalidad.
+
+**Lecturas sugeridas:**
+- El Tio Tech. (2021). *6 ejercicios de tablas dinámicas para practicar*. https://eltiotech.com/6-ejercicios-tablas-dinamicas
+- Gelabert Fernández, R. (2026). *Técnicas avanzadas de tablas dinámicas* [Material inédito]. UNACAR.
+
+---
+
+**Caso: Valor económico por especie, origen y mes**
+
+El dataset de capturas pesqueras contiene información sobre el valor en pesos de cada registro, así como el origen (Captura o Acuacultura). Analizaremos cómo varía el valor económico a lo largo del año.
+
+**Instrucciones:**
+
+1. Crea una nueva tabla dinámica.
+2. Configura:
+   - **Filas:** Especie
+   - **Columnas:** Origen
+   - **Valores:** Suma de Valor_Pesos
+3. Agrega un **Filtro de informe** con el campo "Mes" para poder seleccionar meses específicos.
+4. Crea una segunda tabla dinámica (en la misma hoja o en otra nueva):
+   - **Filas:** Mes
+   - **Columnas:** Origen
+   - **Valores:** Suma de Valor_Pesos
+5. En la segunda tabla, ordena los meses cronológicamente (Enero, Febrero, ...).
+
+---
+
+**Resultados:**
+
+**Tabla 1 - Valor en pesos por especie y origen:**
+
+| Especie | Captura | Acuacultura | Total General |
+|---------|---------|-------------|--------------|
+| Camarón blanco | | | |
+| Camarón café | | | |
+| Mero rojo | | | |
+| Pargo rojo | | | |
+| Huachinango | | | |
+| Sardina | | | |
+| Ostión | | | |
+| Pulpo maya | | | |
+| Langosta espinosa | | | |
+| Jaiba | | | |
+| **Total General** | | | |
+
+**Tabla 2 - Valor en pesos por mes y origen:**
+
+| Mes | Captura | Acuacultura | Total General |
+|-----|---------|-------------|--------------|
+| Enero | | | |
+| Febrero | | | |
+| Marzo | | | |
+| Abril | | | |
+| Mayo | | | |
+| Junio | | | |
+| Julio | | | |
+| Agosto | | | |
+| Septiembre | | | |
+| Octubre | | | |
+| Noviembre | | | |
+| Diciembre | | | |
+| **Total General** | | | |
+
+**Preguntas:**
+
+a) ¿Qué especie genera el mayor valor económico total?
+
+```
+_________________________________________________________________
+```
+
+b) ¿Qué especie tiene mayor participación de acuacultura frente a captura?
+
+```
+_________________________________________________________________
+```
+
+c) ¿En qué mes se registra el mayor valor en capturas?
+
+```
+_________________________________________________________________
+```
+
+d) ¿Existe algún patrón estacional en el valor de las capturas? ¿Qué meses son los más productivos?
+
+```
+_________________________________________________________________
+_________________________________________________________________
+```
+
+e) ¿Qué especie depende casi exclusivamente de la captura (sin acuacultura significativa)?
+
+```
+_________________________________________________________________
+```
+
+f) Si quisieras ver solo los datos del Camarón blanco, ¿cómo lo harías con el filtro de informe?
 
 ```
 _________________________________________________________________
@@ -655,97 +859,111 @@ _________________________________________________________________
 
 ---
 
-### Ejercicio 7: Calculos personalizados y campos calculados
+**Reflexión del estudiante:**
+
+```
+_________________________________________________________________
+_________________________________________________________________
+_________________________________________________________________
+```
+
+---
+
+### Ejercicio 8: Agrupación de datos y campos calculados
 
 **Nivel:** Intermedio-Avanzado
 
-**Objetivo:** El estudiante creara campos calculados y elementos calculados dentro de una tabla dinamica para realizar analisis que no existen en los datos originales.
+**Objetivo:** El estudiante agrupará datos en intervalos (años, rangos de peso) y creará campos calculados para obtener indicadores derivados como el valor por kilogramo y la relación peso vivo / peso desembarcado.
 
 **Saberes a reforzar:**
-- Insertar campo calculado
-- Formulas en campos calculados
-- Elementos calculados
-- Mostrar valores como (diferencia, %)
+- Agrupar campos en tabla dinámica
+- Crear grupos personalizados (quinquenios, rangos)
+- Insertar campo calculado con fórmulas
+- Interpretación de campos derivados
 
-**Estrategia metodologica:** Aprendizaje basado en problemas. El estudiante debe crear formulas personalizadas para responder preguntas especificas de negocio.
+**Estrategia metodológica:** Aprendizaje basado en problemas. El estudiante crea indicadores que no existen en los datos originales.
 
 **Lecturas sugeridas:**
-- Microsoft Support. (s.f.). *Crear una tabla dinamica para analizar datos de una hoja de calculo*.
-- Gelabert Fernandez, R. (2026). *Tecnicas avanzadas de tablas dinamicas* [Material inedito]. UNACAR.
+- Microsoft Support. (s.f.). *Crear campos calculados en tabla dinámica*. https://support.microsoft.com/es-es/office/crear-campos-calculados-en-tabla-dinamica
+- Caballero, M. & Torres, F. (s.f.). *Tablas dinámicas: la quinta dimensión* (1. ed.). [PDF].
 
 ---
 
-**Caso: "Ferreteria El Constructor" - Registro de ventas**
+**Caso: Análisis de capturas por quinquenios y rendimiento económico**
 
-| Fecha | Producto | Categoria | Cantidad | Precio | Costo | Vendedor |
-|------|----------|-----------|----------|-------|-------|----------|
-| 03/03 | Taladro | Herramienta | 5 | $1,500 | $900 | Rosa |
-| 03/03 | Martillo | Herramienta | 20 | $250 | $120 | Luis |
-| 04/03 | Pintura 20L | Pinturas | 3 | $2,800 | $1,800 | Rosa |
-| 04/03 | Cinta metrica | Accesorios | 30 | $80 | $35 | Luis |
-| 05/03 | Taladro | Herramienta | 8 | $1,500 | $900 | Luis |
-| 05/03 | Martillo | Herramienta | 15 | $250 | $120 | Rosa |
-| 06/03 | Pintura 20L | Pinturas | 5 | $2,800 | $1,800 | Luis |
-| 06/03 | Cinta metrica | Accesorios | 20 | $80 | $35 | Rosa |
-| 07/03 | Taladro | Herramienta | 3 | $1,500 | $900 | Rosa |
-| 07/03 | Pintura 20L | Pinturas | 2 | $2,800 | $1,800 | Rosa |
-| 10/03 | Martillo | Herramienta | 25 | $250 | $120 | Luis |
-| 10/03 | Cinta metrica | Accesorios | 40 | $80 | $35 | Luis |
+Trabajaremos con el dataset de capturas para agrupar años en quinquenios y crear indicadores de rendimiento.
 
 **Instrucciones:**
 
-1. Captura los datos en Excel.
-2. Crea una tabla dinamica basica:
-   - **Filas:** Producto
-   - **Valores:** Suma de Cantidad, Suma de Precio
-3. Inserta un **campo calculado** llamado "Ingreso Total" con la formula: `=Cantidad * Precio`
-4. Inserta un segundo campo calculado llamado "Utilidad" con la formula: `=(Precio - Costo) * Cantidad`
-5. Crea otra tabla dinamica:
-   - **Filas:** Categoria
-   - **Valores:** Suma de Utilidad (campo calculado)
+1. Crea una tabla dinámica con:
+   - **Filas:** Año
+   - **Valores:** Suma de Peso_Desembarcado_kg, Suma de Valor_Pesos
+2. Selecciona varios años en la tabla (ej. 2005 a 2009), haz clic derecho y elige **Agrupar**. Nombra el grupo como "2005-2009".
+3. Repite para 2010-2014, 2015-2019 y 2020-2022.
+4. **Inserta un campo calculado:**
+   - Selecciona la tabla dinámica
+   - Ve a **Analizar > Campos, elementos y conjuntos > Campo calculado**
+   - Crea un campo llamado "Valor_por_kg" con la fórmula: `= Valor_Pesos / Peso_Desembarcado_kg`
+   - Establece el formato con el botón "Formato de número" como moneda.
+5. Crea un segundo campo calculado llamado "Rendimiento_Vivo" con la fórmula: `= (Peso_Vivo_kg - Peso_Desembarcado_kg) / Peso_Desembarcado_kg * 100`.
 
 ---
 
 **Resultados:**
 
-**Tabla 1 - Campos calculados por producto:**
+**Tabla 1 - Captura y valor por quinquenio:**
 
-| Producto | Cantidad Vendida | Precio Unit. | Ingreso Total | Utilidad |
-|----------|-----------------|-------------|---------------|----------|
-| Taladro | | | | |
-| Martillo | | | | |
-| Pintura 20L | | | | |
-| Cinta metrica | | | | |
-| **Total** | | | | |
+| Quinquenio | Suma Peso_Desembarcado (kg) | Suma Valor_Pesos | Valor Promedio por kg |
+|------------|---------------------------|-----------------|----------------------|
+| 2005-2009 | | | |
+| 2010-2014 | | | |
+| 2015-2019 | | | |
+| 2020-2022 | | | |
+| **Total General** | | | |
 
-**Tabla 2 - Utilidad por categoria:**
+**Tabla 2 - Rendimiento peso vivo vs. desembarcado por especie:**
 
-| Categoria | Utilidad Total |
-|-----------|---------------|
-| Herramienta | |
-| Pinturas | |
-| Accesorios | |
-| **Total** | |
+| Especie | Suma Peso_Desembarcado | Suma Peso_Vivo | Rendimiento_Vivo (%) |
+|---------|----------------------|---------------|---------------------|
+| | | | |
+| | | | |
+| **Total General** | | | |
 
 **Preguntas:**
 
-a) ?Cual es el producto mas rentable (mayor utilidad)? ___________________________
-
-b) ?Que categoria genera mayor utilidad? ________________________________________
-
-c) ?Cual es el margen de utilidad porcentual del Taladro? (Utilidad / Ingreso * 100)
+a) ¿Qué quinquenio registró el mayor valor total en capturas?
 
 ```
 _________________________________________________________________
 ```
 
-d) ?Que vendedor genero mas ingresos? (Pista: agrega Vendedor a Filas)
+b) ¿Qué especie tiene el mayor valor por kilogramo (Valor_por_kg)?
 
 ```
 _________________________________________________________________
 ```
 
-e) Si los costos aumentan un 10%, ?como cambiaria la utilidad del Martillo?
+c) ¿Qué especie tiene el mayor rendimiento (diferencia entre peso vivo y desembarcado)?
+
+```
+_________________________________________________________________
+```
+
+d) ¿Cómo ha evolucionado el valor por kg a lo largo de los quinquenios? ¿Ha aumentado o disminuido?
+
+```
+_________________________________________________________________
+_________________________________________________________________
+```
+
+e) ¿Qué utilidad tiene agrupar años en quinquenios para el análisis temporal?
+
+```
+_________________________________________________________________
+_________________________________________________________________
+```
+
+f) Crea un grupo adicional que clasifique las especies en "Alto valor" (Valor_por_kg > $100) y "Bajo valor" (≤ $100). ¿Cuántas especies caen en cada categoría?
 
 ```
 _________________________________________________________________
@@ -754,215 +972,134 @@ _________________________________________________________________
 
 ---
 
-### Ejercicio 8: Porcentajes y comparacion de periodos
+**Autoevaluación:**
+
+| Indicador | Sí | No |
+|-----------|----|----|
+| Agrupé correctamente los años en quinquenios | - | - |
+| Creé el campo calculado Valor_por_kg | - | - |
+| Creé el campo calculado Rendimiento_Vivo | - | - |
+| Pude dar formato a los campos calculados | - | - |
+| Comprendo cómo los campos calculados amplían el análisis | - | - |
+
+---
+
+### Ejercicio 9: Mostrar valores como (% del total, diferencias, rankings)
 
 **Nivel:** Avanzado
 
-**Objetivo:** El estudiante aplicara las opciones "Mostrar valores como" para calcular porcentajes, diferencias y variaciones entre periodos en una tabla dinamica.
+**Objetivo:** El estudiante utilizará las opciones "Mostrar valores como" para calcular porcentajes, diferencias entre periodos, rankings y variaciones en los datos de capturas pesqueras.
 
 **Saberes a reforzar:**
 - % del total general
 - % del total de fila/columna
 - Diferencia respecto a periodo anterior
 - % de diferencia
+- Ranking (mayor a menor)
 
-**Estrategia metodologica:** Aprendizaje analitico. El estudiante comparara datos entre periodos para extraer conclusiones de negocio.
+**Estrategia metodológica:** Aprendizaje analítico. El estudiante comparará datos entre litorales, años y especies para extraer conclusiones sobre la distribución y evolución de las capturas.
 
 **Lecturas sugeridas:**
-- Excel Total. (2021). *Tablas dinamicas en Excel (tutorial completo)*.
-- Caballero, M. & Torres, F. (s.f.). *Tablas dinamicas: la quinta dimension*.
+- Excel Total. (2021). *Tablas dinámicas en Excel (tutorial completo)*.
+- Microsoft Support. (s.f.). *Mostrar valores como en tabla dinámica*. https://support.microsoft.com/es-es/office/mostrar-valores-como-en-tabla-dinamica
 
 ---
 
-**Caso: Ventas trimestrales "Distribuidora Peninsular"**
-
-| Producto | Trimestre | Ano | Ventas |
-|----------|-----------|-----|--------|
-| Refrigerador | Q1 | 2024 | $120,000 |
-| Refrigerador | Q2 | 2024 | $135,000 |
-| Refrigerador | Q3 | 2024 | $150,000 |
-| Refrigerador | Q4 | 2024 | $180,000 |
-| Refrigerador | Q1 | 2025 | $145,000 |
-| Refrigerador | Q2 | 2025 | $160,000 |
-| Lavadora | Q1 | 2024 | $95,000 |
-| Lavadora | Q2 | 2024 | $88,000 |
-| Lavadora | Q3 | 2024 | $102,000 |
-| Lavadora | Q4 | 2024 | $130,000 |
-| Lavadora | Q1 | 2025 | $110,000 |
-| Lavadora | Q2 | 2025 | $125,000 |
-| Microondas | Q1 | 2024 | $30,000 |
-| Microondas | Q2 | 2024 | $35,000 |
-| Microondas | Q3 | 2024 | $32,000 |
-| Microondas | Q4 | 2024 | $40,000 |
-| Microondas | Q1 | 2025 | $38,000 |
-| Microondas | Q2 | 2025 | $42,000 |
+**Caso: Distribución y evolución de las capturas por litoral y especie**
 
 **Instrucciones:**
 
-1. Captura los datos.
-2. Crea una tabla dinamica con:
-   - **Filas:** Producto
-   - **Columnas:** Trimestre
-   - **Valores:** Suma de Ventas
-3. Duplica la tabla y configura "Mostrar valores como" > **% del total general**.
-4. Crea una tercera tabla mostrando **% de diferencia** respecto al trimestre anterior.
-5. Crea una cuarta tabla mostrando **% del total de fila**.
+1. Crea una tabla dinámica con:
+   - **Filas:** Especie
+   - **Columnas:** Litoral
+   - **Valores:** Suma de Peso_Desembarcado_kg
+2. Duplica la tabla (copia y pega) y en la copia, haz clic derecho sobre el campo de valores > **Mostrar valores como > % del total general**.
+3. Crea una tercera tabla dinámica con:
+   - **Filas:** Especie
+   - **Valores:** Suma de Peso_Desembarcado_kg
+   - Cambia a **Mostrar valores como > Ranking de mayor a menor**.
+4. Crea una cuarta tabla dinámica:
+   - **Filas:** Año
+   - **Valores:** Suma de Peso_Desembarcado_kg
+   - Cambia a **Mostrar valores como > Diferencia respecto al año anterior**.
+5. Crea una quinta tabla dinámica (sobre la anterior):
+   - Cambia a **Mostrar valores como > % de diferencia respecto al año anterior**.
 
 ---
 
 **Resultados:**
 
-**Tabla 1 - Ventas reales por producto y trimestre:**
+**Tabla 1 - % del total general por especie y litoral:**
 
-| Producto | Q1 | Q2 | Q3 | Q4 | Total |
-|----------|-----|-----|-----|-----|-------|
-| Refrigerador | | | | | |
-| Lavadora | | | | | |
-| Microondas | | | | | |
-| **Total** | | | | | |
+| Especie | Golfo de México (%) | Pacífico (%) | Caribe (%) | Total (%) |
+|---------|--------------------|-------------|-----------|----------|
+| | | | | 100% |
+| | | | | 100% |
+| **Total General** | | | | 100% |
 
-**Tabla 2 - % del total general:**
+**Tabla 2 - Ranking de especies por peso desembarcado:**
 
-| Producto | Q1 (%) | Q2 (%) | Q3 (%) | Q4 (%) |
-|----------|--------|--------|--------|--------|
-| Refrigerador | | | | |
-| Lavadora | | | | |
-| Microondas | | | | |
+| Posición | Especie | Peso Desembarcado (kg) |
+|----------|---------|----------------------|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+| 4 | | |
+| 5 | | |
+| ... | | |
 
-**Preguntas:**
+**Tabla 3 - Diferencia anual en peso desembarcado:**
 
-a) ?Que trimestre tiene la mayor participacion en ventas totales?
-
-```
-_________________________________________________________________
-```
-
-b) ?Que producto aporta el mayor porcentaje de las ventas totales?
-
-```
-_________________________________________________________________
-```
-
-c) ?Cual fue el trimestre de mayor crecimiento para Refrigerador?
-
-```
-_________________________________________________________________
-```
-
-d) ?Que producto muestra la tendencia mas estable a lo largo del tiempo?
-
-```
-_________________________________________________________________
-```
-
-e) Calcula la variacion porcentual de Lavadora entre Q4 2024 y Q1 2025:
-
-```
-_________________________________________________________________
-```
-
----
-
-### Ejercicio 9: Graficos dinamicos y dashboards
-
-**Nivel:** Avanzado
-
-**Objetivo:** El estudiante creara graficos dinamicos vinculados a tablas dinamicas y los combinara para construir un dashboard interactivo.
-
-**Saberes a reforzar:**
-- Insertar grafico dinamico
-- Tipos de grafico: columna, barra, circular, linea
-- Vincular segmentaciones a multiples graficos
-- Diseno de dashboard
-
-**Estrategia metodologica:** Aprendizaje basado en proyectos. El estudiante construye un tablero visual para la toma de decisiones.
-
-**Lecturas sugeridas:**
-- Gelabert Fernandez, R. (2026). *Graficos dinamicos en Excel* [Material inedito]. UNACAR.
-- SMARTpro Academy. (s.f.). *Como hacer tablas dinamicas en Excel + IA desde cero* [Video].
-
----
-
-**Caso: "Restaurante El Sabor" - Ventas mensuales**
-
-Datos del ano 2025:
-
-| Mes | Sucursal | Categoria | Ventas | Clientes | Costo Operativo |
-|-----|----------|-----------|--------|---------|----------------|
-| Enero | Centro | Comida | $45,000 | 850 | $28,000 |
-| Enero | Centro | Bebidas | $18,000 | 850 | $6,000 |
-| Enero | Norte | Comida | $32,000 | 620 | $20,000 |
-| Enero | Norte | Bebidas | $12,000 | 620 | $4,000 |
-| Febrero | Centro | Comida | $48,000 | 900 | $29,000 |
-| Febrero | Centro | Bebidas | $20,000 | 900 | $6,500 |
-| Febrero | Norte | Comida | $35,000 | 680 | $22,000 |
-| Febrero | Norte | Bebidas | $13,500 | 680 | $4,200 |
-| Marzo | Centro | Comida | $52,000 | 980 | $31,000 |
-| Marzo | Centro | Bebidas | $22,000 | 980 | $7,000 |
-| Marzo | Norte | Comida | $38,000 | 710 | $23,000 |
-| Marzo | Norte | Bebidas | $14,000 | 710 | $4,500 |
-| Abril | Centro | Comida | $50,000 | 920 | $30,000 |
-| Abril | Centro | Bebidas | $21,000 | 920 | $6,800 |
-| Abril | Norte | Comida | $33,000 | 650 | $21,000 |
-| Abril | Norte | Bebidas | $11,500 | 650 | $3,800 |
-| Mayo | Centro | Comida | $58,000 | 1100 | $33,000 |
-| Mayo | Centro | Bebidas | $25,000 | 1100 | $8,000 |
-| Mayo | Norte | Comida | $40,000 | 750 | $24,000 |
-| Mayo | Norte | Bebidas | $15,000 | 750 | $4,800 |
-
-**Instrucciones:**
-
-1. Captura los datos en Excel.
-2. Crea una tabla dinamica con:
-   - **Filas:** Mes
-   - **Valores:** Suma de Ventas
-3. A partir de esa tabla, inserta un **Grafico dinamico de columnas**.
-4. Crea una segunda tabla dinamica:
-   - **Filas:** Sucursal
-   - **Valores:** Suma de Ventas, Suma de Clientes
-5. Inserta un **Grafico dinamico circular** para mostrar la contribucion por sucursal.
-6. Agrega una segmentacion conectada a AMBAS tablas dinamicas.
-
----
-
-**Resultados:**
-
-**Tabla 1 - Ventas totales por mes:**
-
-| Mes | Ventas Totales |
-|-----|---------------|
-| Enero | |
-| Febrero | |
-| Marzo | |
-| Abril | |
-| Mayo | |
-
-**Tabla 2 - Indicadores por sucursal:**
-
-| Sucursal | Ventas Totales | Clientes Totales | Ventas Promedio x Cliente |
-|----------|---------------|-----------------|--------------------------|
-| Centro | | | |
-| Norte | | | |
+| Año | Peso Desembarcado | Diferencia vs. Año Anterior | % de Diferencia |
+|-----|------------------|---------------------------|----------------|
+| 2005 | | — (base) | — |
+| 2006 | | | |
+| 2007 | | | |
+| ... | | | |
+| 2022 | | | |
 
 **Preguntas:**
 
-a) ?Que mes registro las ventas mas altas? ______________________________________
-
-b) ?Que sucursal genera mayores ingresos? ______________________________________
-
-c) ?Cual es el ticket promedio por cliente en la sucursal Centro?
+a) ¿Qué especie concentra el mayor porcentaje del peso desembarcado total?
 
 ```
 _________________________________________________________________
 ```
 
-d) ?Que categoria (Comida vs Bebidas) representa mayor porcentaje de ingresos?
+b) ¿Qué litoral tiene la mayor participación porcentual en el total de capturas?
 
 ```
 _________________________________________________________________
 ```
 
-e) Describe que informacion revela el dashboard que no se veia en los datos originales:
+c) ¿Cuál fue el año con mayor crecimiento porcentual respecto al año anterior?
+
+```
+_________________________________________________________________
+```
+
+d) ¿Hubo años con decrecimiento en las capturas? ¿Cuáles?
+
+```
+_________________________________________________________________
+```
+
+e) ¿Qué especie ocupa el primer lugar en el ranking? ¿Y el último?
+
+```
+_________________________________________________________________
+```
+
+f) ¿Cómo cambia la participación porcentual del Pacífico a lo largo de los años?
+
+```
+_________________________________________________________________
+_________________________________________________________________
+```
+
+---
+
+**Reflexión del estudiante:**
 
 ```
 _________________________________________________________________
@@ -972,99 +1109,103 @@ _________________________________________________________________
 
 ---
 
-### Ejercicio 10: Proyecto integrador - Reporte ejecutivo de ventas
+### Ejercicio 10: Proyecto integrador — Dashboard de capturas pesqueras
 
 **Nivel:** Avanzado
 
-**Objetivo:** El estudiante integrara todos los conocimientos adquiridos para construir un reporte ejecutivo completo que incluya multiples tablas dinamicas, graficos dinamicos, segmentaciones y conclusiones de negocio.
+**Objetivo:** El estudiante integrará todos los conocimientos adquiridos para construir un dashboard interactivo completo que incluya tablas dinámicas, gráficos dinámicos, segmentaciones y escalas de tiempo, generando un reporte ejecutivo sobre las capturas pesqueras del dataset 2005-2022.
 
 **Saberes a reforzar:**
-- Todas las areas de tabla dinamica
+- Todas las áreas de tabla dinámica
 - Campos calculados
-- Segmentaciones y escalas de tiempo
-- Graficos dinamicos
-- Interpretacion de resultados
+- Segmentaciones (slicers) y escalas de tiempo
+- Gráficos dinámicos
+- Conexión de segmentaciones a múltiples tablas
+- Interpretación de resultados
 
-**Estrategia metodologica:** Aprendizaje basado en proyectos. El estudiante desarrolla un analisis integral simulando un entorno profesional real.
+**Estrategia metodológica:** Aprendizaje basado en proyectos. El estudiante desarrolla un análisis integral simulando un entorno profesional de reporte pesquero.
 
 **Lecturas sugeridas:**
 - Todas las lecturas de los ejercicios anteriores.
-- Microsoft Support. (s.f.). *Crear una tabla dinamica para analizar datos*.
-- Aprender21. (2026). *Tablas dinamicas en Excel: guia paso a paso*.
+- SMARTpro Academy. (s.f.). *Cómo hacer tablas dinámicas en Excel + IA desde cero* [Video]. YouTube. https://www.youtube.com/watch?v=Mh93eaKbkkw
+- Aprender21. (2026). *Tablas dinámicas en Excel: guía paso a paso*.
 
 ---
 
-**Caso: "Grupo Comercial del Caribe" - Base de datos anual**
+**Caso: Dashboard ejecutivo de pesca y acuacultura en México (2005-2022)**
 
-Genera una base de datos en Excel con al menos 60 registros (20 por cada sucursal durante 3 meses) que incluya los siguientes campos:
+Utilizando el dataset completo de capturas, construye un tablero de control que permita visualizar y filtrar la información de manera interactiva.
 
-| Fecha | Sucursal | Vendedor | Producto | Categoria | Cantidad | Precio Unit. | Costo Unit. | Total | Ganancia |
-|------|----------|----------|----------|-----------|----------|-------------|-------------|-------|----------|
-| (variar) | (variar) | (variar) | (variar) | (variar) | (1-20) | (variar) | (variar) | (formula) | (formula) |
+**Instrucciones — Construye tu dashboard en 4 hojas:**
 
-**Sucursales:** Centro, Norte, Sur
-**Vendedores:** Hugo, Maya, Leo, Rosa, Luis
-**Productos:** Laptop ($18,000), Tablet ($8,000), Monitor ($6,000), Smartwatch ($4,500), Audifonos ($2,000), Teclado Mec. ($1,800), Bocina BT ($1,200), Mouse ($800)
-**Categorias:** Computo (Laptop, Tablet, Monitor), Accesorios (Smartwatch, Audifonos, Teclado, Bocina, Mouse)
+**Hoja 1 - Resumen General:**
 
-**Instrucciones - Construye tu reporte ejecutivo:**
+- Tabla dinámica: Filas = Especie, Valores = Suma de Peso_Desembarcado_kg, Suma de Valor_Pesos
+- Gráfico dinámico de barras mostrando las 5 especies con mayor peso desembarcado
+- Agrega un campo calculado "Participación_%" con la fórmula: `= Peso_Desembarcado_kg / ObtenerDatosDinamicos("Suma de Peso_Desembarcado_kg", $A$1) * 100`
 
-1. **Hoja 1 - Resumen General:**
-   - Tabla dinamica: Filas = Producto, Valores = Suma de Total, Suma de Cantidad
-   - Grafico dinamico de barras mostrando los productos mas vendidos
+**Hoja 2 - Análisis por Litoral:**
 
-2. **Hoja 2 - Analisis por Sucursal:**
-   - Tabla dinamica: Filas = Sucursal, Columnas = Categoria, Valores = Suma de Total
-   - Grafico dinamico circular mostrando contribucion por sucursal
+- Tabla dinámica: Filas = Litoral, Columnas = Origen (Captura / Acuacultura), Valores = Suma de Peso_Vivo_kg
+- Gráfico dinámico circular que muestre la contribución de cada litoral al total
+- Gráfico dinámico de columnas apiladas mostrando captura vs. acuacultura por litoral
 
-3. **Hoja 3 - Rendimiento de Vendedores:**
-   - Tabla dinamica: Filas = Vendedor, Valores = Suma de Total, Suma de Ganancia
-   - Calcular campo "% Comision" asumiendo 5% del Total
+**Hoja 3 - Evolución Temporal:**
 
-4. **Hoja 4 - Dashboard:**
-   - Agrupa las 3 tablas dinamicas en una sola hoja
-   - Agrega segmentaciones de: Sucursal, Categoria, Producto
-   - Conecta cada segmentacion a todas las tablas dinamicas
+- Tabla dinámica: Filas = Año, Valores = Suma de Peso_Desembarcado_kg, Suma de Valor_Pesos
+- Gráfico dinámico de líneas mostrando la tendencia de captura a lo largo del tiempo (2005-2022)
+- Agrega una escala de tiempo (Timeline) conectada a esta tabla
 
-5. **Hoja 5 - Conclusiones:**
-   - Escribe un parrafo analizando los resultados
+**Hoja 4 - Dashboard consolidado:**
+
+- Agrupa los elementos más importantes de las 3 hojas anteriores en una sola hoja
+- Agrega **segmentaciones (slicers)** para los campos:
+  - Litoral (Golfo de México, Pacífico, Caribe)
+  - Especie
+  - Origen (Captura, Acuacultura)
+- Conecta CADA segmentación a TODAS las tablas dinámicas del dashboard
+- Ajusta el formato: colores profesionales, títulos, alineación
 
 ---
 
 **Resultado - Hoja 1: Resumen General**
 
-| Producto | Total Ventas | Cantidad Vendida | Precio Promedio |
-|----------|-------------|-----------------|----------------|
+| Especie | Peso Desembarcado (kg) | Valor Total ($) | Participación % |
+|---------|----------------------|----------------|----------------|
 | | | | |
 | | | | |
-| **Total** | | | |
+| | | | |
+| **Total General** | | | 100% |
 
-**Resultado - Hoja 2: Analisis por Sucursal y Categoria**
+**Resultado - Hoja 2: Análisis por Litoral**
 
-| Sucursal | Computo | Accesorios | Total |
-|----------|---------|-----------|-------|
-| Centro | | | |
-| Norte | | | |
-| Sur | | | |
-| **Total** | | | |
+| Litoral | Captura (kg) | Acuacultura (kg) | Total |
+|---------|-------------|-----------------|-------|
+| Golfo de México | | | |
+| Pacífico | | | |
+| Caribe | | | |
+| **Total General** | | | |
 
-**Resultado - Hoja 3: Rendimiento de Vendedores**
+**Resultado - Hoja 3: Evolución Temporal**
 
-| Vendedor | Total Ventas | Ganancia Neta | Comision (5%) | Participacion % |
-|----------|-------------|---------------|---------------|----------------|
-| | | | | |
-| | | | | |
-| **Total** | | | | |
+| Año | Peso Desembarcado (kg) | Valor Total ($) |
+|-----|----------------------|----------------|
+| 2005 | | |
+| 2006 | | |
+| ... | | |
+| 2022 | | |
 
 ---
 
-**Conclusiones del proyecto (Hoja 5):**
+**Conclusiones del proyecto:**
 
-Redacta un analisis ejecutivo respondiendo:
-- ?Que producto es el mas vendido? ?Cual el mas rentable?
-- ?Que sucursal tiene mejor desempeno?
-- ?Que vendedor debe ser reconocido?
-- ?Que recomendaciones darias a la gerencia?
+Redacta un análisis ejecutivo respondiendo las siguientes preguntas:
+
+- ¿Cuál es la tendencia general de las capturas pesqueras entre 2005 y 2022?
+- ¿Qué especie y litoral son los más productivos?
+- ¿Qué proporción de la producción proviene de acuacultura vs. captura?
+- ¿Qué especie tiene el mayor valor económico por kilogramo?
+- ¿Qué recomendaciones darías para la gestión pesquera con base en los datos?
 
 ```
 _________________________________________________________________
@@ -1077,7 +1218,26 @@ _________________________________________________________________
 _________________________________________________________________
 _________________________________________________________________
 _________________________________________________________________
+_________________________________________________________________
+_________________________________________________________________
+_________________________________________________________________
+_________________________________________________________________
+_________________________________________________________________
 ```
+
+---
+
+### Ejercicio 10 (Continuación) — Rúbrica de evaluación del proyecto
+
+| Criterio | Excelente (4 pts) | Bueno (3 pts) | Suficiente (2 pts) | Insuficiente (1 pt) |
+|----------|------------------|---------------|-------------------|---------------------|
+| Tablas dinámicas | Crea 3+ tablas correctas con múltiples campos | Crea 2 tablas correctas | Crea 1 tabla correcta | No crea tablas funcionales |
+| Campos calculados | Crea 1+ campo calculado funcional | Crea campo con errores menores | Intenta crear campo | No crea campos |
+| Gráficos dinámicos | 2+ gráficos correctos con formato | 2 gráficos básicos | 1 gráfico | Sin gráficos |
+| Segmentaciones | Conectadas a todas las tablas | Conectadas parcialmente | Sin conectar | Sin segmentaciones |
+| Análisis escrito | Conclusiones profundas y coherentes | Conclusiones básicas | Conclusiones confusas | Sin conclusiones |
+
+**Calificación obtenida:** ______ / 20 puntos
 
 ---
 
@@ -1087,208 +1247,166 @@ _________________________________________________________________
 
 ### Ejercicio 1
 
-a) Laptop (es el primer producto en orden alfabetico)
-b) Norte (Ana Lopez suma $15,000 en laptop y $8,500 en monitor = $23,500)
-c) $60,800 (suma de todos los valores: 15,000 + 3,200 + 8,500 + 12,000 + 2,100 + 10,000)
-d) Al arrastrar "Vendedor" a Filas, los datos se agrupan primero por Vendedor, mostrando el total por cada uno antes que por producto.
-e) El promedio dividira cada suma individual entre la cantidad de transacciones (1 cada una), por lo que el promedio sera identico a la suma en este caso.
+a) 1 registro (Campeche, Litoral = Golfo de México, Especie = Camarón blanco).
+b) Suma del peso desembarcado del Pacífico: 200,000 (Camarón café) + 350,000 (Sardina) + 28,000 (Huachinango) = 578,000 kg.
+c) Mazatlán — Camarón café ($30,000,000).
+d) Hacer clic en la flecha de filtro de Litoral y seleccionar solo "Caribe".
+e) Camarón blanco con 125,000 kg.
 
 ### Ejercicio 2
 
-a) Tabla completa:
+a) Filtro AND (Pacífico + Libre):
+- 2020, Sinaloa, Camarón café, 210,000 kg, $31,500,000
+- 2021, Sinaloa, Camarón café, 195,000 kg, $29,250,000
+- 2022, Sinaloa, Camarón café, 220,000 kg, $33,000,000
 
-| Producto | Norte | Sur | Centro | Total |
-|----------|-------|-----|--------|-------|
-| Laptop Gamer | $50,000 | $25,000 | $0 | $75,000 |
-| Tablet | $0 | $0 | $16,000 | $16,000 |
-| Monitor | $0 | $6,000 | $0 | $6,000 |
-| Smartwatch | $4,500 | $4,500 | $4,500 | $13,500 |
-| Audifonos | $2,000 | $2,000 | $0 | $4,000 |
-| Teclado Mec. | $0 | $0 | $1,800 | $1,800 |
-| **Total** | $56,500 | $37,500 | $22,300 | $116,300 |
+b) 5 registros (Mero rojo: 6 registros de Campeche + Langosta: 2 registros de Quintana Roo, pero el filtro OR muestra ambos). En total 8 registros.
 
-b) Laptop Gamer ($75,000)
-c) Norte ($56,500)
-d) Lucia suma: $25,000 + $2,000 + $25,000 + $4,500 = $56,500
-e) Ana tiene 3 transacciones
-f) Teclado Mec. en Centro ($1,800)
+Preguntas:
+a) AND (misma fila): ambas condiciones deben cumplirse. OR (distintas filas): basta con que una condición se cumpla.
+b) Pacífico (Sinaloa produce más en temporada libre).
+c) $6,300,000 (Langosta en Caribe, temporada libre).
+d) Criterios: J1: `Año`, J2: `2022`, K1: `Peso_Desembarcado_kg`, K2: `>50000`.
+e) Camarón café: produce mucho más en temporada libre que en veda.
 
 ### Ejercicio 3
 
-Tabla 1:
-
-| Categoria | Promedio Precio Venta | Cantidad Productos |
-|-----------|----------------------|-------------------|
-| Alimentos | $24.83 | 4
-| Limpieza | $23.00 | 2
-| Cuidado Pers. | $52.00 | 1
-
-Tabla 2:
-
-| Categoria | Costo Max | Costo Min |
-|-----------|----------|----------|
-| Alimentos | $25.00 | $12.00 |
-| Limpieza | $22.00 | $8.00 |
-| Cuidado Pers. | $35.00 | $35.00 |
-
-a) Cuidado Personal ($52.00)
-b) 4 productos diferentes considerando nombre unico
-c) $8.00 (Jabon barra)
-d) Alimentos (200+150+80+300+180+120 = 1,030 unidades)
-e) Centro (aparece mas veces en los datos)
+a) 4 puertos: Ciudad del Carmen (125,000), Frontera (85,000), Progreso (55,000), Tampico (65,000).
+b) Mazatlán ($30,000,000).
+c) No todos: Guaymas tiene alta captura (370,000 kg) pero bajo valor ($7,000,000). El valor depende de la especie, no solo del volumen.
+d) Langosta espinosa en Chetumal: $6,750,000 / 16,500 kg ≈ $409/kg (alto valor unitario).
+e) Permiten comparar visualmente la magnitud entre filas sin leer los números exactos.
 
 ### Ejercicio 4
 
-(Las respuestas variaran segun los datos generados por el estudiante)
-a) El estudiante debe sumar los porcentajes de 4 y 5.
-b) El estudiante debe contar los "No" en la columna Recomienda.
-c) El estudiante debe usar la tabla dinamica con Promedio de Satisfaccion en Valores y Producto en Filas.
-d) El estudiante debe cruzar Frecuencia (Filas) con Promedio de Satisfaccion (Valores).
+(Las respuestas variarán según el dataset proporcionado por el docente)
+a) Las inconsistencias típicas incluyen: valores nulos o "N/A", formatos mezclados (texto y número en misma columna), filas vacías, encabezados repetidos, errores ortográficos en nombres de especies o entidades, duplicados, valores negativos en peso.
+b) Depende del dataset.
+c) Típicamente: Año (texto → número), Valor_Pesos (texto → moneda), Peso_Desembarcado_kg (texto → decimal).
+d) Las tablas dinámicas requieren datos limpios con estructura uniforme. Datos sucios producen resultados incorrectos o incompletos.
+e) Power Query automatiza el proceso, es reproducible, maneja grandes volúmenes y registra cada transformación aplicada.
 
 ### Ejercicio 5
 
-Tabla 1:
-
-| Materia | Promedio General | Promedio Sem 1 | Promedio Sem 2 |
-|---------|-----------------|----------------|----------------|
-| Matematicas | 79.17 | 81.67 | 76.67 |
-| Fisica | 75.17 | 76.00 | 74.33 |
-| Quimica | 79.00 | 84.33 | 73.67 |
-
-Tabla 2 - Ranking:
-1. Ana Martinez (91.33)
-2. Sofia Ramirez (87.67)
-3. Laura Garcia (85.00)
-4. Miguel Angel (75.67)
-5. Pedro Lopez (69.33)
-6. Luis Torres (57.67)
-
-a) Matematicas (79.17)
-b) 3 estudiantes (Laura, Ana, Sofia)
-c) Semestre 1 (promedio general 80.67 vs 74.89)
+(Las respuestas variarán según el dataset)
+a) La especie de mayor peso desembarcado en el Golfo de México dependerá del dataset. Típicamente: Camarón blanco o Mero rojo.
+b) Depende de los datos. Se debe buscar el año con mayor valor en la fila de la especie líder.
+c) El ranking cambia porque el promedio favorece a especies con pocos registros pero de alto volumen individual.
+d) El año con mayor captura total se identifica en el Total General de cada columna.
+e) Sin filtro, aparecen especies del Pacífico y Caribe que pueden ser más abundantes.
 
 ### Ejercicio 6
 
-Tabla completa:
-
-| Vendedor | Bocina BT | Laptop | Pantalla LED | Total |
-|----------|-----------|--------|-------------|-------|
-| Hugo | $6,000 | $36,000 | $96,000 | $138,000 |
-| Leo | $15,600 | $36,000 | $24,000 | $75,600 |
-| Maya | $36,000 | $162,000 | $0 | $198,000 |
-| **Total** | $57,600 | $234,000 | $120,000 | $411,600 |
-
-Filtro (Enero + Pantalla LED):
-- Hugo: $24,000 + $36,000 + $32,000 = $92,000
-- Leo: $8,000 + $16,000 = $24,000
-- Total: $116,000
-
-a) Maya = $198,000
-b) Laptop ($126,000 en febrero)
-c) 10 unidades (3+1+2+4)
+(Las respuestas variarán según el dataset)
+a) Golfo de México (típicamente por mayor número de entidades costeras).
+b) Campeche (principal productor pesquero del Golfo de México).
+c) Caribe (por tener especies de alto valor por kg, aunque menor volumen total).
+d) Depende del número de registros en el dataset para Quintana Roo.
+e) Típicamente Oaxaca o Michoacán (menor tradición pesquera).
+f) La suma refleja el volumen total, mientras el promedio indica la productividad por registro. Un litoral puede tener mucha suma pero bajo promedio si tiene muchos registros pequeños.
 
 ### Ejercicio 7
 
-Tabla 1:
-
-| Producto | Cantidad | Precio | Ingreso Total | Utilidad |
-|----------|---------|-------|---------------|----------|
-| Taladro | 16 | $1,500 | $24,000 | $9,600 |
-| Martillo | 60 | $250 | $15,000 | $7,800 |
-| Pintura 20L | 10 | $2,800 | $28,000 | $10,000 |
-| Cinta metrica | 90 | $80 | $7,200 | $4,050 |
-| **Total** | 176 | - | $74,200 | $31,450 |
-
-Tabla 2:
-- Herramienta: $9,600 + $7,800 = $17,400
-- Pinturas: $10,000
-- Accesorios: $4,050
-
-a) Pintura 20L ($10,000)
-b) Herramienta ($17,400)
-c) Margen Taladro: ($1,500 - $900) / $1,500 * 100 = 40%
-d) Rosa genera mas ingresos
-e) La utilidad del Martillo se reduciria: nuevo costo = $132, utilidad = ($250 - $132) * 60 = $7,080 (antes $7,800)
+(Las respuestas variarán según el dataset)
+a) Camarón blanco o Camarón café (especies de alto valor comercial).
+b) Ostión o Camarón blanco (especies con producción acuícola significativa).
+c) Diciembre o noviembre (temporada de mayor demanda).
+d) Sí, típicamente hay picos en los meses de diciembre-marzo (cuaresma y fin de año) y valles en verano.
+e) Mero rojo, Pargo rojo, Huachinango, Pulpo maya, Langosta (especies exclusivamente de captura).
+f) Usar el filtro de informe de Mes; también se puede arrastrar Especie al filtro.
 
 ### Ejercicio 8
 
-Tabla 1:
-
-| Producto | Q1 | Q2 | Q3 | Q4 | Total |
-|----------|-----|-----|-----|-----|-------|
-| Refrigerador | $265,000 | $295,000 | $150,000 | $180,000 | $890,000 |
-| Lavadora | $205,000 | $213,000 | $102,000 | $130,000 | $650,000 |
-| Microondas | $68,000 | $77,000 | $32,000 | $40,000 | $217,000 |
-| **Total** | $538,000 | $585,000 | $284,000 | $350,000 | $1,757,000 |
+(Las respuestas variarán según el dataset)
+a) Depende de los datos; típicamente el quinquenio más reciente (2020-2022) o el de mayor actividad pesquera.
+b) Langosta espinosa o Pulpo maya (especies de alto valor unitario).
+c) La especie con mayor diferencia relativa entre peso vivo y desembarcado (típicamente especies que pierden más agua o vísceras).
+d) Depende del dataset; puede mostrar tendencia al alza o fluctuaciones.
+e) Los quinquenios suavizan la variabilidad anual y permiten ver tendencias de largo plazo.
+f) Depende del umbral; típicamente langosta y pulpo maya son "Alto valor".
 
 ### Ejercicio 9
 
-Tabla 1:
-- Enero: $107,000
-- Febrero: $116,500
-- Marzo: $126,000
-- Abril: $115,500
-- Mayo: $138,000
-
-Tabla 2:
-- Centro: $319,000 ventas, 6,520 clientes, $48.93 promedio
-- Norte: $219,000 ventas, 4,410 clientes, $49.66 promedio
-
-a) Mayo ($138,000)
-b) Centro
-c) $319,000 / 6,520 = $48.93
-d) Comida (72% aproximadamente)
+(Las respuestas variarán según el dataset)
+a) La especie con mayor porcentaje del total (típicamente sardina o camarón por volumen).
+b) Golfo de México (por número de entidades y tradición pesquera).
+c) El año con mayor incremento porcentual respecto al anterior.
+d) Pueden identificarse años con capturas decrecientes (relacionados con veda, fenómenos climáticos, o sobrexplotación).
+e) Depende del dataset. Se espera que el ranking muestre las especies ordenadas por volumen.
+f) Se espera que el estudiante observe la evolución de la participación del Pacífico a lo largo de los años.
 
 ### Ejercicio 10
 
-Las respuestas variaran segun los datos generados por el estudiante. Se espera que identifique correctamente el producto mas vendido, compare sucursales usando totales, calcule las comisiones como Total * 0.05, cree un dashboard funcional con segmentaciones conectadas y redacte conclusiones coherentes basadas en los datos analizados.
+Las respuestas variarán según los datos generados y la interpretación del estudiante. Se espera que:
+
+- Identifique correctamente la tendencia general de las capturas
+- Compare litorales usando las sumas totales
+- Calcule la proporción captura vs. acuacultura
+- Identifique la especie de mayor valor por kilogramo
+- Cree un dashboard funcional con al menos 3 tablas dinámicas
+- Conecte las segmentaciones a todas las tablas
+- Incluya gráficos dinámicos de tipo barra, circular y línea
+- Redacte conclusiones coherentes basadas en los datos analizados
+- Proponga recomendaciones viables para la gestión pesquera
+
+**Rúbrica:** El estudiante debe obtener mínimo 12/20 puntos para considerar el proyecto integrador aprobado.
 
 ---
 
-## 4. Fuentes de Informacion y Bibliografia
+## 4. Fuentes de Información y Bibliografía
 
-### Bibliografia basica
+### Bibliografía básica
 
-Caballero, M. & Torres, F. (s.f.). *Tablas dinamicas: la quinta dimension* (1. ed.). [Documento PDF]. Incluido en el Paquete para la Docencia.
+Caballero, M. & Torres, F. (s.f.). *Tablas dinámicas: la quinta dimensión* (1. ed.). [Documento PDF]. Incluido en el Paquete para la Docencia.
 
-Gelabert Fernandez, R. (2026). *Fuentes originales del cuaderno: conceptos basicos, tutorial practico, tecnicas avanzadas, graficos dinamicos, errores comunes* [Material inedito]. Universidad Autonoma del Carmen.
+Gelabert Fernández, R. (2026). *Material didáctico de Bioestadística: filtros, Power Query y tablas dinámicas para datos pesqueros* [Material inédito]. Universidad Autónoma del Carmen.
 
-Microsoft. (s.f.). *Crear una tabla dinamica para analizar datos de una hoja de calculo*. Microsoft Support. https://support.microsoft.com/es-es/office/crear-una-tabla-dinamica-para-analizar-datos-de-una-hoja-de-calculo-a9a84538-bfe9-40a9-a8e9-f99134456576
+Microsoft. (s.f.). *Crear una tabla dinámica para analizar datos de una hoja de cálculo*. Microsoft Support. https://support.microsoft.com/es-es/office/crear-una-tabla-dinamica-para-analizar-datos-de-una-hoja-de-calculo-a9a84538-bfe9-40a9-a8e9-f99134456576
 
-### Bibliografia complementaria
+### Bibliografía complementaria
 
-Aprender21. (2026). *Tablas dinamicas en Excel: guia paso a paso*. https://www.aprender21.com/blog/excel-tablas-dinamicas-guia
+Aprender21. (2026). *Tablas dinámicas en Excel: guía paso a paso*. https://www.aprender21.com/blog/excel-tablas-dinamicas-guia
 
-Excel Total. (2021). *Tablas dinamicas en Excel (tutorial completo)*. https://exceltotal.com/tablas-dinamicas-en-excel
+CONAPESCA. (2025). *Anuario estadístico de pesca y acuacultura*. Secretaría de Agricultura y Desarrollo Rural. https://www.gob.mx/conapesca
 
-Ninja Excel. (2024). *Como hacer tablas dinamicas en Excel: paso a paso*. https://www.ninjaexcel.com/excel-en-el-trabajo/tablas-dinamicas
+Excel Total. (2021). *Tablas dinámicas en Excel (tutorial completo)*. https://exceltotal.com/tablas-dinamicas-en-excel
 
-El Tio Tech. (2021). *6 ejercicios de tablas dinamicas para practicar*. https://eltiotech.com/6-ejercicios-tablas-dinamicas
+Ninja Excel. (2024). *Cómo hacer tablas dinámicas en Excel: paso a paso*. https://www.ninjaexcel.com/excel-en-el-trabajo/tablas-dinamicas
+
+El Tio Tech. (2021). *6 ejercicios de tablas dinámicas para practicar*. https://eltiotech.com/6-ejercicios-tablas-dinamicas
+
+Microsoft Support. (s.f.). *Introducción a Power Query*. https://support.microsoft.com/es-es/office/introducción-a-power-query
 
 ### Recursos audiovisuales
 
-Daxus Latam. (2025). *Aprende a crear tablas dinamicas desde cero (con ejemplos)* [Video]. YouTube. https://www.youtube.com/watch?v=WGH-k_vURuE
+Daxus Latam. (2025). *Aprende a crear tablas dinámicas desde cero (con ejemplos)* [Video]. YouTube. https://www.youtube.com/watch?v=WGH-k_vURuE
 
-El Tio Tech. (2025). *Domina las tablas dinamicas en Excel desde cero* [Video]. YouTube. https://www.youtube.com/watch?v=tN6_ZEaqYBo
+El Tio Tech. (2025). *Domina las tablas dinámicas en Excel desde cero* [Video]. YouTube. https://www.youtube.com/watch?v=tN6_ZEaqYBo
 
-Saber Programas. (2024). *Tablas dinamicas en Excel: de cero a experto* [Video]. YouTube. https://www.youtube.com/watch?v=6YOsIVH0STg
+Saber Programas. (2024). *Tablas dinámicas en Excel: de cero a experto* [Video]. YouTube. https://www.youtube.com/watch?v=6YOsIVH0STg
 
-SMARTpro Academy. (s.f.). *Como hacer tablas dinamicas en Excel + IA desde cero* [Video]. YouTube. https://www.youtube.com/watch?v=Mh93eaKbkkw
+SMARTpro Academy. (s.f.). *Cómo hacer tablas dinámicas en Excel + IA desde cero* [Video]. YouTube. https://www.youtube.com/watch?v=Mh93eaKbkkw
+
+### Referencias institucionales
+
+DOF. (2018). *Ley General de Pesca y Acuacultura Sustentables*. Diario Oficial de la Federación. https://www.diputados.gob.mx/LeyesBiblio/pdf/LGPAS.pdf
+
+INEGI. (2022). *Censo Nacional de Pesca y Acuacultura*. Instituto Nacional de Estadística y Geografía. https://www.inegi.org.mx
 
 ---
 
 ```
 Firma de los autores:
 
-M.A. Rolando Gelabert Fernandez           Dr. Juan Carlos Perez Lopez
+Dr. Rolando Gelabert Fernández           Dr. Juan Carlos Pérez López
 ___________________________________       ___________________________________
 
-Mtra. Ana Maria Sanchez Ruiz              Ing. Luis Alberto Dominguez Hernandez
+Mtra. Ana María Sánchez Ruiz              Ing. Luis Alberto Domínguez Hernández
 ___________________________________       ___________________________________
 
 
-Fecha de elaboracion: Agosto 2025
-Vo. Bo. del Comite de Pares Academicos
+Fecha de elaboración: Febrero 2026
+Vo. Bo. del Comité de Pares Académicos
 ---
 
 *Fin del Cuaderno de Trabajo*
