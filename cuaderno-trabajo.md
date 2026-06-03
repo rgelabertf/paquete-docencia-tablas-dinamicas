@@ -1165,6 +1165,13 @@ Utilizando el dataset completo de capturas, construye un tablero de control que 
   - Origen (Captura, Acuacultura)
 - Conecta CADA segmentación a TODAS las tablas dinámicas del dashboard
 - Ajusta el formato: colores profesionales, títulos, alineación
+- **Refinamiento científico (McDonald, 2014):** Aplica los siguientes principios a cada gráfico del dashboard:
+  - Elimina gridlines, fondos grises y efectos 3D
+  - Ajusta la escala del eje Y para que comience en 0, con valores máximos redondos
+  - Usa fuente sans-serif (Arial) consistente en todos los elementos del gráfico
+  - Agrega borde negro al área del gráfico (4 lados)
+  - Incluye unidades de medida en las etiquetas de los ejes
+  - Para presentación usa color (evita rojo+verde); para publicación usa blanco/negro/tramas
 
 ---
 
@@ -1233,11 +1240,12 @@ _________________________________________________________________
 |----------|------------------|---------------|-------------------|---------------------|
 | Tablas dinámicas | Crea 3+ tablas correctas con múltiples campos | Crea 2 tablas correctas | Crea 1 tabla correcta | No crea tablas funcionales |
 | Campos calculados | Crea 1+ campo calculado funcional | Crea campo con errores menores | Intenta crear campo | No crea campos |
-| Gráficos dinámicos | 2+ gráficos correctos con formato | 2 gráficos básicos | 1 gráfico | Sin gráficos |
+| Gráficos dinámicos | 2+ gráficos correctos con formato científico | 2 gráficos básicos | 1 gráfico | Sin gráficos |
 | Segmentaciones | Conectadas a todas las tablas | Conectadas parcialmente | Sin conectar | Sin segmentaciones |
+| Calidad científica | Gráficos sin clutter, escalas correctas, etiquetas claras, borde negro, fuente sans-serif | Aplica 3-4 principios correctamente | Aplica 1-2 principios | Sin aplicación de principios |
 | Análisis escrito | Conclusiones profundas y coherentes | Conclusiones básicas | Conclusiones confusas | Sin conclusiones |
 
-**Calificación obtenida:** ______ / 20 puntos
+**Calificación obtenida:** ______ / 24 puntos
 
 ---
 

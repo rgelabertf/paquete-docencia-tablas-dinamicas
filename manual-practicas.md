@@ -260,6 +260,16 @@ Los principios de visualización en biología marina incluyen: uso de escalas lo
 10. Probar la interactividad: seleccionar un litoral en la segmentación y observar cómo todos los gráficos se actualizan simultáneamente. Seleccionar especies específicas y ver el cambio en la tendencia temporal y distribución geográfica.
 11. Guardar el archivo como `Practica5_Graficos_Dinamicos.xlsx`.
 
+12. **Aplicar principios de gráficos científicos (Handbook of Biological Statistics — McDonald, 2014):**
+    - **Eliminar clutter:** Quitar gridlines (líneas de cuadrícula), fondos grises y efectos 3D del área del gráfico. Todo eso distrae del mensaje.
+    - **Escalas de ejes:** El eje Y debe comenzar en 0 a menos que los valores observados varíen en un rango muy estrecho. Usa valores máximos redondos (ej. 5000, 10000, no 4783). Si tienes múltiples gráficos comparables, usa la misma escala en todos.
+    - **Tipografía:** Usa fuente sans-serif (Arial, Helvetica) consistente en todos los elementos del gráfico (títulos, etiquetas de ejes, leyenda). Incluye unidades de medida en las etiquetas de los ejes.
+    - **Marcos:** El área del gráfico debe tener borde negro en los 4 lados (Format Plot Area → Line → Black). El área exterior (Chart Area) debe ir sin borde (No Line).
+    - **Barras de error:** Si agregas barras de error, especifica en la descripción si son IC 95 %, error estándar o desviación estándar. En Excel, usa Custom en lugar de las opciones predeterminadas "Standard Error" o "Standard Deviation" (que no calculan lo que parecen).
+    - **Leyenda:** Si solo hay una serie de datos, elimínala; si hay varias, decide si va en el gráfico o se explica en la descripción.
+    - **Color:** Para presentaciones usa color (evita combinar rojo+verde por daltonismo). Para publicación usa blanco, negro, grises, tramas (rayas, puntos, cross-hatching) — no uses tonos de gris similares porque no se distinguen en fotocopia.
+    - **Exportación:** Para publicación, guarda el gráfico como PDF (clic derecho en el área del gráfico → Guardar como imagen → PDF) y edítalo en un programa vectorial como Inkscape si es necesario.
+
 ### Criterios de evaluación
 
 | Criterio | Ponderación |
